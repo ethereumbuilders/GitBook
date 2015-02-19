@@ -9,6 +9,7 @@
 ### Install dependencies
 
 Using homebrew:
+test undo
 
     brew install boost --c++11 # this takes a while
     brew install boost-python --c++11
