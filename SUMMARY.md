@@ -33,5 +33,5 @@
    * [Solidity Tutorials](solidity_tutorials.md)
 * [Ethereum.Builders](ethereumbuilders.md)
 * [Get Involved](get_involved.md)
-   * Test Feedback
+   * [Test Feedback](test_feedback.md)
 
