@@ -1,0 +1,10 @@
+{
+    "pluginsConfig": {
+        "discourse": {
+            "url": "ethereum.builders",
+            "api_key": "ce563fb4f6a844cd2a1c11e4b1e8b99072d7b677c2e940c9f6c05355921d2ed0",
+            "api_username": "seraphim",
+            "parent_category_id": "16"
+        }
+    }
+}
