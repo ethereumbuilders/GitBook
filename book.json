@@ -1,5 +1,11 @@
 {
-    "pluginsConfig": {},
+    "pluginsConfig": {
+        "discourse": {
+            "plugins": [
+                "discourse"
+            ]
+        }
+    },
     "plugins": [
         "discourse"
     ]
