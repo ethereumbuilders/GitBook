@@ -1,5 +1,5 @@
 # C++
-test change
+
 # Installing cpp-ethereum on Ubuntu 14.04, 64 bit
 
 For the latest stable version:
