@@ -32,6 +32,7 @@
        * [Building on Windows](build_windows.md)
            * [C++](cppwin.md)
            * [Go](gowin.md)
+* Ethereum JSON RPC
 * [Beyond Blockchains: The EtherWeb](beyond_blockchains_the_etherweb.md)
 * [Time To Kick It Up a Notch: Tutorials](time_to_kick_it_up_a_notch_tutorials.md)
    * [Serpent Tutorials](serpent_tutorials.md)
@@ -39,5 +40,4 @@
 * [Ethereum.Builders](ethereumbuilders.md)
 * [Get Involved](get_involved.md)
    * [Test Feedback](test_feedback.md)
-* Ethereum JSON RPC
 
