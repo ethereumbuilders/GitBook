@@ -1,2 +1,2 @@
-# Why should I care?
+# Start with why
 
