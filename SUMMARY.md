@@ -6,7 +6,7 @@
    * [The aim of this work](the_aim_of_this_work.md)
    * [Special thanks](special_thanks.md)
 * [The Why, How and What](They why, How and What.md)
-   * Why decentralized
+   * [Why decentralized](why_decentralized.md)
    * How it works
    * What can you do with it
 * Under the hood
