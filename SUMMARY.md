@@ -8,7 +8,7 @@
 * [The Why, How and What](They why, How and What.md)
    * [Why decentralized](why_decentralized.md)
    * [How it works](how_it_works.md)
-   * What can you do with it
+   * [What can you do with it](what_can_you_do_with_it.md)
 * Under the hood
 * [Design philosophy](design_philosophy.md)
 * [Installing Ethereum Client](installing_ethereum.md)
