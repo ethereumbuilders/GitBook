@@ -12,6 +12,7 @@
    * [What can you do with it](what_can_you_do_with_it.md)
 * [Smart contracts intro](smart_contracts_intro.md)
    * Etherean Languages
+       * Serpent
    * Single Smart Contracts
        * Serpent examples
        * Solidity examples
