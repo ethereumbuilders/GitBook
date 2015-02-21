@@ -7,7 +7,7 @@
    * [Special thanks](special_thanks.md)
 * [The Why, How and What](They why, How and What.md)
    * [Why decentralized](why_decentralized.md)
-   * How it works
+   * [How it works](how_it_works.md)
    * What can you do with it
 * Under the hood
 * [Design philosophy](design_philosophy.md)
