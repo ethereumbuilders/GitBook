@@ -37,5 +37,6 @@
    * [Serpent Tutorials](serpent_tutorials.md)
    * [Solidity Tutorials](solidity_tutorials.md)
 * [Ethereum.Builders](ethereumbuilders.md)
+   * Open collaboration system
 * [Get Involved](get_involved.md)
 
