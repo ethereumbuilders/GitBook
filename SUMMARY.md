@@ -25,7 +25,6 @@
 * [Etherean Languages](etherean_languages.md)
    * [Serpent](serpent.md)
    * [Solidity](solidity.md)
-* Single smart contracts
 * [Smart contracts intro](smart_contracts_intro.md)
    * Single Smart Contracts
    * Smart Contract Systems
