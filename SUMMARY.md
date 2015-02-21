@@ -12,8 +12,8 @@
    * [What can you do with it](what_can_you_do_with_it.md)
 * [Smart contracts intro](smart_contracts_intro.md)
    * Single Smart Contracts
+   * Examples
    * Smart Contract Systems
-* Examples
 * [Installing Ethereum Client](installing_ethereum.md)
    * [Manual Build](manualbuild.md)
        * [Python](python_build.md)
