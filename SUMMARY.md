@@ -7,7 +7,7 @@
    * [Special thanks](special_thanks.md)
 * [The Why, How and What](They why, How and What.md)
    * Why decentralized
-       * How it works
+* How it works
 * [Why Ethereum?](why_ethereum.md)
 * Under the hood
 * [Design philosophy](design_philosophy.md)
