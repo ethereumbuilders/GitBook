@@ -13,6 +13,7 @@
 * [Smart contracts intro](smart_contracts_intro.md)
    * Etherean Languages
        * Serpent
+       * Solidity
    * Single Smart Contracts
        * Serpent examples
        * Solidity examples
