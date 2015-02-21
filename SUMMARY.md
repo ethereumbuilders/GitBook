@@ -39,5 +39,4 @@
 * [Ethereum.Builders](ethereumbuilders.md)
    * Open collaboration system
    * Get involved
-* [Get Involved](get_involved.md)
 
