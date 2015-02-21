@@ -6,6 +6,7 @@
    * [The aim of this work](the_aim_of_this_work.md)
    * [Special thanks](special_thanks.md)
 * [Start with why](Start with why.md)
+   * Why decentralized
 * [Why Ethereum?](why_ethereum.md)
 * Under the hood
 * [Design philosophy](design_philosophy.md)
