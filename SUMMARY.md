@@ -27,6 +27,7 @@
    * [Solidity](solidity.md)
 * Single smart contracts
 * [Smart contracts intro](smart_contracts_intro.md)
+   * Single Smart Contracts
 * Smart contracts systems
 * [Beyond Blockchains: The EtherWeb](beyond_blockchains_the_etherweb.md)
 * [Time To Kick It Up a Notch: Tutorials](time_to_kick_it_up_a_notch_tutorials.md)
