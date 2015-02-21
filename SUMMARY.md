@@ -12,7 +12,7 @@
    * [What can you do with it](what_can_you_do_with_it.md)
 * [Smart contracts intro](smart_contracts_intro.md)
    * Single Smart Contracts
-       * Examples
+       * Serpent examples
    * Smart Contract Systems
        * Examples
 * [Installing Ethereum Client](installing_ethereum.md)
