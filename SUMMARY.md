@@ -9,13 +9,6 @@
 * [Why Ethereum?](why_ethereum.md)
 * [Design philosophy](design_philosophy.md)
 * Under the hood
-* [Etherean Languages](etherean_languages.md)
-   * [Serpent](serpent.md)
-   * [Solidity](solidity.md)
-* [Smart contracts intro](smart_contracts_intro.md)
-* Single smart contracts
-* Smart contracts systems
-* [Beyond Blockchains: The EtherWeb](beyond_blockchains_the_etherweb.md)
 * [Installing Ethereum Client](installing_ethereum.md)
    * [Manual Build](manualbuild.md)
        * [Python](python_build.md)
@@ -28,6 +21,13 @@
        * [Building on Windows](build_windows.md)
            * [C++](cppwin.md)
            * [Go](gowin.md)
+* [Etherean Languages](etherean_languages.md)
+   * [Serpent](serpent.md)
+   * [Solidity](solidity.md)
+* [Smart contracts intro](smart_contracts_intro.md)
+* Single smart contracts
+* Smart contracts systems
+* [Beyond Blockchains: The EtherWeb](beyond_blockchains_the_etherweb.md)
 * [Time To Kick It Up a Notch: Tutorials](time_to_kick_it_up_a_notch_tutorials.md)
    * [Serpent Tutorials](serpent_tutorials.md)
    * [Solidity Tutorials](solidity_tutorials.md)
