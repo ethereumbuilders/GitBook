@@ -7,8 +7,8 @@
    * [Special thanks](special_thanks.md)
 * Why should I care?
 * [Why Ethereum?](why_ethereum.md)
-* [Design philosophy](design_philosophy.md)
 * Under the hood
+* [Design philosophy](design_philosophy.md)
 * [Installing Ethereum Client](installing_ethereum.md)
    * [Manual Build](manualbuild.md)
        * [Python](python_build.md)
