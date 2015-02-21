@@ -38,5 +38,6 @@
    * [Solidity Tutorials](solidity_tutorials.md)
 * [Ethereum.Builders](ethereumbuilders.md)
    * Open collaboration system
+   * Ethereum Builders ZenHub Boards
 * [Get Involved](get_involved.md)
 
