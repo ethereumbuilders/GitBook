@@ -17,6 +17,7 @@
    * Smart Contract Systems
        * Serpent examples
        * Solidity examples
+   * Etherean Languages
 * [Installing Ethereum Client](installing_ethereum.md)
    * [Manual Build](manualbuild.md)
        * [Python](python_build.md)
