@@ -24,7 +24,7 @@
    * [Manual Build](manualbuild.md)
        * [Python](python_build.md)
        * [Building on Ubuntu](build_ubuntu.md)
-           * [C++](cpp_build.md)
+           * [C++](ubuntu_cpp_build.md)
            * [Go](go_build.md)
        * [Building on MacOS](build_macos.md)
            * [C++](cpp.md)
