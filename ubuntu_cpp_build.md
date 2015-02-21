@@ -1,2 +1,1 @@
-{% include "git+https://github.com/ethereum/cpp-ethereum/wiki/Building-on-Ubuntu" %}
-
+{% include "git+https://raw.githubusercontent.com/wiki/ethereum/cpp-ethereum/Building-on-Ubuntu.md" %}
