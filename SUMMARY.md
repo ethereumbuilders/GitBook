@@ -5,7 +5,7 @@
    * [This is a knowledge remix](this_is_a_knowledge_remix.md)
    * [The aim of this work](the_aim_of_this_work.md)
    * [Special thanks](special_thanks.md)
-* [Start with why](Start with why.md)
+* [The Why, How and What](They why, How and What.md)
    * Why decentralized
 * [Why Ethereum?](why_ethereum.md)
 * Under the hood
