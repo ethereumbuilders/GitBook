@@ -5,7 +5,7 @@
    * [This is a knowledge remix](this_is_a_knowledge_remix.md)
    * [The aim of this work](the_aim_of_this_work.md)
    * [Special thanks](special_thanks.md)
-* Why should I care?
+* [Why should I care?](Start with why.md)
 * [Why Ethereum?](why_ethereum.md)
 * Under the hood
 * [Design philosophy](design_philosophy.md)
