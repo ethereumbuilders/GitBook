@@ -13,6 +13,7 @@
 * [Smart contracts intro](smart_contracts_intro.md)
    * Single Smart Contracts
        * Serpent examples
+       * Solidity examples
    * Smart Contract Systems
        * Examples
 * [Installing Ethereum Client](installing_ethereum.md)
