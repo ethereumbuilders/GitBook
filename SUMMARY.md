@@ -10,6 +10,9 @@
    * [Why decentralized](why_decentralized.md)
    * [How it works](how_it_works.md)
    * [What can you do with it](what_can_you_do_with_it.md)
+* [Smart contracts intro](smart_contracts_intro.md)
+   * Single Smart Contracts
+   * Smart Contract Systems
 * [Installing Ethereum Client](installing_ethereum.md)
    * [Manual Build](manualbuild.md)
        * [Python](python_build.md)
@@ -25,9 +28,6 @@
 * [Etherean Languages](etherean_languages.md)
    * [Serpent](serpent.md)
    * [Solidity](solidity.md)
-* [Smart contracts intro](smart_contracts_intro.md)
-   * Single Smart Contracts
-   * Smart Contract Systems
 * [Beyond Blockchains: The EtherWeb](beyond_blockchains_the_etherweb.md)
 * [Time To Kick It Up a Notch: Tutorials](time_to_kick_it_up_a_notch_tutorials.md)
    * [Serpent Tutorials](serpent_tutorials.md)
