@@ -16,6 +16,7 @@
        * Solidity examples
    * Smart Contract Systems
        * Serpent examples
+       * Solidity examples
 * [Installing Ethereum Client](installing_ethereum.md)
    * [Manual Build](manualbuild.md)
        * [Python](python_build.md)
