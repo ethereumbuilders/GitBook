@@ -13,7 +13,6 @@
 * [Smart contracts intro](smart_contracts_intro.md)
    * Single Smart Contracts
        * Examples
-   * Examples
    * Smart Contract Systems
 * [Installing Ethereum Client](installing_ethereum.md)
    * [Manual Build](manualbuild.md)
