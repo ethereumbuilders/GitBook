@@ -1,1 +1,1 @@
-{% include "git+https://github.com/ethereum/wiki.git/wiki/White-Paper.md" %}
+{% include "git+https://github.com/ethereum/wiki.wiki.git/White-Paper.md" %}
