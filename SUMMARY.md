@@ -8,7 +8,6 @@
 * [The Why, How and What](They why, How and What.md)
    * [Design philosophy](design_philosophy.md)
        * [Design rationale](design_rationale.md)
-   * [Why decentralized](why_decentralized.md)
    * [How it works](how_it_works.md)
    * [What can you do with it](what_can_you_do_with_it.md)
 * [Smart contracts intro](smart_contracts_intro.md)
