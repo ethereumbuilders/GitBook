@@ -30,4 +30,5 @@
    * Get involved
 * Resources
    * [Whitepaper](whitepaper.md)
+* C++
 
