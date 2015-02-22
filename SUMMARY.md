@@ -28,7 +28,7 @@
            * [Go](go_build.md)
        * [Building on MacOS](build_macos.md)
            * [C++](mac_cpp_build.md)
-           * [Go](go.md)
+           * [Go](mac_go_build.md)
        * [Building on Windows](build_windows.md)
            * [C++](win_cpp_build.md)
            * [Go](gowin.md)
