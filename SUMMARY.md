@@ -28,7 +28,7 @@
        * [Go](mac_go_build.md)
    * Building on Windows
        * [C++](win_cpp_build.md)
-       * Go
+       * [Go](win_go_build.md)
 * Ethereum JSON RPC
 * [Time To Kick It Up a Notch: Tutorials](time_to_kick_it_up_a_notch_tutorials.md)
    * [Serpent Tutorials](serpent_tutorials.md)
