@@ -1,1 +1,1 @@
-{% include "git+https://github.com/ethereum/go-build/blob/master/README.md" %}
+Need to create a wiki page with instructions for windows Go
