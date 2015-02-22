@@ -38,7 +38,6 @@
 * [Ethereum.Builders](ethereumbuilders.md)
    * Open collaboration system
    * Get involved
-* [How it works](how_it_works.md)
 * Resources
    * [Whitepaper](whitepaper.md)
 
