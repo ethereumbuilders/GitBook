@@ -1,1 +1,1 @@
-{% include "https://github.com/ethereum/go-build/blob/master/README.md" %}
+{% include "git+https://github.com/ethereum/go-build/blob/master/README.md#windows" %}
