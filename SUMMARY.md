@@ -21,7 +21,6 @@
        * Solidity examples
 * [Installing Ethereum Client](installing_ethereum.md)
    * [Manual Build](manualbuild.md)
-       * [Python](python_build.md)
        * [Building on Ubuntu](build_ubuntu.md)
            * [C++](ubuntu_cpp_build.md)
            * [Go](ubuntu_go_build.md)
