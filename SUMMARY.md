@@ -35,9 +35,9 @@
 * [Time To Kick It Up a Notch: Tutorials](time_to_kick_it_up_a_notch_tutorials.md)
    * [Serpent Tutorials](serpent_tutorials.md)
    * [Solidity Tutorials](solidity_tutorials.md)
-* [How it works](how_it_works.md)
 * [Ethereum.Builders](ethereumbuilders.md)
    * Open collaboration system
    * Get involved
+* [How it works](how_it_works.md)
 * Resources
 
