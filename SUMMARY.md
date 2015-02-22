@@ -8,7 +8,6 @@
 * [The Why, How and What](They why, How and What.md)
    * [Design philosophy](design_philosophy.md)
        * [Design rationale](design_rationale.md)
-   * [How it works](how_it_works.md)
    * [What can you do with it](what_can_you_do_with_it.md)
 * [Smart contracts intro](smart_contracts_intro.md)
    * Etherean Languages
@@ -36,6 +35,7 @@
 * [Time To Kick It Up a Notch: Tutorials](time_to_kick_it_up_a_notch_tutorials.md)
    * [Serpent Tutorials](serpent_tutorials.md)
    * [Solidity Tutorials](solidity_tutorials.md)
+* [How it works](how_it_works.md)
 * [Ethereum.Builders](ethereumbuilders.md)
    * Open collaboration system
    * Get involved
