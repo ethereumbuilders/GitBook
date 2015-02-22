@@ -9,16 +9,6 @@
    * [Ethereum design philosophy](design_philosophy.md)
        * [Design rationale](design_rationale.md)
    * [What is Ethereum?](what_is_ethereum.md)
-* [Smart contracts intro](smart_contracts_intro.md)
-   * Etherean Languages
-       * Serpent
-       * Solidity
-   * Single Smart Contracts
-       * Serpent examples
-       * Solidity examples
-   * Smart Contract Systems
-       * Serpent examples
-       * Solidity examples
 * [Installing Ethereum Client](installing_ethereum.md)
    * Building on Ubuntu
        * [C++](ubuntu_cpp_build.md)
