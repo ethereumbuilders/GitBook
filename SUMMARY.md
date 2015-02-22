@@ -20,7 +20,7 @@
        * [C++](win_cpp_build.md)
        * [Go](win_go_build.md)
 * Ethereum JSON RPC
-* [Time To Kick It Up a Notch: Tutorials](time_to_kick_it_up_a_notch_tutorials.md)
+* [Smart Contract Tutorials](smart_contract_tutorials.md)
    * [Serpent Tutorials](serpent_tutorials.md)
    * [Solidity Tutorials](solidity_tutorials.md)
 * [Ethereum.Builders](ethereumbuilders.md)
