@@ -20,6 +20,7 @@
        * Serpent examples
        * Solidity examples
 * [Installing Ethereum Client](installing_ethereum.md)
+   * Building on Ubuntu
 * Ethereum JSON RPC
 * [Time To Kick It Up a Notch: Tutorials](time_to_kick_it_up_a_notch_tutorials.md)
    * [Serpent Tutorials](serpent_tutorials.md)
