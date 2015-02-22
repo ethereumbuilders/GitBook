@@ -8,7 +8,7 @@
 * [The Why, How and What](They why, How and What.md)
    * [Ethereum design philosophy](design_philosophy.md)
        * [Design rationale](design_rationale.md)
-   * [What can you do with it](what_can_you_do_with_it.md)
+   * [What can you do with it](what_is_ethereum.md)
 * [Smart contracts intro](smart_contracts_intro.md)
    * Etherean Languages
        * Serpent
