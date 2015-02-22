@@ -30,7 +30,7 @@
            * [C++](mac_cpp_build.md)
            * [Go](go.md)
        * [Building on Windows](build_windows.md)
-           * [C++](cppwin.md)
+           * [C++](win_cpp_build.md)
            * [Go](gowin.md)
 * Ethereum JSON RPC
 * [Time To Kick It Up a Notch: Tutorials](time_to_kick_it_up_a_notch_tutorials.md)
