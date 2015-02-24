@@ -28,4 +28,5 @@
    * Get involved
 * Resources
    * [Whitepaper](whitepaper.md)
+* Javascript API
 
