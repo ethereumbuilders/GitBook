@@ -20,6 +20,7 @@
        * [C++](win_cpp_build.md)
        * [Go](win_go_build.md)
 * [Ethereum JSON RPC](ethereum_json_rpc.md)
+* Javascript API
 * [Smart Contract Tutorials](smart_contract_tutorials.md)
    * [Serpent Tutorials](serpent_tutorials.md)
    * [Solidity Tutorials](solidity_tutorials.md)
@@ -28,5 +29,4 @@
    * Get involved
 * Resources
    * [Whitepaper](whitepaper.md)
-* Javascript API
 
