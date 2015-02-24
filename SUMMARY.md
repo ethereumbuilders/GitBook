@@ -24,9 +24,9 @@
    * [Javascript API](ethereum_javascript_api.md)
 * [Smart Contract Tutorials](smart_contract_tutorials.md)
    * [Solidity Features](solidity_features.md)
+   * Serpent Features
    * [Serpent Tutorials](serpent_tutorials.md)
    * [Solidity Tutorials](solidity_tutorials.md)
-   * Serpent Features
 * [Ethereum.Builders](ethereumbuilders.md)
    * Open collaboration system
    * Get involved
