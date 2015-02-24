@@ -13,7 +13,7 @@
    * [Building on Ubuntu](building_on_ubuntu.md)
        * [C++](ubuntu_cpp_build.md)
        * [Go](ubuntu_go_build.md)
-   * Building on Mac OS
+   * [Building on Mac OS](building_on_mac_os.md)
        * [C++](mac_cpp_build.md)
        * [Go](mac_go_build.md)
    * Building on Windows
