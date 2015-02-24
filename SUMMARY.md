@@ -19,7 +19,7 @@
    * Building on Windows
        * [C++](win_cpp_build.md)
        * [Go](win_go_build.md)
-* Ethereum JSON RPC
+* [Ethereum JSON RPC](ethereum_json_rpc.md)
 * [Smart Contract Tutorials](smart_contract_tutorials.md)
    * [Serpent Tutorials](serpent_tutorials.md)
    * [Solidity Tutorials](solidity_tutorials.md)
