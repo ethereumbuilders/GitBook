@@ -29,4 +29,5 @@
    * Get involved
 * Resources
    * [Whitepaper](whitepaper.md)
+* Ethereum APIs
 
