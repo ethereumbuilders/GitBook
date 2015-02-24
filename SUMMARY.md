@@ -20,7 +20,7 @@
        * [C++](win_cpp_build.md)
        * [Go](win_go_build.md)
 * [Ethereum JSON RPC](ethereum_json_rpc.md)
-* Javascript API
+* [Javascript API](ethereum_javascript_api.md)
 * [Smart Contract Tutorials](smart_contract_tutorials.md)
    * [Serpent Tutorials](serpent_tutorials.md)
    * [Solidity Tutorials](solidity_tutorials.md)
