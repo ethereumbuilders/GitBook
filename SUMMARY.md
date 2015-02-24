@@ -25,6 +25,7 @@
 * [Smart Contract Tutorials](smart_contract_tutorials.md)
    * [Serpent Tutorials](serpent_tutorials.md)
    * [Solidity Tutorials](solidity_tutorials.md)
+   * Serpent Features
 * [Ethereum.Builders](ethereumbuilders.md)
    * Open collaboration system
    * Get involved
