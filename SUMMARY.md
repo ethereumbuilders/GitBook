@@ -16,7 +16,7 @@
    * [Building on Mac OS](building_on_mac_os.md)
        * [C++](mac_cpp_build.md)
        * [Go](mac_go_build.md)
-   * Building on Windows
+   * [Building on Windows](building_on_windows.md)
        * [C++](win_cpp_build.md)
        * [Go](win_go_build.md)
 * [Ethereum APIs](ethereum_apis.md)
