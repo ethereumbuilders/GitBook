@@ -23,7 +23,7 @@
    * [JSON RPC API](ethereum_json_rpc.md)
    * [Javascript API](ethereum_javascript_api.md)
 * [Smart Contract Tutorials](smart_contract_tutorials.md)
-   * Solidity Features
+   * [Solidity Features](solidity_features.md)
    * [Serpent Tutorials](serpent_tutorials.md)
    * [Solidity Tutorials](solidity_tutorials.md)
    * Serpent Features
