@@ -19,7 +19,7 @@
    * Building on Windows
        * [C++](win_cpp_build.md)
        * [Go](win_go_build.md)
-* Ethereum APIs
+* [Ethereum APIs](ethereum_apis.md)
 * [Ethereum JSON RPC](ethereum_json_rpc.md)
 * [Ethereum Javascript API](ethereum_javascript_api.md)
 * [Smart Contract Tutorials](smart_contract_tutorials.md)
