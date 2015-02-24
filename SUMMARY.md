@@ -10,7 +10,7 @@
        * [Design rationale](design_rationale.md)
    * [What is Ethereum?](what_is_ethereum.md)
 * [Installing Ethereum Client](installing_ethereum.md)
-   * Building on Ubuntu
+   * [Building on Ubuntu](building_on_ubuntu.md)
        * [C++](ubuntu_cpp_build.md)
        * [Go](ubuntu_go_build.md)
    * Building on Mac OS
