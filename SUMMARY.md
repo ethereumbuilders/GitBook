@@ -8,7 +8,7 @@
 * [The Why, How and What](They why, How and What.md)
    * [Ethereum design philosophy](design_philosophy.md)
        * [Design rationale](design_rationale.md)
-   * [What is Ethereum?](what_is_ethereum.md)
+   * [What can you do with it?](what_is_ethereum.md)
 * [Installing Ethereum Client](installing_ethereum.md)
    * [Building on Ubuntu](building_on_ubuntu.md)
        * [C++](ubuntu_cpp_build.md)
