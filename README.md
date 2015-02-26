@@ -3,11 +3,12 @@ Into the ether
 
 [![Join the chat at https://gitter.im/ethereumbuilders/GitBook](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereumbuilders/GitBook?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
-There are a number of developers and researchers who are either working for Ethereum or working on ideas as volunteers and happen to spend lots of time interacting with the Ethereum community, and this set of people has coalesced into a group dedicated to building out the vision set by Vitalik Buterin in the ethereum whitepaper. 
+When the grand experiment that is Bitcoin began, the anonymous wizard desired to test two parameters - a trustless, decentralized database enjoying security enforced by the austere relentlessness of cryptography and a robust transaction system capable of sending value across the world without intermediaries. Yet the past five years years have painfully demonstrated a third missing feature: a sufficiently powerful Turing-complete scripting language. Up until this point, most innovation in advanced applications such as domain and identity registration, user-issued currencies, smart property, smart contracts, and decentralized exchange has been highly fragmented, and implementing any of these technologies has required creating an entire meta-protocol layer or even a specialized blockchain. Theoretically, however, each and every one of these innovations and more can potentially be made hundreds of times easier to implement, and easier to scale, if only there was a stronger foundational layer with a powerful scripting language for all of these protocols to build upon. And this need is what we seek to satisfy.
 
-###Thank you! 
+Ethereum is a modular, stateful, Turing-complete contract scripting system married to a blockchain and developed with a philosophy of simplicity, universal accessibility and generalization. Our goal is to provide a platform for decentralized applications - an android of the cryptocurrency world, where all efforts can share a common set of APIs, trustless interactions and no compromises. 
 
-###You are awesome.
+During the past year there have been a number of developers and researchers who have either worked for Ethereum or working on ideas as volunteers and happen to spend lots of time interacting with the Ethereum community, and this set of people has coalesced into a group dedicated to building out the vision set by Vitalik Buterin in the Ethereum Whitepaper. 
 
-This guide is for you.
+
+We ask for the community to join us as volunteers, developers, investors and evangelists seeking to enable a fundamentally different paradigm for the Internet and the relationships it provides. 
 
