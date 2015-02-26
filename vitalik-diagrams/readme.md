@@ -255,3 +255,7 @@ ___
 ---
 
 ![](incentives.png)
+
+---
+
+![](inflation.png)
