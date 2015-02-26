@@ -32,4 +32,5 @@
    * Get involved
 * Resources
    * [Whitepaper](whitepaper.md)
+* Ξaster Egg
 
