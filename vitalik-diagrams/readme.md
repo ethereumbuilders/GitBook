@@ -251,3 +251,7 @@ ___
 ---
 
 ![](image2.png)
+
+---
+
+![](incentives.png)
