@@ -28,9 +28,9 @@
    * [Serpent Tutorials](serpent_tutorials.md)
    * [Solidity Tutorials](solidity_tutorials.md)
 * [Ethereum.Builders](ethereumbuilders.md)
-   * Open collaboration system
+   * [Open collaboration system](open_collaboration_system.md)
    * Get involved
 * Resources
    * [Whitepaper](whitepaper.md)
-* [Ξaster Egg](/vitalik-diagrams/readme.md)
+* [Ξaster Egg](vitalik-diagrams/readme.md)
 
