@@ -1,0 +1,230 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="489.99094"
+   height="543.26801"
+   id="svg3244"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="collectivepayoff.svg"
+   inkscape:export-filename="/home/vub/collectivepayoff.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs3246">
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3329"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3325"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3321"
+       is_visible="true" />
+    <inkscape:path-effect
+       effect="spiro"
+       id="path-effect3309"
+       is_visible="true" />
+  </defs>
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.7"
+     inkscape:cx="181.65012"
+     inkscape:cy="189.15679"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     showguides="true"
+     inkscape:guide-bbox="true"
+     inkscape:window-width="1600"
+     inkscape:window-height="824"
+     inkscape:window-x="0"
+     inkscape:window-y="24"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata3249">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-193.34989,-257.18078)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.96579242;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 236.70709,710.86842 388.60561,1.46277"
+       id="path2987-3"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 238.15276,732.31409 0,-40"
+       id="path3007-5"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 626.38322,732.57541 0,-40"
+       id="path3007-4-5"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3009-2-9"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(526.66895,191.33807)"><flowRegion
+         id="flowRegion3011-3-7"><rect
+           id="rect3013-1-7"
+           width="98.571434"
+           height="97.142868"
+           x="51.42857"
+           y="552.66589" /></flowRegion><flowPara
+         id="flowPara3015-9-9"
+         style="font-size:25px;text-align:center;text-anchor:middle">All vote B</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3009-4-9"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(133.8118,191.62379)"><flowRegion
+         id="flowRegion3011-4-2"><rect
+           id="rect3013-3-0"
+           width="110"
+           height="85.714294"
+           x="51.42857"
+           y="552.66589"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara3015-4-2"
+         style="font-size:25px;text-align:center;text-anchor:middle">All vote A</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#ff0000;stroke-width:4.97183657;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 432.34306,534.30484 3.88531,-178.17102"
+       id="path3339"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3009-2-9-1"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(324.89788,184.37355)"><flowRegion
+         id="flowRegion3011-3-7-4"><rect
+           id="rect3013-1-7-6"
+           width="98.571434"
+           height="97.142868"
+           x="51.42857"
+           y="552.66589" /></flowRegion><flowPara
+         id="flowPara3015-9-9-6"
+         style="font-size:25px;text-align:center;text-anchor:middle">50% split</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#ff0000;stroke-width:6;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 240,527.21933 435.71429,360.07647"
+       id="path3368"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3370"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(-58,271.69627)"><flowRegion
+         id="flowRegion3372"><rect
+           id="rect3374"
+           width="480"
+           height="140"
+           x="247.14285"
+           y="-21.619804" /></flowRegion><flowPara
+         id="flowPara3376"
+         style="font-size:30px;text-align:center;text-anchor:middle">Counter-coordination collective payoff</flowPara></flowRoot>    <path
+       sodipodi:type="arc"
+       style="fill:#0000ff;stroke:none"
+       id="path3378"
+       sodipodi:cx="429.28571"
+       sodipodi:cy="54.808769"
+       sodipodi:rx="6.4285712"
+       sodipodi:ry="6.4285712"
+       d="m 435.71428,54.808769 c 0,3.550402 -2.87817,6.428571 -6.42857,6.428571 -3.55041,0 -6.42858,-2.878169 -6.42858,-6.428571 0,-3.550402 2.87817,-6.428571 6.42858,-6.428571 3.5504,0 6.42857,2.878169 6.42857,6.428571 z"
+       transform="translate(-3.7142857,311.12484)" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3380"
+       style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#0000ff;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(0,302.55341)"><flowRegion
+         id="flowRegion3382"><rect
+           id="rect3384"
+           width="438.57141"
+           height="151.42857"
+           x="441.42856"
+           y="51.237339"
+           style="fill:#0000ff" /></flowRegion><flowPara
+         id="flowPara3388"
+         style="font-size:22px;fill:#0000ff">Optimum (51/49 split)</flowPara></flowRoot>    <path
+       style="fill:#00ff00;stroke:none"
+       d="m 295.81462,534.12359 -59.99102,-0.76491 92.43802,-78.77492 c 62.45753,-53.22579 93.51674,-78.77492 95.76398,-78.77492 3.62924,0 5.86486,-2.06991 7.18994,-6.65703 0.47008,-1.62728 0.54187,22.28057 0.15956,53.12856 -0.38232,30.84797 -0.69513,68.9595 -0.69513,84.69227 l 0,28.60506 -37.43718,-0.34461 c -20.59043,-0.18953 -64.43311,-0.68881 -97.42817,-1.1095 z"
+       id="path3433"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:#ffff00;stroke:none"
+       d="m 286.71156,708.50959 -45.05289,-0.4318 -0.96118,-9.6072 c -0.52865,-5.28394 -0.58604,-45.53814 -0.12763,-89.45374 l 0.83363,-79.84656 191.85023,1.05016 c 105.51761,0.57759 192.2971,1.26625 192.84331,1.53035 0.54618,0.2641 0.038,40.38319 -1.12923,89.15354 l -2.12233,88.67335 -145.54055,-0.31816 c -80.04733,-0.17498 -165.81436,-0.51246 -190.59344,-0.74994 z"
+       id="path3455"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3398-0"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(147.67175,357.69753)"><flowRegion
+         id="flowRegion3400-1"><rect
+           id="rect3402-1"
+           width="134.28572"
+           height="97.14286"
+           x="122.85714"
+           y="223.83943"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara3404-5"
+         style="font-size:20px;text-align:center;text-anchor:middle">Base mechanism revenue</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3398"
+       style="font-size:40px;font-style:normal;font-weight:normal;text-align:end;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:end;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(166.20703,220.89508)"><flowRegion
+         id="flowRegion3400"><rect
+           id="rect3402"
+           width="134.28572"
+           height="97.14286"
+           x="122.85714"
+           y="223.83943"
+           style="text-align:end;text-anchor:end" /></flowRegion><flowPara
+         id="flowPara3404"
+         style="font-size:20px;text-align:end;text-anchor:end">Claimed revenue from bribes</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:1.65448773;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 238.34989,693.79132 0,-166.68509"
+       id="path3007-4-5-0"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#ff0000;stroke-width:5.11019278;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 431.4764,528.5753 195.17552,3.74695"
+       id="path3339-0"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:1.65448773;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 625.6356,700.93419 0,-166.68509"
+       id="path3007-4-5-0-6"
+       inkscape:connector-curvature="0" />
+  </g>
+</svg>

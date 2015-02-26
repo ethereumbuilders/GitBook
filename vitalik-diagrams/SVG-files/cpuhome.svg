@@ -1,0 +1,180 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="632.59503"
+   height="518.16864"
+   id="svg2"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="asichome1.svg"
+   inkscape:export-filename="/home/vub/Work/ethereum/docs/diagrams/asichome1.png"
+   inkscape:export-xdpi="90"
+   inkscape:export-ydpi="90">
+  <defs
+     id="defs4" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.35"
+     inkscape:cx="376.84549"
+     inkscape:cy="182.09718"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="10"
+     fit-margin-left="10"
+     fit-margin-bottom="10"
+     fit-margin-right="10"
+     inkscape:window-width="1600"
+     inkscape:window-height="851"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(-3.8687919,-202.00503)">
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 112.85714,629.50504 5.71429,-397.14286"
+       id="path2985"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 529.71429,628.36218 -417.14286,2.85715"
+       id="path2987"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:4.11212778;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 116.27035,630.09184 543.72965,376.91825"
+       id="path2989"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3.70998406;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 535.35929,217.86002 318.92642,508.57861"
+       id="path2993"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3003"
+       style="font-size:15px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+         id="flowRegion3005"><rect
+           id="rect3007"
+           width="17.142857"
+           height="22.857143"
+           x="325.71429"
+           y="826.64789" /></flowRegion><flowPara
+         id="flowPara3009"></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2995-2"
+       style="font-size:15px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(339.64934,-195.90678)"><flowRegion
+         id="flowRegion2997-6"><rect
+           id="rect2999-2"
+           width="194.28572"
+           height="80"
+           x="137.14285"
+           y="509.50504" /></flowRegion><flowPara
+         id="flowPara3001-1"
+         style="font-size:30px">Hardware</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot2995-9"
+       style="font-size:15px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(262.50649,12.664646)"><flowRegion
+         id="flowRegion2997-64"><rect
+           id="rect2999-7"
+           width="194.28572"
+           height="80"
+           x="137.14285"
+           y="509.50504" /></flowRegion><flowPara
+         id="flowPara3001-3"
+         style="font-size:30px">Electricity</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3065"
+       style="font-size:15px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(22.571429,85.714286)"><flowRegion
+         id="flowRegion3067"><rect
+           id="rect3069"
+           width="128.57143"
+           height="148.57143"
+           x="2.8571429"
+           y="326.64789" /></flowRegion><flowPara
+         id="flowPara3071"
+         style="font-size:25px">Cost</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3073"
+       style="font-size:15px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"><flowRegion
+         id="flowRegion3075"><rect
+           id="rect3077"
+           width="14.285714"
+           height="22.857143"
+           x="-477.14285"
+           y="586.64789" /></flowRegion><flowPara
+         id="flowPara3079"></flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3065-0"
+       style="font-size:15px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(252.73939,353.39847)"><flowRegion
+         id="flowRegion3067-0"><rect
+           id="rect3069-0"
+           width="154.28571"
+           height="142.85715"
+           x="2.8571429"
+           y="326.64789" /></flowRegion><flowPara
+         id="flowPara3071-9"
+         style="font-size:25px">Hashpower</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 323.71429,629.50504 0,-128.57143"
+       id="path3108"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3112"
+       style="font-size:15px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(1.428571,2.8571429)"><flowRegion
+         id="flowRegion3114"><rect
+           id="rect3116"
+           width="77.14286"
+           height="74.285713"
+           x="102.85714"
+           y="635.2193" /></flowRegion><flowPara
+         id="flowPara3118"
+         style="font-size:25px">0</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot3112-1"
+       style="font-size:15px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(207.7809,1.3250459)"><flowRegion
+         id="flowRegion3114-3"><rect
+           id="rect3116-6"
+           width="77.14286"
+           height="74.285713"
+           x="102.85714"
+           y="635.2193" /></flowRegion><flowPara
+         id="flowPara3118-1"
+         style="font-size:25px">N</flowPara></flowRoot>  </g>
+</svg>

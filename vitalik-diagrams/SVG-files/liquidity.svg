@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   width="1576.5865"
+   height="735.87207"
+   id="svg5450"
+   version="1.1"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="liquidity.svg">
+  <defs
+     id="defs5452" />
+  <sodipodi:namedview
+     id="base"
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1.0"
+     inkscape:pageopacity="0.0"
+     inkscape:pageshadow="2"
+     inkscape:zoom="0.5"
+     inkscape:cx="455.46997"
+     inkscape:cy="368.45337"
+     inkscape:document-units="px"
+     inkscape:current-layer="layer1"
+     showgrid="false"
+     fit-margin-top="0"
+     fit-margin-left="0"
+     fit-margin-right="0"
+     fit-margin-bottom="0"
+     inkscape:window-width="1600"
+     inkscape:window-height="851"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1" />
+  <metadata
+     id="metadata5455">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title></dc:title>
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <g
+     inkscape:label="Layer 1"
+     inkscape:groupmode="layer"
+     id="layer1"
+     transform="translate(80.469971,-164.94348)">
+    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect5458"
+       width="544"
+       height="560"
+       x="86"
+       y="286.36218" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:2.65914488;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 135.82957,658.53261 456.17043,544.19175"
+       id="path5460"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 628,544.36218 -544,-4"
+       id="path5462"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5464"
+       style="font-size:15px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(10,82)"><flowRegion
+         id="flowRegion5466"><rect
+           id="rect5468"
+           width="186"
+           height="142"
+           x="-104"
+           y="632.36218"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara5470"
+         style="font-size:35px;text-align:center;text-anchor:middle">Actual</flowPara><flowPara
+         style="font-size:35px;text-align:center;text-anchor:middle"
+         id="flowPara5490">cost</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 87.10396,810.25822 136.89604,658.46614"
+       id="path5460-9"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5464-5"
+       style="font-size:15px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(8.495361,-137.72594)"><flowRegion
+         id="flowRegion5466-9"><rect
+           id="rect5468-6"
+           width="186"
+           height="142"
+           x="-104"
+           y="632.36218"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         style="font-size:35px;text-align:center;text-anchor:middle"
+         id="flowPara5524">Marginal</flowPara><flowPara
+         style="font-size:35px;text-align:center;text-anchor:middle"
+         id="flowPara5528">cost</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5464-4"
+       style="font-size:15px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(362.49536,234.27406)"><flowRegion
+         id="flowRegion5466-6"><rect
+           id="rect5468-1"
+           width="506"
+           height="88"
+           x="-266"
+           y="624.36218"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         style="font-size:35px;text-align:center;text-anchor:middle"
+         id="flowPara5490-5">Quantity</flowPara></flowRoot>    <rect
+       style="fill:#ffffff;fill-opacity:1;stroke:#000000;stroke-width:3;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+       id="rect5458-0"
+       width="544"
+       height="560"
+       x="774.48499"
+       y="285.8855" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1079.618,830.75251 71.734,-115.73402"
+       id="path5460-1"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1316.485,543.8855 -544.00002,-4"
+       id="path5462-2"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5464-58"
+       style="font-size:15px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(1416.485,77.52332)"><flowRegion
+         id="flowRegion5466-7"><rect
+           id="rect5468-3"
+           width="186"
+           height="142"
+           x="-104"
+           y="632.36218"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         id="flowPara5470-9"
+         style="font-size:35px;text-align:center;text-anchor:middle">Actual</flowPara><flowPara
+         style="font-size:35px;text-align:center;text-anchor:middle"
+         id="flowPara5490-7">cost</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 938.89342,844.47702 1082.0765,829.29394"
+       id="path5460-9-5"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5464-5-4"
+       style="font-size:15px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(1424.9804,-138.20262)"><flowRegion
+         id="flowRegion5466-9-2"><rect
+           id="rect5468-6-3"
+           width="186"
+           height="142"
+           x="-104"
+           y="632.36218"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         style="font-size:35px;text-align:center;text-anchor:middle"
+         id="flowPara5524-5">Marginal</flowPara><flowPara
+         style="font-size:35px;text-align:center;text-anchor:middle"
+         id="flowPara5528-6">cost</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5464-4-9"
+       style="font-size:15px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(1050.9803,233.79737)"><flowRegion
+         id="flowRegion5466-6-9"><rect
+           id="rect5468-1-5"
+           width="506"
+           height="88"
+           x="-266"
+           y="624.36218"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         style="font-size:35px;text-align:center;text-anchor:middle"
+         id="flowPara5490-5-3">Quantity</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1149.6744,718.68783 22.6512,-176.6513"
+       id="path5460-1-2"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5464-5-6"
+       style="font-size:15px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(292.91455,42.27406)"><flowRegion
+         id="flowRegion5466-9-9"><rect
+           id="rect5468-6-32"
+           width="186"
+           height="142"
+           x="-104"
+           y="632.36218"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         style="font-size:35px;text-align:center;text-anchor:middle"
+         id="flowPara5528-2">Total</flowPara><flowPara
+         style="font-size:35px;text-align:center;text-anchor:middle"
+         id="flowPara5681">cost</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 455.7029,846.65928 4.5942,-304.5942"
+       id="path5462-23"
+       inkscape:connector-curvature="0" />
+    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="m 1171.7029,848.65928 4.5942,-304.5942"
+       id="path5462-23-9"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5464-5-6-7"
+       style="font-size:15px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(920.6833,-255.72594)"><flowRegion
+         id="flowRegion5466-9-9-6"><rect
+           id="rect5468-6-32-2"
+           width="186"
+           height="142"
+           x="-104"
+           y="632.36218"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         style="font-size:35px;text-align:center;text-anchor:middle"
+         id="flowPara5528-2-2">Total</flowPara><flowPara
+         style="font-size:35px;text-align:center;text-anchor:middle"
+         id="flowPara5681-3">cost</flowPara></flowRoot>    <path
+       style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-opacity:1"
+       d="M 1144.9921,720.08832 955.00787,462.63604"
+       id="path5460-1-3"
+       inkscape:connector-curvature="0" />
+    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5464-5-3"
+       style="font-size:15px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(262.91455,-475.72594)"><flowRegion
+         id="flowRegion5466-9-6"><rect
+           id="rect5468-6-5"
+           width="382"
+           height="148"
+           x="-104"
+           y="632.36218"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         style="font-size:35px;text-align:center;text-anchor:middle"
+         id="flowPara5528-5">Inefficiency of work sacrifice</flowPara></flowRoot>    <flowRoot
+       xml:space="preserve"
+       id="flowRoot5464-5-3-4"
+       style="font-size:15px;font-style:normal;font-weight:normal;text-align:center;line-height:125%;letter-spacing:0px;word-spacing:0px;text-anchor:middle;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+       transform="translate(969.28247,-473.72594)"><flowRegion
+         id="flowRegion5466-9-6-9"><rect
+           id="rect5468-6-5-1"
+           width="394"
+           height="136"
+           x="-104"
+           y="632.36218"
+           style="text-align:center;text-anchor:middle" /></flowRegion><flowPara
+         style="font-size:35px;text-align:center;text-anchor:middle"
+         id="flowPara5528-5-9">Inefficiency of liquidity sacrifice</flowPara></flowRoot>  </g>
+</svg>

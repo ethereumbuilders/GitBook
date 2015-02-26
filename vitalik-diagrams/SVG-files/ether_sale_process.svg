@@ -1,0 +1,560 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   xmlns:dc="http://purl.org/dc/elements/1.1/"
+   xmlns:cc="http://creativecommons.org/ns#"
+   xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+   xmlns:svg="http://www.w3.org/2000/svg"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:sodipodi="http://sodipodi.sourceforge.net/DTD/sodipodi-0.dtd"
+   xmlns:inkscape="http://www.inkscape.org/namespaces/inkscape"
+   version="1.2"
+   width="950"
+   height="1400"
+   id="svg2"
+   inkscape:version="0.48.4 r9939"
+   sodipodi:docname="funding1.svg">
+  <sodipodi:namedview
+     pagecolor="#ffffff"
+     bordercolor="#666666"
+     borderopacity="1"
+     objecttolerance="10"
+     gridtolerance="10"
+     guidetolerance="10"
+     inkscape:pageopacity="0"
+     inkscape:pageshadow="2"
+     inkscape:window-width="1366"
+     inkscape:window-height="719"
+     id="namedview186"
+     showgrid="false"
+     inkscape:zoom="0.5"
+     inkscape:cx="264.91431"
+     inkscape:cy="545.59024"
+     inkscape:window-x="0"
+     inkscape:window-y="25"
+     inkscape:window-maximized="1"
+     inkscape:current-layer="svg2" />
+  <defs
+     id="defs4" />
+  <metadata
+     id="metadata7">
+    <rdf:RDF>
+      <cc:Work
+         rdf:about="">
+        <dc:format>image/svg+xml</dc:format>
+        <dc:type
+           rdf:resource="http://purl.org/dc/dcmitype/StillImage" />
+        <dc:title />
+      </cc:Work>
+    </rdf:RDF>
+  </metadata>
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3116-9-6-8-8-1-9-8-8"
+     d="m 669.91065,419.19554 0,-89.9686" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3118-1-7-8-1-6-7-2-3"
+     d="m 685.91066,406.58888 -16,18.00002" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3120-5-2-2-9-5-8-1-1"
+     d="m 651.91066,408.58888 18,14.00002" />
+  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot2987-4-1-3-1-0"
+     transform="translate(403.98048,315.6887)"><flowRegion
+       id="flowRegion2989-4-6-2-5-7"><rect
+         id="rect2991-1-0-1-7-8"
+         y="122.36218"
+         x="76"
+         height="300"
+         width="390" /></flowRegion><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara5488-5-4-7">SEED = sha3(entropy)</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara3545-2">ENCSEED = AES256(SEED,PW)</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara3547-9">ETHPRIV = sha3(SEED)</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara3551-5">BTCPRIV = sha3(SEED + 01)</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara3553-7">ETHADDR = eth_privtoaddr(ETHPRIV)</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara3555-4">BTCADDR = btc_privtoaddr(BTCPRIV)</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara4424-7">save { seed: ENCSEED, bkp: sha3(SEED + 02), addr: ETHADDR, btcaddr: BTCADDR, email: EMAIL } to ethwallet.json and offer a download link</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara4632">show BTCADDR QR code</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara3549-5" /></flowRoot>  <rect
+     style="fill:none;stroke:#000000;stroke-width:3.43050027;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="rect2985-4-6-0"
+     y="430.92218"
+     x="480.18216"
+     height="311.63559"
+     width="391.63559" />
+  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot2987-4-2"
+     transform="translate(304.98047,623.64608)"><flowRegion
+       id="flowRegion2989-4-0"><rect
+         id="rect2991-1-7"
+         y="122.36218"
+         x="76"
+         height="74"
+         width="178" /></flowRegion><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara3040-63" /></flowRoot>  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot4638"
+     transform="translate(0,347.63782)"><flowRegion
+       id="flowRegion4640"><rect
+         id="rect4642"
+         y="780.83319"
+         x="420.02142"
+         height="42.426407"
+         width="52.325901" /></flowRegion><flowPara
+       id="flowPara4644" /></flowRoot>  <text
+     xml:space="preserve"
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     x="842"
+     y="794"
+     id="text5496"
+     sodipodi:linespacing="125%"><tspan
+       sodipodi:role="line"
+       id="tspan5498"
+       x="842"
+       y="794" /></text>
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:2.98589492;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="rect2985-4"
+     y="38.992947"
+     x="166.99295"
+     height="84.014107"
+     width="206.01411" />
+  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot2987-2"
+     transform="translate(104.01855,-81.353929)"><flowRegion
+       id="flowRegion2989-1"><rect
+         id="rect2991-3"
+         y="122.36218"
+         x="76"
+         height="74"
+         width="178" /></flowRegion><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara2993-9">Download Ethereum python CLI tool</flowPara></flowRoot>  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3116-9-6-8-8-1-9"
+     d="m 264.91064,213.15295 0,-89.9686" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3118-1-7-8-1-6-7"
+     d="m 280.91065,200.54629 -16,18.00002" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3120-5-2-2-9-5-8"
+     d="m 246.91065,202.54629 18,14.00002" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:2.98589492;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="rect2985-4-4"
+     y="37.992947"
+     x="562.99292"
+     height="84.014107"
+     width="206.01411" />
+  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot2987-2-9"
+     transform="translate(494.01854,-74.353931)"><flowRegion
+       id="flowRegion2989-1-7"><rect
+         id="rect2991-3-9"
+         y="122.36218"
+         x="76"
+         height="74"
+         width="192" /></flowRegion><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara2993-9-1">Go to fund.ethereum.org</flowPara></flowRoot>  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3116-9-6-8-8-1-9-2"
+     d="m 666.99999,212.68238 0,-89.9686" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3118-1-7-8-1-6-7-8"
+     d="m 683,200.07572 -16,18.00002" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3120-5-2-2-9-5-8-2"
+     d="m 649,202.07572 18,14.00002" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:3.21942568;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="rect2985-9-1-3"
+     y="225.1097"
+     x="169.10971"
+     height="97.780579"
+     width="205.78058" />
+  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot2987-4-1-3"
+     transform="translate(104.98047,113.64611)"><flowRegion
+       id="flowRegion2989-4-6-2"><rect
+         id="rect2991-1-0-1"
+         y="122.36218"
+         x="76"
+         height="80"
+         width="186" /></flowRegion><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara5488-5">Type &quot;pyethtool genwallet&quot;, enter EMAIL then PW twice</flowPara></flowRoot>  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3116-9-6-8-8-1-9-8"
+     d="m 266.91064,418.45554 0,-89.9686" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3118-1-7-8-1-6-7-2"
+     d="m 282.91065,405.84888 -16,18.00002" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3120-5-2-2-9-5-8-1"
+     d="m 248.91065,407.84888 18,14.00002" />
+  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot2987-4-1-3-1"
+     transform="translate(2.98047,322.9487)"><flowRegion
+       id="flowRegion2989-4-6-2-5"><rect
+         id="rect2991-1-0-1-7"
+         y="122.36218"
+         x="76"
+         height="286"
+         width="394" /></flowRegion><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara5488-5-4">SEED = sha3(entropy)</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara3545">ENCSEED = AES256(SEED,PW)</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara3547">ETHPRIV = sha3(SEED)</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara3551">BTCPRIV = sha3(SEED + 01)</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara3553">ETHADDR = eth_privtoaddr(ETHPRIV)</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara3555">BTCADDR = btc_privtoaddr(BTCPRIV)</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara3557">save { seed: ENCSEED, bkp: sha3(seed + 02), addr: ETHADDR, btcaddr: BTCADDR, email: EMAIL } to ethwallet.json</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara4424">output BTCADDR to stdout</flowPara><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara3549" /></flowRoot>  <rect
+     style="fill:none;stroke:#000000;stroke-width:3.41958237;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="rect2985-4-6"
+     y="430.17676"
+     x="77.176743"
+     height="309.64651"
+     width="391.64651" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:3.31444597;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="rect2985-9-1-3-6"
+     y="225.15723"
+     x="565.15729"
+     height="103.68555"
+     width="205.68556" />
+  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot2987-4-1-3-14"
+     transform="translate(500.98047,113.64613)"><flowRegion
+       id="flowRegion2989-4-6-2-1"><rect
+         id="rect2991-1-0-1-1"
+         y="122.36218"
+         x="76"
+         height="80"
+         width="186" /></flowRegion><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara5488-5-7">Enter email address and password twice</flowPara></flowRoot>  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:2.58391857;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3116-9-6-8-8-1-9-8-6"
+     d="m 358.99999,808.67485 0,-66.74306" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3118-1-7-8-1-6-7-2-6"
+     d="m 375,795.68096 -16,18.00002" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3120-5-2-2-9-5-8-1-6"
+     d="m 341,797.68096 18,14.00002" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:3.21942568;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="rect2985-9-1-3-7"
+     y="823.10974"
+     x="261.10974"
+     height="97.780579"
+     width="205.78058" />
+  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot2987-4-1-3-4"
+     transform="translate(196.98047,711.64613)"><flowRegion
+       id="flowRegion2989-4-6-2-3"><rect
+         id="rect2991-1-0-1-3"
+         y="122.36218"
+         x="76"
+         height="80"
+         width="186" /></flowRegion><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara5488-5-0">Type &quot;pyethtool fundaddress&quot;, returns BTCADDR</flowPara></flowRoot>  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:2.87589407;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3116-9-6-8-8-1-9-8-6-2"
+     d="m 196.99996,1009.3618 0,-269.43598" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3118-1-7-8-1-6-7-2-6-6"
+     d="m 212.99997,996.02144 -16,18.00006" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3120-5-2-2-9-5-8-1-6-7"
+     d="m 178.99997,1000.0214 18,14.0001" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:3.21942568;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="rect2985-9-1-3-7-5"
+     y="1017.4502"
+     x="151.10974"
+     height="97.780579"
+     width="205.78058" />
+  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot2987-4-1-3-4-9"
+     transform="translate(86.98044,917.98661)"><flowRegion
+       id="flowRegion2989-4-6-2-3-6"><rect
+         id="rect2991-1-0-1-3-4"
+         y="122.36218"
+         x="76"
+         height="80"
+         width="186" /></flowRegion><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara5488-5-0-4">Send funds to BTCADDR</flowPara></flowRoot>  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3116-9-6-8-8-1-9-8-6-2-0"
+     d="m 304.99999,1010.2876 0,-89.96858" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3118-1-7-8-1-6-7-2-6-6-0"
+     d="M 321,995.68096 305,1013.681" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3120-5-2-2-9-5-8-1-6-7-1"
+     d="m 287,997.68096 18,14.00004" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3116-9-6-8-8-1-9-8-6-3"
+     d="m 248.99996,1208.6281 0,-89.9686" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3118-1-7-8-1-6-7-2-6-5"
+     d="m 264.99997,1196.0214 -16,18.0001" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3120-5-2-2-9-5-8-1-6-8"
+     d="m 230.99997,1198.0214 18,14.0001" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:3.64117932;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="rect2985-9-1-3-7-0"
+     y="1223.6611"
+     x="137.32057"
+     height="109.35883"
+     width="235.35881" />
+  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot2987-4-1-3-4-0"
+     transform="translate(64.98044,1105.9866)"><flowRegion
+       id="flowRegion2989-4-6-2-3-8"><rect
+         id="rect2991-1-0-1-3-0"
+         y="122.36218"
+         x="76"
+         height="106"
+         width="222" /></flowRegion><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara5488-5-0-0">Type &quot;pyethtool finalize&quot;, enter PW, tool does everything else automatically</flowPara></flowRoot>  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:2.58391857;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3116-9-6-8-8-1-9-8-6-5"
+     d="m 746.99999,810.98324 0,-66.74306" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3118-1-7-8-1-6-7-2-6-50"
+     d="m 763,797.98935 -16,18.00002" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3120-5-2-2-9-5-8-1-6-5"
+     d="m 729,799.98935 18,14.00002" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:4.43853331;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="rect2985-9-1-3-7-3"
+     y="826.02765"
+     x="649.7193"
+     height="144.56148"
+     width="264.56146" />
+  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot2987-4-1-3-4-2"
+     transform="translate(578.98046,711.95452)"><flowRegion
+       id="flowRegion2989-4-6-2-3-63"><rect
+         id="rect2991-1-0-1-3-6"
+         y="122.36218"
+         x="76"
+         height="158"
+         width="256" /></flowRegion><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara5488-5-0-1">Send backup to email, where backup = { OPT1: AES256(SEED+00,PW), OPT2: AES256(SEED,BKP) }</flowPara></flowRoot>  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:2.86530924;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3116-9-6-8-8-1-9-8-6-2-5"
+     d="m 584.99995,1011.6804 0,-267.45635" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3118-1-7-8-1-6-7-2-6-6-5"
+     d="m 600.99996,998.3298 -16,18.0001" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3120-5-2-2-9-5-8-1-6-7-5"
+     d="m 566.99996,1002.3298 18,14.0001" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:2.93108296;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="rect2985-9-1-3-7-5-5"
+     y="1019.6143"
+     x="558.96552"
+     height="98.068916"
+     width="170.06892" />
+  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot2987-4-1-3-4-9-4"
+     transform="translate(474.98043,920.295)"><flowRegion
+       id="flowRegion2989-4-6-2-3-6-3"><rect
+         id="rect2991-1-0-1-3-4-9"
+         y="122.36218"
+         x="76"
+         height="80"
+         width="186" /></flowRegion><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara5488-5-0-4-7">Send funds to BTCADDR</flowPara></flowRoot>  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3116-9-6-8-8-1-9-8-6-2-0-4"
+     d="m 692.99999,1013.3705 0,-43.51755" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3118-1-7-8-1-6-7-2-6-6-0-6"
+     d="m 709,997.9893 -16,18.0001" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3120-5-2-2-9-5-8-1-6-7-1-7"
+     d="m 675,999.9893 18,14.0001" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3116-9-6-8-8-1-9-8-6-3-3"
+     d="m 636.99996,1210.9365 0,-89.9686" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3118-1-7-8-1-6-7-2-6-5-1"
+     d="m 652.99997,1198.3298 -16,18.0001" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3120-5-2-2-9-5-8-1-6-8-7"
+     d="m 618.99996,1200.3298 18.00001,14.0001" />
+  <rect
+     style="fill:none;stroke:#000000;stroke-width:3.37108135;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="rect2985-9-1-3-7-0-9"
+     y="1225.8345"
+     x="525.18549"
+     height="93.628929"
+     width="235.62891" />
+  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot2987-4-1-3-4-0-0"
+     transform="translate(452.98043,1108.295)"><flowRegion
+       id="flowRegion2989-4-6-2-3-8-1"><rect
+         id="rect2991-1-0-1-3-0-6"
+         y="122.36218"
+         x="76"
+         height="106"
+         width="222" /></flowRegion><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara5488-5-0-0-9">Web client does everything else automatically</flowPara></flowRoot>  <rect
+     style="fill:none;stroke:#000000;stroke-width:3.19483614;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="rect2985-9-1-3-7-5-5-9"
+     y="1020.9271"
+     x="761.09741"
+     height="107.80516"
+     width="183.80518" />
+  <flowRoot
+     style="font-size:40px;font-style:normal;font-weight:normal;line-height:125%;letter-spacing:0px;word-spacing:0px;fill:#000000;fill-opacity:1;stroke:none;font-family:Sans"
+     xml:space="preserve"
+     id="flowRoot2987-4-1-3-4-9-4-4"
+     transform="translate(684.9804,903.47596)"><flowRegion
+       id="flowRegion2989-4-6-2-3-6-3-5"><rect
+         id="rect2991-1-0-1-3-4-9-1"
+         y="122.36218"
+         x="76"
+         height="118"
+         width="184" /></flowRegion><flowPara
+       style="font-size:20px;text-align:center;text-anchor:middle"
+       id="flowPara5488-5-0-4-7-2">Recovery process for email + password and email + file</flowPara></flowRoot>  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3116-9-6-8-8-1-9-8-6-2-0-4-2"
+     d="m 845,1016.4493 0,-43.51752" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3118-1-7-8-1-6-7-2-6-6-0-6-2"
+     d="m 861,1001.0681 -16,18.0001" />
+  <path
+     inkscape:connector-curvature="0"
+     style="fill:none;stroke:#000000;stroke-width:3;stroke-linecap:butt;stroke-linejoin:miter;stroke-miterlimit:4;stroke-opacity:1;stroke-dasharray:none"
+     id="path3120-5-2-2-9-5-8-1-6-7-1-7-3"
+     d="m 827,1003.0681 18,14.0001" />
+</svg>
