@@ -32,5 +32,5 @@
    * Get involved
 * Resources
    * [Whitepaper](whitepaper.md)
-* [Ξaster Egg](easter_egg.md)
+* [Ξaster Egg](/vitalik-diagrams/readme.md)
 
