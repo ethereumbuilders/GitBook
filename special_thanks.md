@@ -4,11 +4,15 @@ Through their work, these people make this guide possible. If you feel generous 
 
 ####Vitalik Buterin
 
-####Jeffrey Wilcke
+_Inventor of Ethereum_
 
-####Gavin Wood 
+**Gavin Wood**
 
+_C++/IDE/Whisper/Swarm Lead_
 
+**Jeffrey Wilcke**
+
+_Go/Mist Project Lead_
 
 
 
