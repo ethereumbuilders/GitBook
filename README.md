@@ -1,7 +1,7 @@
 Into the ether
 =======
 
-###Continuing the experiment...
+###Continuing the experiment ...
 
 When the grand experiment that is Bitcoin began, the anonymous wizard desired to test two parameters:
 
@@ -13,7 +13,7 @@ Yet the past five years years have painfully demonstrated a **_third_ missing fe
 
 Ethereum is a modular, stateful, Turing-complete contract scripting system married to a blockchain and developed with a philosophy of simplicity, universal accessibility and generalization. Our goal is to provide a platform for decentralized applications - an android of the cryptocurrency world, where all efforts can share a common set of APIs, trustless interactions and no compromises. 
 
-###...together
+###... together
 
 During the past year there have been a number of developers and researchers who have either worked for Ethereum or working on ideas as volunteers and happen to spend lots of time interacting with the Ethereum community, and this set of people has coalesced into a group dedicated to building out the vision set by Vitalik Buterin in the Ethereum Whitepaper.
 
