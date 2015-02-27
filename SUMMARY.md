@@ -4,7 +4,7 @@
 * [Thank you.](thank_you.md)
    * [This is a knowledge remix](this_is_a_knowledge_remix.md)
    * [aaaaa](build_ubuntu.md)
-   * [Special thanks](special_thanks.md)
+   * [bbbb](build_windows.md)
 * [The Why, How and What](They why, How and What.md)
    * [Ethereum design philosophy](design_philosophy.md)
        * [Design rationale](design_rationale.md)
