@@ -12,7 +12,7 @@ _C++/IDE/Whisper/Swarm Lead_
 
 **Jeffrey Wilcke**
 
-_Go/Mist Project Lead_
+_Go/Mist Project  Lead_
 
 
 
