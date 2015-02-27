@@ -33,5 +33,5 @@
 * Resources
    * [Whitepaper](whitepaper.md)
 * [Ξaster Egg](vitalik-diagrams/readme.md)
-* Summary
+* [Summary](SUMMARY.md)
 
