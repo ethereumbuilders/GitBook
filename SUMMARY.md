@@ -1,6 +1,7 @@
 # Summary
 
 * [Introduction](README.md)
+* [Summary](SUMMARY.md)
 * [Thank you.](thank_you.md)
    * [This is a knowledge remix](this_is_a_knowledge_remix.md)
    * [Special Thanks](special_thanks.md)
@@ -33,5 +34,4 @@
 * Resources
    * [Whitepaper](whitepaper.md)
 * [Ξaster Egg](vitalik-diagrams/readme.md)
-* [Summary](SUMMARY.md)
 
