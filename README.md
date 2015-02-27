@@ -1,7 +1,7 @@
 Into the ether
 =======
 
-[![Join the chat at https://gitter.im/ethereumbuilders/GitBook](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereumbuilders/GitBook?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
+###Continuing the experiment
 
 When the grand experiment that is Bitcoin began, the anonymous wizard desired to test two parameters:
 
@@ -13,8 +13,9 @@ Yet the past five years years have painfully demonstrated a **_third_ missing fe
 
 Ethereum is a modular, stateful, Turing-complete contract scripting system married to a blockchain and developed with a philosophy of simplicity, universal accessibility and generalization. Our goal is to provide a platform for decentralized applications - an android of the cryptocurrency world, where all efforts can share a common set of APIs, trustless interactions and no compromises. 
 
-During the past year there have been a number of developers and researchers who have either worked for Ethereum or working on ideas as volunteers and happen to spend lots of time interacting with the Ethereum community, and this set of people has coalesced into a group dedicated to building out the vision set by Vitalik Buterin in the Ethereum Whitepaper. 
+###Together
 
+During the past year there have been a number of developers and researchers who have either worked for Ethereum or working on ideas as volunteers and happen to spend lots of time interacting with the Ethereum community, and this set of people has coalesced into a group dedicated to building out the vision set by Vitalik Buterin in the Ethereum Whitepaper.
 
 We ask for the community to join us as volunteers, developers, investors and evangelists seeking to enable a fundamentally different paradigm for the Internet and the relationships it provides. 
 
