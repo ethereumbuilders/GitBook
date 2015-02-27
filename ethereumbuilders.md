@@ -16,11 +16,11 @@ Ethereum is a 100% crowd founded, open source technology created out of necessit
 
 Ethereum builders is a self organizing community that thrives on communication, mass collaboration and solution-oriented thinking. Use your creative freedom, **identify what inspires you, own it, and push it.** Take risks, learn from your mistakes, and most of all, have fun. You are not only welcome to experiment here but encouraged, so throw your craziest of ideas on the boards and have fun! 
 
-From here on, together, we can do more :two_men_holding_hands:
+From here on, together, we can do more 
 
 If we can build a better system, then more than 2 billion people will have a way to regain control over their information, privacy and digital lives. This is an important goal, worthy of time, attention and commitment. We deserve a neutral, open and trustworthy Internet with privacy as a standard, not a feature. Period. 
 
-This is the dawn of the crypto renaissance :sunny:
+This is the dawn of the crypto renaissance
 
 
 #Our values
