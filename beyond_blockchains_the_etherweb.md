@@ -1,2 +1,0 @@
-# Beyond Blockchains: The EtherWeb
-
