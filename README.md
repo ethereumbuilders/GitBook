@@ -1,3 +1,5 @@
+###*This guide is still under heavy development. 
+
 Into the ether
 =======
 
