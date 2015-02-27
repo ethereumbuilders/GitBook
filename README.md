@@ -4,10 +4,12 @@ Into the ether
 [![Join the chat at https://gitter.im/ethereumbuilders/GitBook](https://badges.gitter.im/Join%20Chat.svg)](https://gitter.im/ethereumbuilders/GitBook?utm_source=badge&utm_medium=badge&utm_campaign=pr-badge&utm_content=badge)
 
 When the grand experiment that is Bitcoin began, the anonymous wizard desired to test two parameters:
-- a trustless, decentralized database enjoying security enforced by the austere relentlessness of cryptography and
-- a robust transaction system capable of sending value across the world without intermediaries. 
+
+1. **a trustless, decentralized database enjoying security enforced by the austere relentlessness of cryptography**
+
+2. **a robust transaction system capable of sending value across the world without intermediaries.**
  
-Yet the past five years years have painfully demonstrated a third **missing feature: a sufficiently powerful Turing-complete scripting language**. Up until this point, most innovation in advanced applications such as domain and identity registration, user-issued currencies, smart property, smart contracts, and decentralized exchange has been highly fragmented, and implementing any of these technologies has required creating an entire meta-protocol layer or even a specialized blockchain. Theoretically, however, each and every one of these innovations and more can potentially be made hundreds of times easier to implement, and easier to scale, if only there was a stronger foundational layer with a powerful scripting language for all of these protocols to build upon. And this need is what we seek to satisfy.
+Yet the past five years years have painfully demonstrated a **_third_ missing feature: a sufficiently powerful Turing-complete scripting language**. Up until this point, most innovation in advanced applications such as domain and identity registration, user-issued currencies, smart property, smart contracts, and decentralized exchange has been highly fragmented, and implementing any of these technologies has required creating an entire meta-protocol layer or even a specialized blockchain. Theoretically, however, each and every one of these innovations and more can potentially be made hundreds of times easier to implement, and easier to scale, if only there was a stronger foundational layer with a powerful scripting language for all of these protocols to build upon. And this need is what we seek to satisfy.
 
 Ethereum is a modular, stateful, Turing-complete contract scripting system married to a blockchain and developed with a philosophy of simplicity, universal accessibility and generalization. Our goal is to provide a platform for decentralized applications - an android of the cryptocurrency world, where all efforts can share a common set of APIs, trustless interactions and no compromises. 
 
