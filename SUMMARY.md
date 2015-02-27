@@ -30,7 +30,6 @@
 * [Ethereum.Builders](ethereumbuilders.md)
    * [Open collaboration system](open_collaboration_system.md)
    * Get involved
-* [Special thanks](special_thanks.md)
 * Resources
    * [Whitepaper](whitepaper.md)
 * [Ξaster Egg](vitalik-diagrams/readme.md)
