@@ -32,6 +32,7 @@
    * Get involved
 * Resources
    * [Whitepaper](whitepaper.md)
+   * Glossary
 * [Ξaster Egg](vitalik-diagrams/readme.md)
 * Tutorials
 
