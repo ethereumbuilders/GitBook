@@ -33,6 +33,7 @@
 * Resources
    * [Whitepaper](whitepaper.md)
    * [Glossary](glossary.md)
+   * Ethereum Mining Algo
 * [Ξaster Egg](vitalik-diagrams/readme.md)
 * Tutorials
 
