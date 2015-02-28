@@ -1,3 +1,3 @@
 # Ethereum Mining Algo
 
-https://github.com/ethereum/wiki/wiki/ethash
+{% include "git+https://github.com/ethereum/wiki.wiki.git/ethash.md" %}
