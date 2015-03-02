@@ -35,5 +35,5 @@
    * [Glossary](glossary.md)
    * [Ethereum Mining Algo](ethereum_mining_algo.md)
 * [Ξaster Egg](vitalik-diagrams/readme.md)
-* Tutorials
+* [Tutorials](tutorials.md)
 
