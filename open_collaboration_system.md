@@ -5,7 +5,7 @@
 
 In this guide it will be assumed that you already have a GitHub account and [Chrome on your machine][1]. If you don't have a GitHub account yet you can easily [get one here][2]. 
 
-<img src="/uploads/default/40/a57b769af1448548.png" width="690" height="391"> 
+<img src="http://forum.ethereum.builders//uploads/default/40/a57b769af1448548.png" width="690" height="391"> 
 
 **In this guide you'll learn how to setup the following:**
 
@@ -24,8 +24,8 @@ Transform your usual GitHub account into a powerful project management tool in j
 
 * You can check if everything went okay by checking [your Github application settings](https://github.com/settings/applications). You should see ZenHub as one of the authorized applications.
 
-<img src="/uploads/default/51/7aa064deb75b8a8a.png" width="690" height="277"> 
-<img src="/uploads/default/52/d750ae648c4c1a84.png" width="690" height="38"> 
+<img src="http://forum.ethereum.builders/uploads/default/51/7aa064deb75b8a8a.png" width="690" height="277"> 
+<img src="http://forum.ethereum.builders/uploads/default/52/d750ae648c4c1a84.png" width="690" height="38"> 
 
 If ZenHub has been correctly installed, then a new tab called **"board(s)"** should appear on your GitHub repo pages. The **board(s)** are populated by the issues created, each new issue becoming a card on the new ZenHub board tab. 
 
@@ -52,17 +52,17 @@ One of the biggest problems surrounding open source, community based projects is
 
 2. Create, contribute or solve the current issues listed in the [ethereum builders GitHub repos][7]
 
-<img src="/uploads/default/49/c64df7f3e1e2680b.png" width="689" height="153">
+<img src="http://forum.ethereum.builders/uploads/default/49/c64df7f3e1e2680b.png" width="689" height="153">
  
 This is the screen you'll see when opening an issue on bountysource. 
 
-<img src="/uploads/default/50/75a077d5b29328e7.png" width="690" height="162"> 
+<img src="http://forum.ethereum.builders/uploads/default/50/75a077d5b29328e7.png" width="690" height="162"> 
 
 
 
 Things will get more interesting once we'll have the possibility of creating DAOs but in the meantime this is a pretty cool solution as well. You're fully setup now to contribute to all the existent issues and also create new bounties.
 
-<img src="/uploads/default/55/8cae536fb9ea9dae.png" width="690" height="246"> 
+<img src="http://forum.ethereum.builders/uploads/default/55/8cae536fb9ea9dae.png" width="690" height="246"> 
 
 -------
 
@@ -70,7 +70,7 @@ Things will get more interesting once we'll have the possibility of creating DAO
 
 Besides GitHub we also use an application called Gitter. Very straightforward setup process, incredibly well suited app for distributed communities and projects like this one. With this tool you're able to transform your favorite repos into your favorite chatrooms ^_^
 
-<img src="/uploads/default/23/511fabd217df7170.png" width="690" height="225"> 
+<img src="http://forum.ethereum.builders/uploads/default/23/511fabd217df7170.png" width="690" height="225"> 
 
 Get started by [signing up for the free account][8] and allow it the access it needs in order to function properly. 
 
