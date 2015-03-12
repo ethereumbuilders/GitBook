@@ -5,7 +5,7 @@
 
 In this guide it will be assumed that you already have a GitHub account and [Chrome on your machine][1]. If you don't have a GitHub account yet you can easily [get one here][2]. 
 
-<img src="http://forum.ethereum.builders//uploads/default/40/a57b769af1448548.png" width="690" height="391"> 
+<img src="http://forum.ethereum.builders/uploads/default/40/a57b769af1448548.png" width="690" height="391"> 
 
 **In this guide you'll learn how to setup the following:**
 
