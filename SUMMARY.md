@@ -28,7 +28,6 @@
    * [Serpent Tutorials](serpent_tutorials.md)
    * [Solidity Tutorials](solidity_tutorials.md)
 * [Ethereum.Builders](ethereumbuilders.md)
-   * [Open collaboration system](open_collaboration_system.md)
 * Resources
    * [Whitepaper](whitepaper.md)
    * [Glossary](glossary.md)
