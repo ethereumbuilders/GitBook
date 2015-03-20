@@ -1,6 +1,6 @@
 # Special thanks
 
-Through their work, these people make this guide possible. If you feel generous and want to support them in their work, you can send a token of appreciation at the addresses listed below their name(s). 
+Through their work, these people make this guide possible. 
 
 ####Vitalik Buterin
 
@@ -15,6 +15,7 @@ _C++/IDE/Whisper/Swarm Lead_
 _Go/Mist Project  Lead_
 
 
+*(the list will get bigger soon)*
 
 ...
 
