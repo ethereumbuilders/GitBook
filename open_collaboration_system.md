@@ -77,12 +77,7 @@ For those of you that don't like the permissions requested please read this:
 
 #Highfive! You're all set!
 
-###Check out also our next guides:
 
-- [How to get your idea "out there"][9]
-- [How to get your project "out there"][10]
-- [How to contribute knowledge and accelerate growth][11]
-- [How to use the community marketplace][12]
 
 
   [1]: https://github.com/ethereumbuilders
@@ -93,7 +88,3 @@ For those of you that don't like the permissions requested please read this:
   [6]: https://www.bountysource.com/signin
   [7]: https://github.com/ethereumbuilders
   [8]: https://gitter.im/login/github?action=signup&source=intro-signup
-  [9]: http://ethereum.builders/t/how-to-get-your-idea-out-there/126
-  [10]: http://ethereum.builders/t/how-to-get-your-project-out-there/127
-  [11]: http://ethereum.builders/t/how-to-contribute-knowledge-and-accelerate-growth/133
-  [12]: http://ethereum.builders/t/how-to-use-the-community-marketplace/134
