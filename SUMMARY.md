@@ -29,7 +29,6 @@
    * [Solidity Tutorials](solidity_tutorials.md)
 * [Ethereum.Builders](ethereumbuilders.md)
    * [Open collaboration system](open_collaboration_system.md)
-   * [Get involved](get_involved.md)
 * Resources
    * [Whitepaper](whitepaper.md)
    * [Glossary](glossary.md)
