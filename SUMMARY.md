@@ -27,7 +27,6 @@
    * [Serpent Features](serpent_features.md)
    * [Serpent Tutorials](serpent_tutorials.md)
    * [Solidity Tutorials](solidity_tutorials.md)
-* [Ethereum.Builders](ethereumbuilders.md)
 * Resources
    * [Whitepaper](whitepaper.md)
    * [Glossary](glossary.md)
