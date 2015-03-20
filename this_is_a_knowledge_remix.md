@@ -8,5 +8,5 @@ This book represents a mashup of wiki pages, tutorials and other relevant inform
 
 This guide tries to create an **easy to access ethereum knowledge base** that can help people from all around the world to **start experimenting with blockchain technologies**.
 
-It is our belief that the crypto space has enough room for cooperation between many of the different blockchain projects. Hopefully through this work, we will get closer to a reality in which we all realize that as long as we experiment with blockchain related technologies, we enrich the decentralized ecosystem in our own unique ways - contributing to something bigger than any individual project or initiative.
+Hopefully through this work, we will get closer to a reality in which we all realize that as long as we experiment with blockchain related technologies, we enrich the decentralized ecosystem in our own unique ways - contributing to something bigger than any individual project or initiative.
 
