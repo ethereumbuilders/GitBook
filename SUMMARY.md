@@ -30,6 +30,5 @@
 * Resources
    * [Whitepaper](whitepaper.md)
    * [Glossary](glossary.md)
-   * [Ethereum Mining Algo](ethereum_mining_algo.md)
 * [Ξaster Egg](vitalik-diagrams/readme.md)
 
