@@ -1,1 +1,1 @@
-{% include "git+https://github.com/ethereum/go-ethereum.wiki.git/Instructions-for-getting-the-Go-implementation-of-Ethereum-and-the-Mist-browser-installed-on-Ubuntu-14.04-(trusty).md" %}
+{% include "git+https://github.com/ethereum/go-ethereum.wiki.git/Building-Instructions-for-Ubuntu.md" %}
