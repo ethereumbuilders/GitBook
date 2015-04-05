@@ -1,7 +1,7 @@
 This chapter contains **all the diagrams Vitalik created, adapted or used** until 26 Feb 2015 to explain concepts in various blog posts, presentations and forum posts **since ethereum's inception**. 
 
 
-In a true open source fashion, if you want to reuse, edit or update some of the diagrams you can  find the editable [.svg files here](https://github.com/ethereumbuilders/GitBook/tree/master/vitalik-diagrams/SVG-files).
+In a true open source fashion, if you want to reuse, edit or update some of the diagrams you can  find the editable [.svg files here](https://github.com/ethereumbuilders/GitBook/tree/master/vitalik-diagrams/SVG-files). The only request would be to share back with the community :)
 
 ###Enjoy!
 
