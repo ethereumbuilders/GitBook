@@ -6,3 +6,4 @@
 * [Italian](it/)
 * [German](gr/)
 * [French](fr/)
+* [Romanian](ro/)
