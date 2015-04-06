@@ -1,4 +1,4 @@
-# LANGS.md
+### Choose your language
 
 * [English](en/)
 * [Chinese](cn/)
