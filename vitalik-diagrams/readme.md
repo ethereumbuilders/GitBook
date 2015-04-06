@@ -510,14 +510,6 @@ ___
 ![](strip.png)
 
 ---
-##Structure 1
-![](structure1.png)
-
----
-##Structure 2
-![](structure2.png)
-
----
 ##Supply chart
 ![](supplychart.png)
 
