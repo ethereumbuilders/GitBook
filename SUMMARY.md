@@ -31,5 +31,5 @@
    * [Whitepaper](whitepaper.md)
    * [Glossary](glossary.md)
 * [Ξaster Egg](vitalik-diagrams/readme.md)
-* LANGS.md
+* [LANGS.md](langsmd.md)
 
