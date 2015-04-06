@@ -1,4 +1,4 @@
-# Summary
+# Sumar
 
 * [Introducere](README.md)
 * [Thank you.](thank_you.md)
