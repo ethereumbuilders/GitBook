@@ -1,6 +1,5 @@
 # Summary
 
-* introduction
 * [Introduction](en/README.md)
 * [Thank you.](en/thank_you.md)
    * [This is a knowledge remix](en/this_is_a_knowledge_remix.md)
