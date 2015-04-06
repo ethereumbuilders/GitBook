@@ -4,6 +4,7 @@
 * [Chinese](cn)
 * [Español](es)
 * [Italian](it)
-* [German](gr)
+* [German](de)
 * [French](fr)
 * [Romanian](ro)
+* [Japanese](jp)
