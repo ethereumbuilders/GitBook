@@ -6,3 +6,6 @@
 * [Italian](it)
 * [German](de)
 * [French](fr)
+* [Romanian](ro)
+* [Japanese](jp)
+* [Korean](kr)
