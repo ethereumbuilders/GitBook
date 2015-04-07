@@ -1,3 +1,3 @@
 # Glossary
 
-{% include "git+https://raw.githubusercontent.com/wiki/ethereum/wiki/Glossary.md" %}
+{% include "git+https://github.com/ethereum/wiki/wiki/Glossary.md" %}
