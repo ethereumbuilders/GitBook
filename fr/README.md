@@ -10,9 +10,9 @@ Entre l'Ether
 
 Lorsque la grande expérience que représente Bitcoin a commence, son créateur/magicien anonyme souhaitait tester deux paramètres:
 
-1. **Une base de donnes décentralisée, ne requérant aucune confiance, et qui se reposerait sur la sécurité procurée de manière si implacable par la cryptographie.
+1. **Une base de donnes décentralisée, ne requérant aucune confiance, et qui se reposerait sur la sécurité procurée de manière si implacable par la cryptographie.**
 
-2. **Un système de transaction capable d’envoyer de la valeur a l’autre bout du monde et sans intermédiaires.
+2. **Un système de transaction capable d’envoyer de la valeur a l’autre bout du monde et sans intermédiaires.**
 
 Cependant ces cinq dernières années ont démontrées qu’une **troisième fonctionnalité est manquante: un langage de script puissant et Turing-complet**. Jusqu'à présent, la plupart des innovations au sein d’applications avancées telles que l’enregistrement de domaines et d'identités, de création de monnaies, de propriétés intelligente, de contrats intelligents et d'échanges décentralisés ont été extrêmement fragmentées, et les implémenter requiert la création d’une couche de protocole méta ou même d’une chaîne-de-blocs spécialisée. En théorie cependant, chacune des ces innovations, et plus, pourrait être rendue des centaines de fois plus simple a implémenter, et rendue élargissable beaucoup plus simplement, s’il y avait une simple fondation avec un langage de script que tous ces protocoles pourraient utiliser comme tremplin. Et c’est le problème que nous essayons de régler.
 
