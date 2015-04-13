@@ -1,4 +1,4 @@
-Appunti sulla Scalabilità dei Protocolli Blockchain (version 0.0.2)
+#Appunti sulla Scalabilità dei Protocolli Blockchain (version 0.0.2)
 Vitalik Buterin (Ethereum)
 
 Commentatori e collaboratori: Gavin Wood, Vlad Zamfir (Ethereum),
