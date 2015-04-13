@@ -3,7 +3,7 @@
 Guida di costruttori Ethereum. Qui potete trovare i documenti di Ethereum tradotti in Italiano
 =======
 
-L'esperimento continua ...
+## L'esperimento continua ...
 
 Quando e' iniziato quel grande esperimento che prende il nome di *Bitcoin*, il mago anonimo che l'ha sviluppato ha voluto testare due parametri:
 
