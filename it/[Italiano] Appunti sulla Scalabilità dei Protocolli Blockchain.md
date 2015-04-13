@@ -5,7 +5,7 @@ Commentatori e collaboratori: Gavin Wood, Vlad Zamfir (Ethereum),
 Jeff Coleman (Kryptokit)
 Marzo 14-31, 2015 Capitolo 1
 
-Introduzione
+##Introduzione
 
 Allo stato attuale, tutti i protocolli di consenso blockchain, che vengono effettevamente utilizzati, hanno una limitazione critica: ogni nodo del network deve elaborare ogni transazione. Sebbene questo requisito assicuri un alto grado di sicurezza, rendendo del tutto impossibile ad un attaccante, che abbia perfino il controllo su ogni nodo che partecipa al processo di consenso, di convincere il network riguardo la validità di una transazione invalida, ciò richiede un costo molto alto: ogni protocollo blockchain che funziona in questo modo è obbligato a scegliere tra limitare sè stesso entro un tetto massimo di capacità di trasmissione, con il risultato di un costo alto per ciascuna transazione, e permettere un alto grado di centralizzazione.
 
