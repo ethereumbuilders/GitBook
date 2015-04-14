@@ -28,6 +28,6 @@
    * [Tutorials su Serpent](serpent_tutorials.md)
    * [Tutorials su Solidity](solidity_tutorials.md)
 * Risorse
-   * [Il Whitepaper](whitepaper.md)
+   * [Il Whitepaper]([Italian]-Libro-Bianco.md)
    * [Glossario](glossary.md)
 
