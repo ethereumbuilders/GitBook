@@ -11,7 +11,7 @@
    * [Cos e' Etheruem?](what_is_ethereum.md)
 * [Installare il Client di Ethereum](installing_ethereum.md)
    * [Su Ubuntu](building_on_ubuntu.md)
-       * [C++](ubuntu_cpp_build.md)
+       * [C++]([Italian] ubuntu_cpp_build.md)
        * [Go](ubuntu_go_build.md)
    * [Su Mac OS](building_on_mac_os.md)
        * [C++](mac_cpp_build.md)
