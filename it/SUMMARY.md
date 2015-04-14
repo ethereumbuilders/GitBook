@@ -1,7 +1,7 @@
 # Sommario
 
 * [Introduzione](README.md)
-* [Ringraziamenti](thank_you.md)
+* [Ringraziamenti]([Italian]-ringraziamenti.md)
    * [Ripasso conoscitivo]([Italian]-ripasso_conoscitivo.md)
    * [Ringraziamenti speciali](special_thanks.md)
    * [Benvenute collaborazioni](open_collaboration_welcomed.md)
