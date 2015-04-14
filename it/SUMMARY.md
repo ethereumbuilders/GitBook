@@ -2,7 +2,7 @@
 
 * [Introduzione](README.md)
 * [Ringraziamenti](thank_you.md)
-   * [Ripasso conoscitivo]([Italian]ripasso_conoscitivo.md)
+   * [Ripasso conoscitivo]([Italian]-ripasso_conoscitivo.md)
    * [Ringraziamenti speciali](special_thanks.md)
    * [Benvenute collaborazioni](open_collaboration_welcomed.md)
 * [Il Perche', il Come e il Quando ](They why, How and What.md)
