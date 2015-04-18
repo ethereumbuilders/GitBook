@@ -4,7 +4,7 @@
 * [Ringraziamenti]([Italian]-ringraziamenti.md)
    * [Ripasso conoscitivo]([Italian]-ripasso_conoscitivo.md)
    * [Ringraziamenti speciali]([Italian]-ringraziamenti_speciali.md)
-   * [Benvenute collaborazioni](open_collaboration_welcomed.md)
+   * [Benvenute collaborazioni]([Italian]benvenute collaborazioni.md)
 * [Il Perche', il Come e il Quando ](They why, How and What.md)
    * [La filosofia di progettazione di Ethereum](design_philosophy.md)
        * [Design rationale](design_rationale.md)
