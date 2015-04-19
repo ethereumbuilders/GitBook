@@ -5,7 +5,7 @@
    * [Ripasso conoscitivo]([Italian]-ripasso_conoscitivo.md)
    * [Ringraziamenti speciali]([Italian]-ringraziamenti_speciali.md)
    * [Collaborazioni benvenute]([Italian]benvenute_collaborazioni.md)
-* [Il Perche', il Come e il Quando ](They why, How and What.md)
+* [Il Perche', il Come e il Quando ]([Italian]il_perche_il_come_il_quando.md)
    * [La filosofia di progettazione di Ethereum](design_philosophy.md)
        * [Design rationale](design_rationale.md)
    * [Cos e' Etheruem?](what_is_ethereum.md)
