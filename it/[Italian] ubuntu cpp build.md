@@ -59,9 +59,9 @@ cmake ..
 
 Facoltativo: Potete configurare la compilazione in diversi modi semplicemente passando dei determinati parametri al comando cmake di cui sopra:
 ```
-cmake .. -DCMAKE_BUILD_TYPE=Release -DBUNDLE=minimal # Compile minimal amount, just enough for a node, enable compiler optimsations.
-cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUNDLE=user -DFATDB=1 # Compile enough for normal usage and with support for the full chain explorer
-cmake .. -DBUNDLE=full -DGUI=0 # builds only the commandline-clients; no need to bother with the Qt dependencies.
+cmake .. -DCMAKE_BUILD_TYPE=Release -DBUNDLE=minimal # Compila una quantita' minima, sufficiente per un singolo nodo, e attiva l'ottimizzazione del compilatore.
+cmake .. -DCMAKE_BUILD_TYPE=Debug -DBUNDLE=user -DFATDB=1 # Compila tanto quanto basta per un utilizzo normale e con il supporto per l'esploratore dell'intera chain
+cmake .. -DBUNDLE=full -DGUI=0 # compila solamente il cliente a linea di comando; nessun bisogno di preoccuparsi delle dependencies di Qt.
 ```
 
 
@@ -163,9 +163,9 @@ export CMAKE_PREFIX_PATH=<Qt installation directory>/Qt/5.*/gcc
 Qui i pacchetti necessari sono piu' o meno gli stessi, ma dato che alcune dependencies non sono disponibili per queste versioni di Ubuntu, il processo di installazione e' un po' diverso:
 
 ```
-sudo apt-get install build-essential g++-4.8 git cmake libboost1.53-all-dev # for build
-sudo apt-get install libncurses5-dev automake libtool unzip libgmp-dev libleveldb-dev yasm libminiupnpc-dev libreadline-dev scons # for ethereum
-sudo apt-get install libcurl4-openssl-dev # for json-rpc serving client
+sudo apt-get install build-essential g++-4.8 git cmake libboost1.53-all-dev # per la compilazione
+sudo apt-get install libncurses5-dev automake libtool unzip libgmp-dev libleveldb-dev yasm libminiupnpc-dev libreadline-dev scons # per ethereum
+sudo apt-get install libcurl4-openssl-dev # per il client di servizio di json-rpc
 ```
 
 ## Precise 12.04
