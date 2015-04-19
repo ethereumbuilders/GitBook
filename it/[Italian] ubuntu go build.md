@@ -17,9 +17,9 @@ Adesso scrivete `mist` per l'interfaccia grafica o `geth` per la linea di comand
 
 In alternativa, potete installare solamente la interfaccia a linea di comando o solo l'interfaccia grafica, rispettivamente tramite `apt-get install geth` o `apt-get install mist`.
 
-## Opzione 2: Installazione automatico
+## Opzione 2: Installazione automatica
 
-**Nota** Obsoleto, per favore usate le PPA.
+**Nota** Sezione obsoleta, per favore usate le PPA.
 
 [Lo script di installazione di Mist](https://gist.github.com/tgerring/d4ab3f1672ed91a53c6c) installera' tutto cio' che e' necessario su una installazione di Ubuntu 14.04 ed iniziera' l'esecuzione di Mist.
 
