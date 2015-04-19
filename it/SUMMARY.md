@@ -6,7 +6,7 @@
    * [Ringraziamenti speciali]([Italian]-ringraziamenti_speciali.md)
    * [Collaborazioni benvenute]([Italian]benvenute_collaborazioni.md)
 * [Il Perche', il Come e il Quando ]([Italian]il_perche_il_come_il_quando.md)
-   * [La filosofia di progettazione di Ethereum](design_philosophy.md)
+   * [La filosofia di progettazione di Ethereum]([Italian]La_filosofia_di_progettazione_di_Ethereum.md)
        * [Design rationale](design_rationale.md)
    * [Cos e' Etheruem?](what_is_ethereum.md)
 * [Installare il Client di Ethereum](installing_ethereum.md)
