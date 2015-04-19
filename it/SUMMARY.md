@@ -12,7 +12,7 @@
 * [Installare il Client di Ethereum](installing_ethereum.md)
    * [Su Ubuntu](building_on_ubuntu.md)
        * [C++]([Italian] ubuntu cpp build.md)
-       * [Go](ubuntu_go_build.md)
+       * [Go]([Italian] ubuntu_go_build.md)
    * [Su Mac OS](building_on_mac_os.md)
        * [C++](mac_cpp_build.md)
        * [Go](mac_go_build.md)
