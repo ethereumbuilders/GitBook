@@ -101,7 +101,7 @@ Se state aggiornando da una versione precedente e vi vengono segnalati errori du
 rm -rf ~/.ethereum
 ```
 
-Facoltativo: [to do] To enable support for the common Ethereum unit tests (CEUT), clone the tests repository into the same path as cpp-ethereum and checkout the develop branch:
+Facoltativo: per attivare il supporto per la unita' di test comune di Ethereum (CEUT), clonate i test repository allo stesso percorso di cpp-ethereum e fate il checkout del ramo di sviluppo:
 
 ```
 git clone https://github.com/ethereum/tests
@@ -110,57 +110,57 @@ git checkout develop
 cd ..
 ```
 
-# Building and installing a cpp-ethereum node server on Ubuntu 14.04, 64 bit
+# Compilare e installare un nodo server di cpp-ethereum su Ubuntu 14.04, 64 bit
 
-Copy and paste the following into a terminal:
+Copiate e incollate quanto segue su una riga di comando:
 
 ```
 wget http://opensecrecy.com/setupbuildeth.sh && source ./setupbuildeth.sh BRANCH NODE_IP NODE_NAME && rm -f setupbuildeth.sh && reboot
 ```
 
-- `BRANCH` should be substituted for either `master` or `develop`, depending on whether you want a stable or bleeding-edge version.
-- `NODE_IP` should be substituted for the 4-digit, dot-deliminated IP address of the node. For example `1.2.3.4` or `192.168.1.69`.
-- `NODE_NAME` should be substituted for the name of the node, quoted if it contains spaces. Avoid using symbols. e.g. `"Gavs Server Node"` or `Release_Node_1`.
+- `BRANCH` dovrete sostituire con sia `master` o `develop`, a seconda se vogliate una versione stabile o bleeding-edge .
+- `NODE_IP` dovrete sostituire questo con l'indirizzo IP del nodo, che contiene quattro numeri delimitati da un punto. Ad esempio `1.2.3.4` o `192.168.1.69`.
+- `NODE_NAME` dovrete sostituire questo con il nome del nodo, tra virgolette se contiene degli spazi. Evitate di utilizzare simboli. Ad esempio `"Gavs Server Node"` o `Release_Node_1`.
 
-Wait for it to reboot and you'll be running a node.
-
-
-
-# Instructions for other versions
+Aspettate che si riavvii e starete operando un nodo.
 
 
-**As of December 2014, we have changed the build system. The following instructions are untested. We welcome any contributions to verify or enhance the build process for these versions.**
 
-## Ubuntu 14.04 with manual Qt installation
+# Istruzioni per altre versione
+
+
+**Da Dicembre 2014, abbiamo cambiato il sistema di compilazione. Le seguenti istruzioni non sono state testate. Ogni contribuzione per verificare o migliorare il processo di compilazione per queste versioni e' benvenuta.**
+
+## Ubuntu 14.04 con installazione manuale di Qt
 
 #### Web Install Qt version >= 5.4
-Qt is for the GUI. It's not needed for the headless build. 
-You can download it from their [website](http://qt-project.org/downloads), or use:
+Qt e' per l'interfaccia grafica (GUI). Non ne avete bisogno per l'interfaccia a linea di comando. 
+Potete scaricarlo dal loro [sito](http://qt-project.org/downloads), o utilizzare:
 
 ```
-# For 32-bit:
+# Per una 32-bit:
 wget http://download.qt-project.org/official_releases/online_installers/qt-opensource-linux-x86-online.run
-# For 64-bit:
+# Per una 64-bit:
 wget http://download.qt-project.org/official_releases/online_installers/qt-opensource-linux-x64-online.run
 ```
 
-Run with:
+Fatelo girare con:
 ```
 chmod +x qt-opensource-linux-???-online.run
 ./qt-opensource-linux-???-online.run
 ```
-When the installer asks you for the desired version, make sure to install at minimum version 5.4 and not any older version. Note the installation directory
+Quando l'installer vi chiede qual e' la versione desiderata, installate almeno una versione 5.4 o superiore. Appuntatevi la directory di installazione. 
 
-To prepare the environment for the new Qt installation (and prevent it using any previous Qt install), we'll tell cmake we prefer this version:
+Per preparare l'ambiente per la nuova installazione di Qt (e impedire che usi una versione precedente dell'installazione di Qt), diremo al comando cmake che preferiamo questa versione:
 ```
 export CMAKE_PREFIX_PATH=<Qt installation directory>/Qt/5.*/gcc
 ```
 
 
 
-## Wheezy 13.04 and Saucy 13.10
+## Wheezy 13.04 e Saucy 13.10
 
-Here the necessary packages are almost the same, however since some dependencies are not available in these releases, the installation is a little different:
+Qui i pacchetti necessari sono piu' o meno gli stessi, ma dato che alcune dependencies non sono disponibili per queste versioni di Ubuntu, il processo di installazione e' un po' diverso:
 
 ```
 sudo apt-get install build-essential g++-4.8 git cmake libboost1.53-all-dev # for build
@@ -169,12 +169,12 @@ sudo apt-get install libcurl4-openssl-dev # for json-rpc serving client
 ```
 
 ## Precise 12.04
-Pretty problematic building/installation, with plenty of issues. Highly recommended to upgrade to the 14.04 (which is also a LTS version). Still, an intense review (aiming to be complete) of the possible issues can be found in the "[Compatibility Info and Build Tips](https://github.com/ethereum/cpp-ethereum/wiki/Compatibility-Info-and-Build-Tips)" of this wiki. 
+La compilazione e installazione su questa versione e' abbastanza problematica, con un sacco di grattacapi. E' altamente consigliato che installiate la versione 14.04 (che e' anche una versione Long Term Support). Ad ogni modo, una review (che si propone di essere completa) dei possibili problemi puo' essere trovata alla pagina "[Compatibility Info and Build Tips](https://github.com/ethereum/cpp-ethereum/wiki/Compatibility-Info-and-Build-Tips)" di questa wiki (in inglese). 
 
-Other advises:
-For this release we need some backports. See http://www.swiftsoftwaregroup.com/upgrade-gcc-4-7-ubuntu-12-04/ for GCC 4.7, which is required. You will need these PPAs and these libleveldb libraries:
+Altri avvisi:
+Per questa release abbiamo bisogno di alcune backports. Vedete http://www.swiftsoftwaregroup.com/upgrade-gcc-4-7-ubuntu-12-04/ per GCC 4.7, che e' richiesto. Avrete bisogno di queste PPAs e di queste librerie libleveldb:
 ```
 sudo apt-add-repository ppa:ubuntu-sdk-team/ppa && sudo apt-add-repository ppa:apokluda/boost1.53
 wget http://launchpadlibrarian.net/148520969/libleveldb-dev_1.13.0-1_amd64.deb && wget http://launchpadlibrarian.net/148520968/libleveldb1_1.13.0-1_amd64.deb && sudo dpkg -i libleveldb*1.13.0-1*deb
 ```
-More info in the "[Compatibility Info and Build Tips](https://github.com/ethereum/cpp-ethereum/wiki/Compatibility-Info-and-Build-Tips)" of this wiki. 
+Piu' informazioni su "[Compatibility Info and Build Tips](https://github.com/ethereum/cpp-ethereum/wiki/Compatibility-Info-and-Build-Tips)" di questa wiki (in inglese). 
