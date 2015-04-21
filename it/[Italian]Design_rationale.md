@@ -26,16 +26,16 @@ Bitcoin, allo stesso modo di molti dei suoi derivati, immagazzina i dettagli dei
 
 # [to do]
 
-A user's "balance" in the system is thus the total value of the set of coins for which the user has a private key capable of producing a valid signature.
+Il "saldo" di un utente nel sistema e' percio' il valore totale di un set di moneta per il quale un utente possiede una chiave privata in grado di produrre una firma valida.
 
 ![](https://bitcoin.org/img/dev/en-transaction-propagation.svg)  
-(Image from https://bitcoin.org/en/developer-guide)  
+(Immagine da https://bitcoin.org/en/developer-guide)  
 
-Ethereum jettisons this scheme in favor of a simpler approach: the state stores a list of accounts where each account has a balance, as well as Ethereum-specific data (code and internal storage), and a transaction is valid if the sending account has enough balance to pay for it, in which case the sending account is debited and the receiving account is credited with the value. If the receiving account has code, the code runs, and internal storage may also be changed, or the code may even create additional messages to other accounts which lead to further debits and credits.
+Ethereum scarta questo schema a favore di un approccio piu' semplice: lo stato immagazzina una lista di conti dove ogni conto ha sia un saldo che alcuni dati specifici ad Ethereum (codice e immagazzinamento interno), e una transazione e' valida che l'account mittente possiede un saldo sufficiente per pagarla, nel quale caso l'account mittente viene addebbidato e l'account ricevente viene accreditato con la somma corrispondente. Se l'account ricevente ha del codice, il codice viene eseguito, l'immagazzinamento interno puo' anche cambiare, o il codice puo' persino creare messaggi aggiuntivi ad altri account che condocuno a ulteriori addebbitamenti e accreditamenti. 
 
-The benefits of UTXOs are:
+I benefici di un sistema UTXOs sono che:
 
-1. **Higher degree of privacy**: if a user uses a new address for each transaction that they receive then it will often be difficult to link accounts to each other. This applies greatly to currency, but less to arbitrary dapps, as arbitrary dapps often necessarily involve keeping track of complex bundled state of users and there may not exist such an easy user state partitioning scheme as in currency.
+1. **Si ha un grado piu' elevato di privacy**: if a user uses a new address for each transaction that they receive then it will often be difficult to link accounts to each other. This applies greatly to currency, but less to arbitrary dapps, as arbitrary dapps often necessarily involve keeping track of complex bundled state of users and there may not exist such an easy user state partitioning scheme as in currency.
 2. **Potential scalability paradigms**: UTXOs are more theoretically compatible with certain kinds of scalability paradigms, as we can rely on only the owner of some coins maintaining a Merkle proof of ownership, and even if everyone including the owner decides to forget that data then only the owner is harmed. In an account paradigm, everyone losing the portion of a Merkle tree corresponding to an account would make it impossible to process messages that affect that account at all in any way, including sending to it. However, non-UTXO-dependent scalability paradigms do exist.
 
 The benefits of accounts are:
