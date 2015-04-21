@@ -2,29 +2,29 @@ Nonostante Ethereum prende in prestito diverse idee che sono gia' state provate 
 
 ## Principi
 
-# [to do]
-
 Il processo di design del protocollo Ethereum segue un certo numero di principi:
 
 1. **Modello di complessita' a "sandwich"**: crediamo che l'architettura di base di Ethereum debba essere il piu' semplice possibile, e le interfacce a Ethereum (compreso il linguaggio di programmazione di alto livello per gli sviluppatore e l'interfaccia per gli utenti) debbano essere il piu' semplice possibile da capire. Laddove la complessita' e' inevitabile, dovrebbe essere racconta all'interno dei "middle layers" del protocollo, che non fanno parte del cuore del sistema di consenso ma anche che non sono visti dall'utente finale - i compilatori del linguaggio di alto livello, la serializzazione degli argomenti e gli script di deserializzazione, i modelli delle strutture di immagazzinamento dei dati, l'interfaccia di immagazzinamento leveldb e il protocollo di connessione, etc. Eppure, questa preferenza non e' assoluta.
 2. **Liberta'**: non ci dovrebbero essere restrizioni agli utenti sulla maniera nella quale usano il protocollo Ethereum, e non dovremmo cercare di favorire o sfavorire certe tipologie di contratti Ethereum o transazioni solamente sulla base della natura del loro scopo. Questo e' simile al principio di "neutralita' della rete". Un esempio di come questo principio _non_ e' seguito e' la situazione attuale nel protocollo di transazioni di Bitcoin, laddova l'uso della blockchain per scopi "off-label" (ad esempio, immagazzinamento dati, meta-protocolli) e' scoraggiata, ed in alcuni casi cambiamenti espliciti quasi-protocollo (ad esempio, la restrizione a 40 bytes per il comando OP_RETURN) sono fatti per tentare di attaccare applicazioni che utilizzano la blockchain in modi "non autorizzati". Invece noi crediamo che su Ethereum si debba fortemente favorire quell'approccio di porre costi di transazione in tal modo affinche' siano approssivamente compatibili ad un incentivo, cosicche' gli utenti che utilizzano la blockchain a dismisura internalizzino il costo delle loro attivita' (ovvero, una tassazione Pigouviana).
 3. **Generalizzazione**: le caratteristiche del protocollo e gli opcodes su Ethereum dovrebbero incarnare massimamente i concetti di basso livello, cosicche' possano essere uniti in modi arbitrari inclusi quei modi che potrebbero non sembrare utili oggi ma che potrebbero essere utili piu' tardi, e in modo che un insieme dei concetti di basso livello puo' essere reso piu' efficiente mediante la rimozione di alcune delle sue funzionalita' quando non e' necessario. Un esempio di come tale principio viene seguito e' la scelta di un LOG opcode come modo di fornire informazioni alle dapps, in contrapposizione al semplicemnte loggare tutte le transazioni e i messaggi come e' stato suggerito internamente in precedenza - il concetto di "messaggio" e' in verita' un agglomerato di tanti concetti, compresa la "funzione di chiamata" e "evento che interessa ad osservatori esterni" ed vale la pena separare i due.
-4. **Non Abbiamo Caratteristiche**: as a corollary to generalization, we often refuse to build in even very common high-level use cases as intrinsic parts of the protocol, with the understanding that if people really want to do it they can always create a sub-protocol (eg. ether-backed subcurrency, bitcoin/litecoin/dogecoin sidechain, etc) inside of a contract. An example of this is the lack of a Bitcoin-like "locktime" feature in Ethereum, as such a feature can be simulated via a protocol where users send "signed data packets" and those data packets can be fed into a specialized contract that processes them and performs some corresponding function if the data packet is in some contract-specific sense valid.
-5. **Non-risk-aversion**: we are okay with higher degrees of risk if a risk-increasing change provides very substantial benefits (eg. generalized state transitions, 50x faster block times, consensus efficiency, etc)
+4. **Non Abbiamo Caratteristiche**: come corollario alla generalizzazione, spesso ci rifiutiamo di programmare anche utilizzi molto comuni di alto livello come componenti intrinseche del protocollo, con la premessa che la gente sa che se vogliono davvero farlo possono sempre creare un sub-protocollo (ad esempio, una sub-valuta collateralizata da ether, bitcoin/litecoin/dogecoin sidechain, etc...) all'interno di un contratto. Un esempio di cio' e' la mancanza di una caratteristica di "locktime" all'interno di Ethereum simile a quella di Bitcoin. Tale caratteristica infatti puo' 'essere simulata mediante un protocollo nel quale gli utenti inviano "pacchetti firmati di dati" e questi pacchetti di dati possono essere letti da un contratto specializzato che li elabora ed esegue qualche funzione predefinita se il pacchetto di dati e' - ovviamente in un senso specificato dal contratto - valido.
+5. **Nessuna avversione al rischio**: ci va bene correre alti rischi se un cambiamento che incrementa i rischi fornisce benefici sostanziali (ad esempio, transizioni generalizzate di stato, tempi dei blocks 50 volte piu' veloci, efficienza di consenso, etc...)
 
-These principles are all involved in guiding Ethereum development, but they are not absolute; in some cases, desire to reduce development time or not to try too many radical things at once has led us to delay certain changes, even some that are obviously beneficial, to a future release (eg. Ethereum 1.1).
+Tutti questi principi sono seguiti nello sviluppo di Ethereum, ma non sono assoluti; in alcuni casi, il desiderio di ridurre il tempo di sviluppo o quello di non apportare cambiamenti troppo radicali tutti in una volta ci convincono a rimandarne alcuni, anche se potenzialmente potrebbero essere utili per una release futura (ad esempio, Ethereum 1.1). 
 
-## Blockchain-level protocol
+## Il protocollo a livello della Blockchain
 
-This section provides a description of some of the blockchain-level protocol changes made in Ethereum, including how blocks and transactions work, how data is serialized and stored, and the mechanisms behind accounts.
+Questa sezione fornisce una descrizione di alcuni dei cambiamenti al protocollo della blockchain che sono stati fatti su Ethereum, compreso come funzionani i blocchi e le transazioni, come vengono serializzati e immagazzinati i dati, e il meccanismo dietro agli account.
 
-### Accounts and not UTXOs
+### Accounts e non UTXOs
 
-Bitcoin, along with many of its derivatives, stores data about users' balances in a structure based on _unspent transaction outputs_ (UTXOs): the entire state of the system consists of a set of "unspent outputs" (think, "coins"), such that each coin has an owner and a value, and a transaction spends one or more coins and creates one or more new coins, subject to the validity constraints:
+Bitcoin, allo stesso modo di molti dei suoi derivati, immagazzina i dettagli dei saldi dei conti degli utenti in una struttura basata su _outputs di transazione non spesi_ (UTXOs): l'intero stato del sistema consiste in un set di "outputs non spesi" (pensate a "monete"), tale che ognuna moneta ha un proprietario e un valore, e una transazione spende una o piu' monete e crea una o piu' nuove monete, dati i seguenti vincoli:
 
-1. Every referenced input must be valid and not yet spent
-2. The transaction must have a signature matching the owner of the input for every input
-3. The total value of the inputs must equal or exceed the total value of the outputs
+1. Ogni input di riferimento deve essere valido, e non ancora speso
+2. La transazione deve possedere una firma che collega il proprietario dell'input ad ogni input
+3. Il valore totale degli input deve essere uguale o superiore al valore totale degli outputs
+
+# [to do]
 
 A user's "balance" in the system is thus the total value of the set of coins for which the user has a private key capable of producing a valid signature.
 
