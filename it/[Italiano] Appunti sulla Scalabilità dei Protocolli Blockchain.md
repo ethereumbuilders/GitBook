@@ -649,45 +649,15 @@ Una soluzione naturale che potrebbe essere proposta e' quella di un "fallback ga
 
 Ci sono due problemi con il suddetto schema. Il primo problema e' tecnico: nonostante lo schema resta scalabile, tollerante all'errore Bizantino ed economicamente sicuro, e perfino economicamente sicuro nel caso di un errore Bizantino oppure tollerante all'errore Bizantino sotto attacco economico, non e' scalabile sotto attacco economico. La ragione e' che un attaccante puo' spendere O (N L 1-) risorse corrompendo m degli 0 (N 1- ) validatori al fine di elevare ogni blocco al livello degli header, e quindi compiendo uno sforzo pari a b * L l'attaccante puo' elevare un totale di O (N 1- ) blocchi. Appena la dimensione di un blocco e' almeno O(N 2 ) (che succede fintanto che  L ∈ O(N 1+ )), cio' significa che facendo uno sforzo pari a b * L l'attaccante puo' rendere il protoccolo non scalabile. La soluzione che proponiamo e' quella di un gioco a escalation a piu' turni: uno sfidante propone una transazione per individuare un blocco precedente invalido, e quella transazione verra' validata da 2m validatori. Se o lo sfidante o un validatore non e' contento del risultato, possono lanciare un'altra sfida, mettendo un deposito due volte piu' grande ma facendo rivedere il blocco da 4m validatori. Un altro appello e' possibile con un deposito pari a 4 volte, che verra' rivisto da 8m validatori, e cosi' via fin quando tutti i validatori partecipano. Analizzando cio' secondo la teoria dei giochi, si puo' osservare che un attaccante che spende b * L risorse puo' al massimo accrescere il carico computazionale del nodo di un fattore costante, e l'eliminazione ricorsiva di strategie dominate porta all'onesta' essendo un equilibrio perfetto del sotto-gioco in un caso normale. 
 
-Un approccio alternativo per assicurare la validita' e' semplicemente quello di utilizzare una succinta [22] prova crittografica al posto di una prova crittoeconomica, apparentemente rimuovendo interamente il bisogno di un "fallback game". 
-
- leads
-to honesty being a subgame-perfect equilibrium in the normal case.
-An alternative approach for ensuring validity is to simply use a succinct
-22cryptographic proof in place of a cryptoeconomic one, seemingly removing
-the need for fallback schemes entirely. A zk-SNARK can theoretically be
-attached to the header of a block, proving that all of the transactions in the
-block are valid and that the final state roots are correct. However, this has
-a few problems. First, zk-SNARKs rely on much less robust cryptographic
-assumptions than hashes and signatures; particularly, it is not known if zk-
-SNARKs are even possible to secure against quantum computers, whereas
-strong candidates for quantum-proof digital signatures are well-known [20]
+Un approccio alternativo per assicurare la validita' e' semplicemente quello di utilizzare una succinta [22] prova crittografica al posto di una prova crittoeconomica, apparentemente rimuovendo interamente il bisogno di un "fallback game". Un zk-SNARK puo' in teoria essere aggiunto all'intestazione di un blocco, che prova che tutte le transazioni nel blocco sono valide e che le radici di stato finali sono corrette. Eppure, questo presenta alcuni problemi. Innanzitutto, gli zk-SNARKs si appoggiano su basi crittografiche molto meno robuste che gli hashes e le firme; in particolare non e' noto se e' persino possibile rendere sicuri gli zk-SNARK da i computer quantistici, laddove ottimi candidati per firme digitali resistenti ai computer quantistici sono ben noti.  [20]
 [21].
-23Chapter 7
-Data availability
-The more difficult challenge in implementing a fallback scheme is that there
-are in fact two ways in which a block can be invalid. First, the block
-may incorrectly process transactions and have an invalid final substate root.
-Second, however, an attacker may simply create a (valid or invalid) block
-and refuse to publish the contents, making it impossible for the network to
-learn the complete final state. Validating data availability is, unfortunately,
-a fundamentally harder problem than validating correctness for a simple
-reason: data availability is quasi-subjective at scale. Although one can
-determine that a particular piece of data is available at a particular time
-by trying to download it, one cannot with perfect precision verify whether
-data is available if one does not have enough bandwidth to download all of
-it, and one cannot determine at all whether or not data was available at a
-previous time if one was not paying attention during that time.
-A particular consequence of this is that validating data availability through
-cascading fallback, as described in the previous section above, is not so sim-
-ple: the attacker can always cheat the system and destroy others’ deposits
-by providing a block with unavailable data at first, waiting for a fallback
-game to start, and then destroying the security deposits of challengers by
-suddenly providing the data mid-game. Although such an attack does not
-compromise security, it does allow the attacker to siphon resources away
-from challengers, leading to an equilibrium in which it is not rational to
-challenge, at which point the attacker will be able to create and propagate
-bad blocks unimpeded.
+
+23 Capitolo 7
+La disponibilita' dei dati
+La sfida piu' ardua nell'implementare uno schema di fallback e' che ci sono difatti due modi nel quale un blocco puo' essere non valido. La prima, che il blocco puo' processare le transazioni non correttamente ed avere una radice non valida di sotto-stato finale. La seconda, invece, e' che un attaccante puo' semplicemente creare un blocco (valido o non valido) e rifiutarsi di pubblicare i contenuti, rendendo impossibile alla rete la conoscenza del suo stato finale completo. Validare la disponibilita' dei dati e' - sfortunatamente - un problema significativamente piu' difficile che validare la correttezza per una semplice ragione: la disponibilita' dei dati e' quasi-soggettiva su scala. Nonostante una persona possa determinare che un segmento particolare di dati e' disponibile in un determinato momento e provare a scaricarlo, egli non puo' verificare con perfetta precisione se il dato e' disponibile se uno non ha abbastanza banda di connessione per scaricarlo tutto, e uno non puo' determinare se il dato era disponibile ad un tempo precedente se allora non stava prestando attenzione. 
+
+Una peculiare conseguenza di cio' e' che validare la disponibilita' dei dati attraverso un fallback a cascata, come descritto nella sezione precedenze, non e' cosi' semplice: l'attaccante puo' sempre ingannare il sistema e distruggere i depositi altrui fornendo dapprima un blocco con dati non disponibili, aspettando che inizi un gioco fallback, e quindi distruggere i depositi di sicurezza degli sfidanti fornendo i dati ad un certo punto a meta' del gioco. Nonostante tale attacco non comprometta la sicurezza, consente all'attaccante di succhiare risorse dagli sfidanti, portanto ad un equilibrio nel quale non e' razionale sfidare, e a quel punto l'attaccante sara' in grado di creare e propagare blocchi cattivi senza piu' impedimenti. 
+
 In order to make clear the gravity of the problem, we will start off by
 showing several categories of attacks that are possible if data availability
 cannot be effectively ensured.
