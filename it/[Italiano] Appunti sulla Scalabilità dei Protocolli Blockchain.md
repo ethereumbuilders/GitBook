@@ -14,6 +14,623 @@ Ci sono diverse svariate ragioni sul perchè i procolli di blockchain scalabili 
 
 In secondo, dobbiamo essere preoccupati non solo della validità, bensì della disponibilità dei dati; è completamente possibile che un blocco possa sembrare essere valido, ed è valido, ma per chi non ha a disposizione i dati ausliari, comporta una situazione dove nessun altro validatore può effettivamente validare transazioni o produrre nuovi blocchi poichè i dati necessari sono, per loro, non disponibili. Infine, le transazioni devono essere necessariamente processate da differenti nodi in parallelo, e visto che non è posibile mettere in parallelo della computazione arbitraria [3], dobbiamo impostare delle restrizioni ad una funzione di transizione di stato che bilancierà al meglio la "parallelibilizzazione" e l'utilità. Questo scritto propone un altro set di strategie per ottenere la scalabilità , come qualche formalismo che può essere usato quando si discutono e si comparano i protocolli blockchain scalabili. In generale, le strategie convergono verso un  opzione "semplice-e-di-facile-implementazione": un blocco è detto valido quanto esso è stato approvato da un gruppo selezionato a caso di validatori, e nel caso di un blocco non sia valido, un nodo è in grado di sfidare quelli invalidi FINO A QUA
 
+, reverting the harmful transactions and transferring the malfeasant validators’ security deposit to the challengers as
+a reward unless the challenge is answered by a confirmation of validity from a much greater number of validators. Theoretically, under a Byzantine-fault- tolerant model of security, fallback is unnecessary; sampling only is sufficient.
+However, if we are operating in an anonymous-validator environment, then it is also considered desirable to have a hard economic guarantee of the minimum quantity of funds that mustneeds to be destroyed in order to cause a
+certain level of damage to the network; in that case, in order to make the
+economic argument work we use fallback as a sort of incentivizer-of-last-
+resort, making cooperation the only subgame-perfect equilibrium.
+The particular advantage that our designs provide is a very high degree of
+generalization and abstraction; although other schemes using technologies
+like auditable computation[5] and micropayment channels[6] exist for in-
+creasing efficiency in specific use cases like processing complex verifications
+and implementing currencies, our designs require no specific properties of
+the underlying state transition function except for the demand that most
+state changes are in some sense “localized”.
+Our basic designs allow for a network consisting solely of nodes bounded
+by O(N ) computational power to process a transaction load of O(N^(2-ε)N 2−   )
+(we generally use O(N ) to denote polylogarithmic terms for simplicity),
+under both Byzantine-fault-tolerant and economic security models; we then
+also propose an experimental “stacking” strategy for achieving arbitrary
+scalability guarantees up to a maximum of O(exp(N/k)) transactional load,
+although we recommend that for simplicity implementers attempt to perfect
+the O(N^(2-ε)N 2− ) designs first.
+2Chapter 2
+Definitions
+Definition (Instance of Invalid State - ∅). A piece of data that when the State Transition Function is applied on it with any Transaction, then it yields the Instance of Invalid State.
+Definition 2.1 (State). A state is a piece of data.
+Definition 2.2 (Transaction). A transaction is a piece of data. A transac-
+tion typically includes a cryptographic signature from which one can verify
+its sender, though in this paper we use ”transaction” in some contexts more
+generally.
+Definition 2.3 (State Transition Function). A state transition function is
+a function AP P LY (σ, τ ) → σ ∪ {∅}, where σ and σ are states and τ is a 
+transaction. If AP P LY (σ, τ ) = ∅, we consider τ invalid in the context of
+σ. A safe state transition function SAF E(AP P LY ) = AP P LY is defined
+by AP P LY (σ, τ ) = {σ if AP P LY (σ, τ ) = ∅ else AP P LY (σ, τ )}.
+For simplicity, we use the following notation:
+• AP P LY (σ, τ ) → σ becomes σ + τ = σ
+• SAF E(AP P LY )(σ, τ ) → σ becomes σ++τ = σ
+• Given an ordered list T = [τ 1 , τ 2 , τ 3 ...] and a state σ, we define σ + T =
+σ + τ 1 + τ 2 + ...
+• Given an ordered list T = [τ 1 , τ 2 , τ 3 ...] and a state σ, we define σ 0 = σ
+and σ i+1 = σ i + +τ i+1 . We denote with T \ σ the ordered list of all
+τ i ∈ T such that σ i + τ i = ∅.
+• T is valid in the context of σ if T = T \ σ
+• [n] is the set {1, 2, 3.....n}
+Definition 2.4 (Replay-immunity). A state transition function is replay-
+immune if, for any σ, τ and T , σ +τ +T +τ = ∅. Generally, we assume that
+all state transition functions used in consensus protocols are replay-immune;
+otherwise, the protocol is almost certainly vulnerable to either exploits or
+denial of service attacks.
+3Note. Replay-immunity is not a sufficient condition to guarantee zero instances of double spendingfor being double-spend-
+proof. Descriptions of blockchains as “anti-replay oracles” [4] emphasize the
+functionality of preventing the successful application of more than one mem-
+ber of a particular class of transactions, where the class is usually defined as
+the transactions that spend a particular unspent balance, which is different
+from the kind of replay-immunity that we describe here.
+Definition 2.5 (Commutativity). Two transactions or lists of transactions
+T 1 , T 2 are commutative in the context of σ if σ + T 1 + T 2 = σ + T 2 + T 1 .
+Definition 2.6 (Partitioning scheme). A partitioning scheme is a bijective
+function P which maps possible values of σ to a tuple (σ 1 , σ 2 ...σ n ) for a
+fixed n. For simplicity, we use σ[i] = P (σ)[i], and if S is a set, σ[S] = {i :
+P (σ)[i] f or i ∈ S}. An individual value σ[i] will be called a substate, and a
+value i will be called a substate index.
+Definition 2.7 (Affected area). The affected area of a transaction (or trans-
+action list) τ in the context of σ (denoted AF F ECT ED(σ, τ )) is the set of
+indices S such that (σ + τ )[i] =  σ[i] for i ∈ S and (σ + τ )[i] = σ[i] for i ∈
+/ S.
+Definition 2.8 (Observed area). The observed area of a transaction (or
+transaction list) τ in the context of σ (denoted OBSERV ED(σ, τ )) is de-
+fined as the set of indices S such that for any ψ where ψ[S] = σ[S], and
+ψ = ψ + τ , we have ψ [S] = σ [S] and ψ [i] = ψ[i] for i ∈
+/ S  .
+Note. The observed area of a transaction, as defined above, is a superset of
+the affected area of the transaction.
+Theorem 2.0.1. If, in the context of σ, the observed area of T 1 is disjoint
+from the affected area of T 2 and vice versa, then T 1 and T 2 are commutative.
+Proof. Suppose a partition of [n] into the subsets a = AF F ECT ED(σ, T 1 ),
+b = AF F ECT ED(σ, T 2 ) and c = [n] \ a \ b. Let us repartition σ as (α, β, γ)
+for σ[a], σ[b] and σ[c] respectively. Suppose that σ + T 1 = (α , β, γ), and
+σ + T 2 = (α, β , γ). Because a is outside the observed area of T 2 (as it is
+the affected area of T 1 ), we can deduce from the previous statement that
+(x, β, γ) + T 2 = (x, β , γ). Hence, σ + T 1 + T 2 = (α , β, γ) + T 2 = (α , β , γ).
+Similarly, because b is outside the observed area of T 1 , σ + T 2 + T 1 =
+(α, β , γ) + T 1 = (α , β , γ).
+Definition 2.9 (Disjointness). Two transactions are disjoint if there exists
+a partition such that the observed area of each transaction is disjoint from
+the affected area of the other. If two transactions are disjoint then, as shown
+above, they are commutative.
+Note. Disjointness does not preclude the observed areas of T 1 and T 2 from
+intersecting. However, in the rest of this paper, we will generally follow a
+4stricter criterion where observed areas are not allowed to intersect; this does
+somewhat reduce the effectiveness of our designs, but it carries the benefit
+of allowing a substantially simplified analysis.
+Definition 2.10 (Block). A block is a piece of data, encoding a collection of
+transactions typically alongside verification data, a pointer to the previous
+block, and other miscellaneous metadata. There typically exists a block-level
+state transition function AP P LY , where AP P LY (σ, β) = σ + T , where T
+is a list of transactions. We of course denote AP P LY (σ, β) with σ + β. A
+block is valid if T is valid in the context of σ, and if it satisfies other validity
+criteria that may be specified by the protocol. In many protocols, there
+exists a special “block finalization function”; we model this by stipulating
+that every block may include a “virtual transaction” that effects the desired
+state transition.
+Definition 2.11 (Proposer). The proposer of a block is the user that pro-
+duced the block.
+Definition 2.12 (Blockchain). A blockchain is a tuple (G, B) where G is a
+genesis state and B is an ordered list of blocks. Cryptographic references
+(ie. hashes) are typically used to maintain the integrity of a blockchain and
+allow it to be securely represented only by its final block. A blockchain is
+valid if B \ G = B (ie. all blocks are valid in their respective contexts if
+applied to G sequentially).
+Definition 2.13 (Parent). The parent of a state σ is defined as the state
+σ −1 such that σ −1 + β = σ for some β that has actually been produced by
+some user in the network. For genesis states, we define P AREN T (σ) = ∅.
+Definition 2.14 (Ancestor). The set of ancestors of a state σ is recursively
+defined via AN C(σ) = ∅ if P AREN T (σ) = ∅ else {P AREN T (σ)} ∪
+AN C(P AREN T (σ)).
+Definition 2.15 (Weight function). A weight function is a function W (u, σ)
+on the set of users u 1 ...u n (each of which is assumed to have a private and
+public key) in the context of a state σ, such that for all users in the network,
+n
+i=0 W (u i , σ) = 1. “k of all weight” will be used to denote the idea of a
+subset of users such that the sum of their weights is k.
+Note. A combination of a weighting function and a threshold 0.5 < t < 1
+produces a quorum system.
+Definition 2.16 (State root function). A state root function is a collision-
+proof preimage-proof function R(σ) → x ∈ D for some compactly rep-
+resentable domain D (usually D = {0, 1} 256 ). R can also be applied to
+substates.
+5Definition 2.17 (Partition-friendliness). A state root function is partition-
+friendly with respect to a particular partitioning scheme if one can compute
+R(σ) by knowing only R(σ[0]), R(σ[1])...R(σ[n]).
+Assumption 2.1. Any state root function that will be used by any of the
+protocols described below will be partition-friendly with respect to any parti-
+tioning scheme that will be used by the protocols.
+Definition 2.18 (Availability). A state σ is available if, for every i ∈ [n],
+σ[i] can be readily accessed from the network if needed.
+Definition 2.19 (Altruist). An altruist is a user that is willing to faithfully
+follow the protocol even if they have an opportunity to earn a profit or save
+on computational expenses by violating it.
+Assumption 2.2. There exists a constant 0 < w a < 13 such that at least
+w a of weight is altruistic under all major weight functions that are used
+in cryptoeconomic systems (eg. computational power, stake under deposit,
+transaction fees paid, transaction coin age burned).
+Assumption 2.3. A sufficient condition of availabilty is for every σ[i] to
+be in the hands of at least one altruist.
+Note. This follows from our assumption of a working distributed hash table,
+elaborated on in the next section.
+Definition 2.20 (Cryptoeconomic State Machine). A cryptoeconomic state
+machine is a tuple (G, AP P LY, P, F ) where G is a genesis state, AP P LY is
+a state transition function and P is a process for determining the next block.
+The cryptoeconomic state machine maintains a “current state” σ, repeatedly
+employs P (by incentivizing validators to carry out their individual roles in
+P) in order to determine a “next block” β, and then sets σ ← σ + β. F
+is a process which can be used by a user to determine a recent value of σ.
+Desired properties for a cryptoeconomic state machine are:
+• Consistency: everyone sees the same value of σ for maximally recent
+iterations of P . If σ is too large for any user to download in its entirety,
+we understand this to mean that everyone sees the same value of R(σ).
+• Data availability: all of σ is available.
+• Non-reversion: σ ideally only changes through the application of ad-
+ditional blocks; it should not revert to previous values. If it does
+sometimes revert to previous values, the total number and depth of
+transactions “undone” during such a revert should be minimized.
+6• Validity: σ only ever attains values that are the result of G + T for
+some transaction list T , where T can be produced, using the set of all
+data that has ever been produced by any user as input, in polynomial
+time. That is, “illegal transitions” that cannot be explained by the
+sequential application of a set of known transactions do not occur.
+• Byzantine fault-tolerance: the above guarantees remain even if up to k
+of all weight (eg. k = 13 ) fails to follow the protocol and/or misbehaves
+arbitrarily (including irrationally).
+• Economic security: the above guarantees survive even if all users ex-
+cept altruists are rational, and are being bribed by an attacker with a
+budget less than b ∗ L where b is a constant and L is some metric of
+the value of economic activity in the system.
+• Complete security: the guarantee of economic security survives even
+if up to k of all weight misbehaves arbitrarily (including irrationally).
+Note. The definition of economic security used above is taken from Vlad
+Zamfir’s model of a “bribing attacker” [7]. Bribes do not need to represent
+literal monetary or other bribes; they can represent blackmail, threats, gov-
+ernmental influence, and even arbitrary personal tastes and prejudices; the
+intent is to model incentives outside the system by making the assumption
+that the size of these incentives is bounded by b ∗ L. Complete security (ie.
+economic security under Byzantine faults), rather than simply economic se-
+curity, is required because, in practice, there do also exist validators that
+are so irrational that they would pass on even a trillion-dollar incentive in
+order to stray from the protocol in some way, and it is sometimes possible to
+inflict extremely high disincentives against specific agents at only medium
+cost, eg. by means of violence.
+Assumption 2.4. The “economic metric of activity” used to define eco-
+nomic security, transaction load, and the number of users are all propor-
+tional to each other.
+Definition 2.21 (Validators). The validators in a cryptoeconomic state
+machine are either (i) the users that are involved in the consensus process of
+agreeing on blocks, or (ii) the set of entities that must provide a signature
+validating a specific object in order for that object to be accepted by the
+protocol.
+Assumption 2.5 (Wealth concentration). There exists some constant b
+such that at least b ∗ L worth of economic power is concentrated in the hands
+of either individuals or groups of individuals capable of coordination that
+each have access to at least N b∗L
+1− funds.[8]
+7Definition 2.22 (Scalability). A cryptoeconomic state machine is scal-
+able if, assuming each individual user has computational power, storage
+and bandwidth bounded above by N , the state machine can process ω(N )
+(ie. strictly greater than O(N )) transactions (with combined Kolmogorov
+complexity ω(N )) and operate on states of size and Kolmogorov complexity
+ω(N ).
+Lemma 2.0.2. It is not possible to achieve scalability for arbitrary state
+transition functions.
+Proof. Suppose the state transition function σ + τ = H(σ + τ ) for some
+hash function. This is clearly unparallelizable. Hence, the transaction rate
+is bounded above by the serial computational power of one node.
+Note. Because of the previous lemma, we can see that the introduction of
+scalability will necessarily involve some restrictions to the state transition
+function - in fact, very similar restrictions to those that would come into play
+when implementing a highly parallelizable computing platform. In general,
+this involves most state transitions being “localized” and only having an ob-
+served area making up a very small part of the state. Fortunately, given that
+cryptoeconomic state machines in practice tend to be massively multi-user
+environments, most on-chain activity already does satisfy that definition, al-
+though some care is required in order to ensure the highest possible ability
+to interact between arbitrary pairs of substates, as arbitrary A-to-B sends
+are a very common use case.
+8Chapter 3
+Cryptographic and
+Cryptoeconomic Primitives
+Definition 3.1 (Sampling function). A sampling function is a function
+SAM P LE(W, k, m) → u 1 ...u m that takes a weight function W , a salt k
+and a number m and outputs a pseudorandomly selected (weighted by W )
+sample of m users.
+Example 3.0.1. Arrange all users u 1 ...u n in order of public key, and assign
+j
+the range [ j−1
+i=1 W (u i )...
+i=1 W (u i )] to user u j for all 1 <= j <= n. For
+all 1 ≤ h ≤ m, return the user whose range includes the value H(k+h)
+for
+2 256
+some hash function H.
+Definition 3.2 (Merkle tree protocol). A Merkle tree protocol is a scheme
+consisting of two functions:
+• P (σ, i) → π
+• V (ρ, i, π, V ) → {0, 1}
+V should only return 1 if π is a proof showing that V = σ[i] for some σ such
+that R(σ) = ρ.
+Note. There exist Merkle tree protocols for which P and V can be com-
+puted in logarithmic time [9], and there exist state root functions which can
+determine the new state root after a minor change to a value or even the
+introduction or removal of a partition in logarithmic time.
+Definition 3.3 (Merkle branch). A Merkle branch is the tuple (V, π).
+Definition 3.4 (Cryptoeconomically secure entropy source). A cryptoeco-
+nomically secure entropy source is a protocol inside of a state transition
+function in a cryptoeconomic state machine that maintains an internal, reg-
+ularly changing, value v ∈ D for some domain D (usually {0, 1} 256 ) with
+the following desired properties:
+9• Unpredictablity: there exists a value M such that at time t 0 + M the
+probability distribution of v conditional only on information available
+at time t 0 is statistically indistinguishable from the random distribu-
+tion. That is, an agent with only information available at time t 0
+cannot determine a value x such that v = x with probability that is
+1+
+not in the range [ 1−
+|D| , |D| ] for cryptographically negligible .
+• Uninfluenceability (I): For any predicate P which the value v would
+have at some given future time with probability p assuming everyone
+correctly follows the specified protocol, the cost of making the value
+have that predicate with probability p > p is bounded below by b ∗ L ∗
+(p −p) where b is a constant independent of P and L is some economic
+metric of activity in the state machine.
+• Uninfluenceability (II): There exist constants k and b such that for any
+predicate P which the value v would have at some given future time
+with probability p assuming everyone honestly follows the protocol, an
+actor controlling less than k of the weight can increase the probability
+to at most p = p ∗ (1 + b).
+Example 3.0.2. The cryptoeconomically secure entropy source used in
+NXT[14] is defined recursively as follows:
+• E(G) = 0
+• E(σ + β) = sha256(E(σ) + V (β)) where V (β) is the block proposer of
+β.
+Assumption 3.1. For any time internal I, there exists some fixed probabil-
+ity p o (I) such that a node randomly selected according to the weight function
+used to measure a cryptoeconomic state machine’s Byzantine fault tolerance
+can be expected to be offline for at least the next I seconds starting from any
+particular point in time with at least probability p o .
+Note. We can derive the above assumption from an altruism assumption by
+simply stating in the protocol that nodes “should” randomly drop offline
+with low probability; however, in practice it is simpler and cleaner to rely
+only on natural faults.
+Note. Combining the two uninfluenceability criteria into one (“it is impos-
+sible to increase the probability of P from p to p ∗ (1 + k) without expending
+at least b ∗ L ∗ k resources”) is likely very difficult; it is hard to avoid having
+ways to cheaply multiply the probability of low-probability predicates by
+only acting when you are sure that your action will have an influence on the
+result.
+Note. In practice, the second criterion is important for security, whereas the
+first criterion is important in order to avoid triggering superlinear returns
+on capital in systems where randomly selected stakeholders are rewarded.
+10Lemma 3.0.3. The NXT algorithm described above satisfies the conditions
+for being a cryptoeconomically secure entropy source.
+Proof. To prove unpredictability, we note that the NXT blockchain pro-
+duces a block every minute, and so the update v ← sha256(v, V (β)) takes
+place once a minute. During each round of updating, there is a probabil-
+ity 1 − p o (60) that the primary signer will be online, and p o (60) that the
+signer will be offline and thus a secondary signer will need to produce the
+block. Hence, after −log(p 1 o (60)) blocks, there is a probability p ≈ 2 1 that the
+resulting value will be the “default value” obtained from updating v with
+the primary signers’ public keys at each block, and a p ≈ 12 probability that
+the resulting value will be different. We model 512 iterations of this pro-
+cess as a tree, with all leaves being probability distributions over sequences
+of 512 public keys of signers, where all probability distributions are dis-
+joint (ie. no sequence appears with probability greater than zero in multiple
+leaves). By random-oracle assumption of sha256, we thus know that we have
+a set of 2 512 independently randomly sampled probability distributions from
+{0, 1} 256 , and so each value will be selected an expected {0, 1} 256 times, with
+standard deviation 2 128 . Hence, the probability distribution is statistically
+indistinguishable from a random distribution.
+To show that the first uninfluenceability criterion holds true, note that
+the only way to manipulate the result is for the block proposer to disappear,
+leading to another proposer taking over. However, this action is costly for
+the proposer as the proposer loses a block reward. The optimal strategy
+is to disappear with probability 0 < q <= 1 only when the predicate will
+be unsatisfied with the proposer participating but will be satisfied with
+the next proposer partipating; if a predicate has probability p this entails
+disappearing p ∗ (1 − p) ∗ q of the time, meaning that the predicate will be
+satisfied p + p ∗ (1 − p) ∗ q of the time instead of p of the time, a probability
+increment of p∗(1−p)∗q will have a cost of p∗(1−p)∗q ∗R if R is the signing
+reward (whose real value is proportional to the quantity of transaction fees, a
+reasonable metric of economic activity). Hence, the desired condition holds
+true with b = 1.
+To show that the second uninfluenceability criterion holds true, note that
+when one is not the signer, one has no influence on the entropy, and when
+one is the signer one has the ability to not sign and instead defer to the
+next signer. Hence, an attacker controlling k 1 of all signing slots will be able
+to defer to the second signer k 1 of the time, to the third signer k 1 2 of the
+time (by being in the first two slots simultaneously), etc, so in total such an
+1
+attacker will on average be able to choose between 1 + k−1
+values and thus
+1
+multiply the probability of a desired predicate by a factor of 1 + k−1
+. If the
+1
+attacker controls 3 of all signing slots, the result will thus be increasing the
+probablity by a factor of 32 .
+11Note. The above algorithm is only one of a class of algorithms that try to
+derive entropy from individual faults. There are also other approaches for
+deriving entropy, including N − of − N commit-reveal protocols, relying
+on at least one of the participants to be altruistic and refuse to share their
+entropy with the other participants. It is an open problem to determine if
+one can come up with cryptoeconomically secure entropy sources cheaper
+than proof-of-work that rely purely on a rationality assumption.
+Note. The above algorithm is NOT downward-uninfluenceable. If there is
+a predicate P with low probability, then one can influence its probability
+down to P ∗ w a by simply bribing all validators who would have created a
+block that changed the entropy value to something satisfying P to instead sit
+their turn out and let the next validator make a block, almost certainly not
+triggering P . The w a multiplier comes from the fact that we are assuming
+a subset of validators that cannot be bribed. However, for predicates with
+medium probability, one can derive a certain degree of resistance to down-
+ward influence simply by applying the upward-uninfluenceability guarantees
+to ¬P .
+Definition 3.5 (zk-SNARK scheme). A zk-SNARK scheme is a tuple of
+three functions G, P , V , where:
+• G(prog) → k generates a ”verification key” from a program.
+• P (prog, I s , I p ) → π generates a proof that prog(I s , I p ) for some secret
+inputs I s and public inputs I p is equal to its actual output, o.
+• V (k, I p , o, π) → {0, 1} verifies a proof, accepting it only if π is actually
+a proof that prog(I s , I p ) = o where G(prog) = k.
+Additionally, π should reveal no information about the value of I s . Schemes
+exist [15] to perform G and P in a time equal to O(N ∗ log k (N )) for a small
+k where N is the number of execution steps, and V can be computed in
+some cases in polylogarithmic time and in some cases in constant time.
+Note. We provide algorithms which achieve scalability without zk-SNARKs,
+however we will show how zk-SNARKs can also be used in scalable blockchain
+protocols.
+Definition 3.6 (Decentralized oracle scheme). A decentralized oracle scheme
+is a mechanism which asks a set of participants to provide an answer to a
+subjective question (eg. ”what was the temperature in San Francisco on 2015
+Jan 9?”), and attempts to incentivize the participants to answer correctly.
+The output of the mechanism is generally considered to be the majority
+answer, and as input the scheme usually requires an economic subsidy.
+Example 3.0.3. A simple decentralized oracle scheme, called “Schelling-
+Coin”, has the following rules:
+12• Each of N participants must vote either 1 or 0 on a question (a scalar-
+valued or multi-valued question is modeled as a series of binary ques-
+tions).
+• A participant whose vote aligns with the majority vote receives a re-
+ward of P .
+• A participant whose vote does not align with the majority vote receives
+a reward of 0.
+SchellingCoin is vulnerable to zero-cost equilibrium flips, and so under a
+formal definition of economic security it cannot be viewed as having any
+security margin at all, though the difficulty of the inherent coordination
+problem may still allow the scheme to function in practice. An attacker with
+a budget greater than P and the ability to credibly commit to to providing
+a bribe under certain conditions in the future can, assuming rationality of
+the participants, effect an equilibrium flip toward a wrong answer at no cost
+[17].
+Note. There are two ways to make SchellingCoin-like protocols more power-
+ful by increasing their security margin. The first involves a strategy of Sztor-
+cian counter-coordination[18], which attempts to naturally set the quantity
+of funds at stake in proportion to the level of controversy in the question; in
+the limit, people who do not vote alongside the majority answer lose their
+entire security deposit. The game-theoretic argument is    that if a medium-
+sized bribe to vote incorrectly is offered, then voters will vote for the correct
+answer with some of their funds and for the incorrect answer with some
+of their funds, leading to an equilibrium where the majority of the voting
+power is still in favor of the correct answer but the users also manage to
+“steal” some of the bribe:
+This approach accepts that attackers with a budget even larger than
+the size of everyone’s security deposits will be able to cause everyone to flip
+to voting incorrectly as an equilibrium, but advocates note that attackers
+that large will also be able to arbitrarily disrupt the underlying blockchain
+consensus anyway.
+The second is to fall back to “subjective resolution”: if the majority
+of voters vote incorrectly, then it is up to the users to simply reject that
+13block as invalid and go along with the block that they see as correct. This
+reliance on human judgement at the last level makes the budget required for
+any kind of zero-cost “equilibrium flip” attack essentially infinite, instead
+requiring the attacker to bribe everyone outright and even then resulting
+in only a moderately large inconvenience for users, not a total failure. The
+process does impose inconveniences to users, but properly built designs that
+use decentralized oracle schemes will use the mechanism only as the last step
+of a fallback game in a similar function as nuclear deterrence; in practice it
+will almost never be used. The security claim essentially becomes something
+like “by paying $100 million, an attacker has the ability to force users to
+visit their favorite internet forum and locate a 32-byte hash representing the
+new fork of the chain to switch to”.
+Definition 3.7 (Distributed hash table). A distributed hash table is a mech-
+anism which gives network-connected nodes access to a function GET (ρ, i) →
+(V, π) where (V, π) is the Merkle branch of σ[i] where ρ = R(σ). GET should
+work with overwhelmingly high probability provided that (i) (V, π) has at
+least once been in the hands of at least one altruist, and (ii) the total quan-
+tity of data stored in the DHT is at most N k ∗n where N is the computational
+and data storage capacity of a node, n is the number of nodes and k is a
+constant.
+Note. The Merkle-branch-based definition of DHT given above can be de-
+duced easily from the more conventional definition of providing a function
+GET (h) → x where h = H(x) for some hash function, given that Merkle
+tree protocols consist simply of repeated reverse-hash-lookup queries. The
+definition used above is more relevant to our “scalable blockchain” use cases.
+Example 3.0.4. Kademlia [10] is an example of a distributed hash table. A
+more direct implementation of our desired formalism with Merkle branches
+will be available from IPFS [11].
+14Chapter 4
+Global Variables
+In the rest of this document we will use the following variables:
+• N - the maximum computational power of a node
+• L - the level of economic activity in the network
+• m - the number of validators in a block
+• w a - the portion of weight controlled by altruists
+τ will represent transactions, β will represent blocks and block headers
+depending on context, and B will represent “super-blocks”.
+15Chapter 5
+A Byzantine-fault-tolerant
+Scalable Consensus
+Algorithm
+Suppose a construction where the state is partitioned into n ∈ O(N 1− )
+substates, and each substate is itself partitioned into very small parts (eg.
+one per account). We define three “levels” of objects:
+• A super-block is a block in the top-level consensus process. The header
+chain is the blockchain of super-blocks.
+• A block is a package containing:
+– T , a list of transactions
+– D, the set of Merkle branches for the observed area of T on the
+fine-grained sub-partition level, ie. where the value proven by
+each Merkle branch is only constant-size
+– A header, consisting of:
+∗
+∗
+∗
+∗
+∗
+AP , a map {i : R(σ[i]) f or i ∈ OBSERV ED(σ, T )}
+AN , a map {i : R(σ [i]) f or i ∈ OBSERV ED(σ, T )}
+S = [s 1 ...s m ], an array of signatures
+H(T )
+H(D)
+• A transaction is a transaction as before.
+We use any non-scalable consensus algorithm (eg. Tendermint[19]) for
+processing super-blocks, except that we define a custom “top-level” state
+transition function AP P LY . For the state processed by AP P LY , we use
+16ψ = {i : R(σ[i]) f or i ∈ [n]} + E(σ) + V (σ) where E(σ) is a cryptoeconomi-
+cally secure entropy source in σ and V (σ) is a set of “validators” registered
+in σ. From the point of view of AP P LY , we define a block header β as
+being valid in the context of ψ if the following are all true:
+• For all i ∈ AP , ψ[i] = AP [i].
+• For at least 2m
+3 values of i ∈ [m], s[i] is a valid signature when checked
+1
+against SAM P LE(W, E(σ) + A, m)[i] where W (σ, u i ) = |V (σ)|
+if u i ∈
+V (σ) else 0 and A is the address or public key of the block proposer.
+If β is valid, we set ψ by:
+• For all i ∈ OBSERV ED(σ, β), ψ [i] = AN [i]
+• For all i ∈
+/ OBSERV ED(σ, β), ψ [i] = β[i]
+The top-level state transition function has an additional validity con-
+straint: for the super-block to be valid, the observed areas of all β[i] must
+be disjoint from each other.
+We do not formally put it into the top-level validation protocol, but we
+separately state that a validator is only supposed to sign a block if the block
+meets what we will call second-level validity criteria for β:
+• Every transaction in T is valid in its context when applied to σ.
+• D, AP , and AN are produced correctly.
+Lemma 5.0.4. Assuming less than 13 of validators are Byzantine, a block
+that is valid under the above top-level state transition function will produce
+a top-level state ψ such that if we define σ with σ = {i : R −1 (ψ [i])},
+σ = σ + T 1 + T 2 + ... where T i is the set of transactions in β i .
+Proof. Suppose that all β i satisfy the second-level validity criteria. Then,
+note that each substate in σ is only modified by at most one T i , and so we can
+model the state as a tuple (O, A 1 , A 2 , A 3 ...A n ) if β includes k transactions,
+where A i is the affected area of T i and O is the remaining part of σ. The state
+after T 1 will be (O, A 1 , A 2 , A 3 ...A n ), by disjointness the state after T 2 will be
+(O, A 1 , A 2 , A 3 ...A n ), and so forth until the final state is (O, A 1 , A 2 , A 3 ...A n ).
+If we use the top-level state transition function on ψ, we can partition ψ
+similarly into (O, B 1 , B 2 , B 3 ...B n ), and a similar progression will take place,
+with state roots matching up at every step. Hence the final state at this
+top-level state transition will be made up of the roots of the substates in σ .
+Now, suppose that one β i does not satisfy the second-level criteria. Then,
+validators following the protocol will consider it invalid, and so 2m
+3 validators
+will not be willing to sign off on it with very high probability, and so the
+block will not satisfy the top-level criteria.
+17Hence, we know that the resulting ψ will represent a state which is valid,
+in the sense that it can be described as a series of transactions applied to
+the genesis. This is the validity criterion that we will repeatedly use in order
+to prove that validity is preserved by other mechanisms that we introduce
+such as revert mechanics.
+Because a sampling scheme is inherently probabilistic, it is theoretically
+prone to failure, and so we will precisely calculate the probability that the
+protocol will fail. Assuming a 96-bit security margin, we can consider a
+probability negligible if the average time between failures is longer than the
+time it takes for an attacker to make 2 96 computations. If we assume that
+the cryptoeconomically secure entropy source updates every super-block,
+and a super-block comes every 20 seconds, then one can reasonably expect
+a hostile computing cluster to be able to perform 2 48 work within that time,
+so we will target a failure probability of 2 −48 (this implies roughly one fail-
+ure per 445979 years of being under attack). We can determine the failure
+probability with the following combinatoric formula:
+P E(n, k, p) = p k ∗ (1 − p) n−k ∗
+n!
+k!(n−k)!
+Where P E(n, k, p) is the probability of an event that occurs with proba-
+bility p in an attempt will achieve exactly k occurrences out of n attempts.
+For convenience, we define P GE(n, k, p) = ni=k P E(n, i, p), ie. the proba-
+bility of at least k occurrences.
+We note that P GE(135, 90, 13 ) = 2 −48.37 , so 135 nodes will suffice for a
+k = 13 fault tolerance. If we are willing to lower to k = 5 1 , then P GE(39, 31, 15 ) =
+2 −48.58 , so 39 nodes will be sufficient. Additionally, note that if we want
+greater efficiency under normal circumstances, then a bimodal scheme where
+either 44 out of a particular 50 nodes (P GE(50, 44, 3 1 ) = 2 −49.22 ) or 90 out of
+a particular 135 nodes is a sufficient validity condition will allow the cheaper
+but equally safe condition to work in the (usual) case where there are almost
+no malicious nodes, nearly everyone is online and the network is not under
+attack, and fall back to the more robust but bulkier validation rule under
+tougher conditions.
+Additionally, note that the combinatoric formula is only valid if the en-
+tropy used to determine validator sets is actually random, or at least close
+enough for our purposes. For this, our second uninfluenceability criterion,
+stipulating that an attacker with less than 3 1 of all validators will be able
+to influence it by at most a reasonably small linear amount (in the NXT
+case, by a factor of 32 ), is crucial, showing that with such a powerful attacker
+the probability of a successful attack remains below 2 −47.4 . The first unin-
+fluenceability criterion is important in order to avoid excessive superlinear
+returns resulting from super-block proposers manipulating the entropy in or-
+der to increase the chance that their validators will be involved in verifying
+blocks, but does not affect security.
+18To see the role of the unpredictability criterion, note that the protocol
+as described here provides ex ante Byzantine fault-tolerance, but not ex post
+Byzantine fault tolerance; after the validators are selected, only that small
+fixed number of validators acting maliciously will compromise the system.
+If entropy becomes unpredictable very slowly (or never at all), then the
+algorithm is only Byzantine fault-tolerant against faults very far in advance,
+leading to potential practical vulnerabilities like an attacker locating the 135
+validators that will be validating their block one year from now and taking
+the time to locate and hack into 90 of them.
+Lemma 5.0.5. The above protocol is scalable.
+Proof. The load of a validator consists of two parts:
+• validating the header chain
+• validating the blocks
+For the header chain, note that the size of each super-block is n+k 1 b+k 2 ,
+where n is the size of the state partition (as each index can be included as
+an observed area at most once), b is the number of blocks, k is a constant
+representing the size of H(T ) + H(D) + [s 1 ...s m ], and k 2 is a constant for
+miscellaneous super-block data (eg. validators entering and leaving, the en-
+tropy source, timestamp, previous block hash). We can require n ∈ O(N 1− )
+and b ≤ n so b ∈ O(N 1− ). One can come up with an algorithm to evalu-
+ate the top-level validity of the block in less than O(N ) time; showing that
+observed areas do not intersect as a set non-intersection algorithm can take
+up to O(k ∗ log(k)) time for k items and O(N 1− ∗ log(N 1− )) < O(N ), and
+the individual block validations should simply take O(N 1− ) time.
+For block validation, suppose that there are v ∈ O(N 1− ) validators.
+Each super-block may contain a maximum of n blocks, and n ∈ O(N 1− ).
+Thus, in total, validators must process at most m ∗ n blocks (as each block
+must be processed by m validators), and so each validator will on average
+end up processing m ∗ n/v ≤ O(1) blocks. If each block has O(N 1− )
+transactions, then the computational load of this is m ∗ O(N 1− ) < O(N ).
+Hence, the total load of a validator is less than O(N ) while the network
+processes a total of O(N 2− ) transactions.
+From a bandwidth perspective, the header chain is sent to everyone, but
+for blocks the block proposer need only send the block to the validators
+directly, so once again the load per validator is O(N 1− ). The only data
+that a validator needs to verify the block is the observed areas on the sub-
+partition level, which are provided with proofs inside of β.
+The incentives inside such a scheme would be provided as follows:
+• Transactions can pay transaction fees to the producer of the block that
+includes them.
+19• Blocks can pay transaction fees to the proposer of the super-block that
+includes them, as well as the the validators that will sign off on them.
+• The proposer of the super-block can pay transaction fees to the valida-
+tor pool of the super-block; this fee can be mandatory (ie. protocol-
+enforced) or enforced by validators refusing to sign a block with a fee
+that is too small for them.
+
+
 
 # PARTE DI MASSI
 * Il protocollo potrebbe aggiungere facoltativamente una fee obbligatoria alle transazioni e ai blocchi, e tale fee puo’ essere distrutta. Il protocollo puo’ anche aggiungere una ricompensa “ex nihilo” per i validatori dei super-blocchi, invece di richiedere che questa sia pagata dalle fee di transazione. 
