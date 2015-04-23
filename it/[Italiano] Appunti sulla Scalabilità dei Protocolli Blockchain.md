@@ -3,6 +3,9 @@ Vitalik Buterin (Ethereum)
 
 Commentatori e collaboratori: Gavin Wood, Vlad Zamfir (Ethereum),
 Jeff Coleman (Kryptokit)
+
+Tradotto in italiano da L.Pedretti e M.Terzi
+
 Marzo 14-31, 2015 Capitolo 1
 
 ##Introduzione
@@ -658,21 +661,10 @@ La sfida piu' ardua nell'implementare uno schema di fallback e' che ci sono difa
 
 Una peculiare conseguenza di cio' e' che validare la disponibilita' dei dati attraverso un fallback a cascata, come descritto nella sezione precedenze, non e' cosi' semplice: l'attaccante puo' sempre ingannare il sistema e distruggere i depositi altrui fornendo dapprima un blocco con dati non disponibili, aspettando che inizi un gioco fallback, e quindi distruggere i depositi di sicurezza degli sfidanti fornendo i dati ad un certo punto a meta' del gioco. Nonostante tale attacco non comprometta la sicurezza, consente all'attaccante di succhiare risorse dagli sfidanti, portanto ad un equilibrio nel quale non e' razionale sfidare, e a quel punto l'attaccante sara' in grado di creare e propagare blocchi cattivi senza piu' impedimenti. 
 
-In order to make clear the gravity of the problem, we will start off by
-showing several categories of attacks that are possible if data availability
-cannot be effectively ensured.
-Example 7.0.5 (Unprovable theft attack). An attacker creates a block
-with transactions T 1 ... T n , where T 1 ... T n−1 are legitimate and applied
-properly but T n is an invalid transaction which seems to transfer $1 million
-from an arbitrary wealthy user to the attacker. The attacker makes T 1 ...
-24T n−1 available, and makes the final state available, but does not make T n
-available. Once the state is confirmed by a sufficient number of future blocks,
-the attacker than spends the $1 million to purchase other untraceable digital
-assets.
-Here, note that there is no way to prove invalidity, because theoretically
-T n very easily could be a transaction legitimately transferring $1 million from
-the millionaire to the attacker, but the unavailability of the data prevents
-the network from making the judgement.
+Per rendere chiara la gravita' del problema, cominceremo col mostrare diverse categorie di attacchi che sono possibili se la disponibilita' dei dati non puo' essere effettivamente garantita. 
+
+Example 7.0.5 (attacco di furto non provabile). Un attaccante crea un blocco con le transazioni T 1 ... T n , laddove T 1 ... T n−1 sono leggittime e appliche appropriatamente ma T n e' una transazione non valida che sembra trasferire 1 milione di dollari da un ricco utente casuale all'attaccante. L'attaccante rende disponibili T 1 ... 24T n−1, e rende disponibile lo stato finale, ma non rende T n disponibile. Quando lo stato e' confermato da un numero sufficiente di blocchi futuri, l'attaccante spende a quel punto il milione di dollari per acquistare altri asset digitali non tracciabili. 
+Nota che cosi' non c'e' modo di provare l'invalidita', perche' teoricamente T n potrebbe facilmente essere una transazione che trasferisce legittimanete un milione di dollari da un milionario ad un attaccante, ma la mancanza di disponibilita' dei dati impedisce alla rete di esprimere un giudizio a proposito. 
 Example 7.0.6 (Sudden millionaire attack). An attacker creates a block
 with transactions T 1 ... T n , where T 1 ... T n−1 are applied properly but T n is
 an invalid transaction. The attacker then makes T 1 ... T n−1 available, and
