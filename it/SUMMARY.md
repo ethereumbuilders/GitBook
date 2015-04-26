@@ -22,7 +22,7 @@
 * [API-uri Ethereum](ethereum_apis.md)
    * [JSON RPC API](ethereum_json_rpc.md)
    * [Javascript API]([Italian] ethereum javascript api.md)
-* [Gli Smart Contracts](smart_contract_tutorials.md)
+* [I contratti intelligenti (smart contracts)](smart_contract_tutorials.md)
    * [Caratteristiche di Solidity]([Italian] caratteristiche di Solidity.md)
    * [Caratteristiche di Serpent](serpent_features.md)
    * [Tutorials su Serpent](serpent_tutorials.md)
