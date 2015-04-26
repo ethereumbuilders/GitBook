@@ -23,7 +23,7 @@
    * [JSON RPC API](ethereum_json_rpc.md)
    * [Javascript API](ethereum_javascript_api.md)
 * [Gli Smart Contracts](smart_contract_tutorials.md)
-   * [Caratteristiche di Solidity](solidity_features.md)
+   * [Caratteristiche di Solidity]([Italian] caratteristiche di Solidity.md)
    * [Caratteristiche di Serpent](serpent_features.md)
    * [Tutorials su Serpent](serpent_tutorials.md)
    * [Tutorials su Solidity](solidity_tutorials.md)
