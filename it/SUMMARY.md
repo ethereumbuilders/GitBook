@@ -26,7 +26,7 @@
    * [Caratteristiche di Solidity]([Italian] caratteristiche di Solidity.md)
    * [Caratteristiche di Serpent](serpent_features.md)
    * [Tutorials su Serpent](serpent_tutorials.md)
-   * [Tutorials su Solidity]([Italian] Tutorials su Solidity.md)
+   * [Tutorials su Solidity]([Italian]_Tutorials_su_Solidity.md)
 * Risorse
    * [Il Whitepaper]([Italian]-Libro-Bianco.md)
    * [Glossario]([Italian] glossario.md)
