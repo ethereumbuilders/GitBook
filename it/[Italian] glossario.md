@@ -4,7 +4,7 @@ Una delle cose per le quali e' famosa la criptoeconomia, in maniera simile ad al
 
 ### Crittografia
 
-See also: http://en.wikipedia.org/wiki/Public-key_cryptography
+Vedete anche: http://en.wikipedia.org/wiki/Public-key_cryptography
 
 * **Computational infeasibility**: a process is computationally infeasible if it would take an impracticably long time (eg. billions of years) to do it for anyone who might conceivably have an interest in carrying it out. Generally, 2<sup>80</sup> computational steps is considered the lower bound for computational infeasibility.
 * **Hash**: a hash function (or hash algorithm) is a process by which a document (ie. a piece of data or file) is processed into a small piece of data (usually 32 bytes) which looks completely random, and from which no meaningful data can be recovered about the document, but which has the important property that the result of hashing one particular document is always the same. Additionally, it is crucially important that it is computationally infeasible to find two documents that have the same hash. Generally, changing even one letter in a document will completely randomize the hash; for example, the SHA3 hash of "Saturday" is `c38bbc8e93c09f6ed3fe39b5135da91ad1a99d397ef16948606cdcbd14929f9d`, whereas the SHA3 hash of Caturday is `b4013c0eed56d5a0b448b02ec1d10dd18c1b3832068fbbdc65b98fa9b14b6dbf`. Hashes are usually used as a way of creating a globally agreed-upon identifier for a particular document that cannot be forged.
