@@ -25,7 +25,7 @@
 * [I contratti intelligenti (smart contracts)](smart_contract_tutorials.md)
    * [Caratteristiche di Solidity]([Italian] caratteristiche di Solidity.md)
    * [Caratteristiche di Serpent]([Italian] caratteristiche di serpent.md)
-   * [Tutorials su Serpent](serpent_tutorials.md)
+   * [Tutorials su Serpent]([Italian]_Tutorials_su_Serpent.md)
    * [Tutorials su Solidity]([Italian]_Tutorials_su_Solidity.md)
 * Risorse
    * [Il Whitepaper]([Italian]-Libro-Bianco.md)
