@@ -29,5 +29,6 @@
    * [Tutorials su Solidity]([Italian]_Tutorials_su_Solidity.md)
 * Risorse
    * [Il Whitepaper]([Italian]-Libro-Bianco.md)
+   * [Lo Yellowpaper]([Italian]-Libro-Giallo.md)
    * [Glossario]([Italian] glossario.md)
 
