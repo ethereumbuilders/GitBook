@@ -9,7 +9,7 @@
    * [La filosofia di progettazione di Ethereum]([Italian]La_filosofia_di_progettazione_di_Ethereum.md)
        * [Design rationale]([Italian]Design_rationale.md)
    * [Cos e' Ethereum?]([Italian]-cosa-e-ethereum.md)
-* [Installare il Client di Ethereum](installing_ethereum.md)
+* [Installare il Client di Ethereum]([Italian]-installare_ethereum.md)
    * [Su Ubuntu](building_on_ubuntu.md)
        * [C++]([Italian]-ubuntu_cpp_build.md)
        * [Go]([Italian]-ubuntu_go_build.md)
