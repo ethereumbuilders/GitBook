@@ -20,7 +20,7 @@
        * [C++]([Italian]-win_cpp_build.md)
        * [Go]([Italian]-win_go_build.md)
 * [API-uri Ethereum](ethereum_apis.md)
-   * [JSON RPC API](ethereum_json_rpc.md)
+   * [JSON RPC API]([Italian]-ethereum_json_rpc.md)
    * [Javascript API]([Italian]-ethereum_javascript_api.md)
 * [I contratti intelligenti (smart contracts)](smart_contract_tutorials.md)
    * [Caratteristiche di Solidity]([Italian] caratteristiche di Solidity.md)
