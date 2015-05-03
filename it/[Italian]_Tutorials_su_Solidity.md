@@ -44,29 +44,17 @@ contract Coin {
 }
 ```
 
-Questo contratto presenta dei nuovi concetti. Uno di questi e' il tipo `address`,
-che e' un valore di 160 bit che non consente di compiere alcuna operazione aritmetica.
-Furthermore, the state variable `balance` is of a complex datatype that maps
-addresses to unsigned integers. Mappings can be seen as hashtables which are
-virtually initialized such that every possible key exists and is mapped to a
-value whose byte-representation is all zeros. The special function `Coin` is the
-constructor which is run during creation of the contract and
-cannot be called afterwards. It permanently stores the address of the person creating the
-contract: Together with `tx` and `block`, `msg` is a magic global variable that
-contains some properties which allow access to the world outside of the contract.
-The function `queryBalance` is declared `constant` and thus is not allowed to
-modify the state of the contract (note that this is not yet enforced, though).
-In Solidity, return "parameters" are named and essentially create a local
-variable. So to return the balance, we could also just use `balance =
-balances[addr];` without any return statement.
+Questo contratto presenta dei nuovi concetti. Uno di questi e' il tipo `address`, che e' un valore di 160 bit che non consente di compiere alcuna operazione aritmetica.
+Inoltre, la variable di stato `balance` è un datatype complesso che mappa indirizzi per interi senza segno. I mappings possono essere visti come tavole di hash che sono praticamente inizializzate in modo che esista ogni chiave possibile ed e' associata ad un valora la cui rappresentazione in byte è di tutti zeri. La funzione speciale `Coin` è il costruttore che viene eseguito durante la creazione del contratto e non può essere eseguito in seguito. Memorizza permanentemente l'indirizzo della persona che crea il contratto: Insieme a `tx` e `block`, `msg` è una variabile magica globale che possiede alcune proprietà che consentono l'accesso al mondo esterno al contratto.
+La funzione `queryBalance` è dichiarata come `constant` e quindi non è consentito modificare lo stato del contratto (si noti però che cio' non è ancora implementato). Su Solidity, i parametri "return" vengono chiamati ed essenzialmente creano una variabile locale. Quindi per restituire il saldo, potremmo anche semplicemente usare `balance = balances[addr];` senza alcuna istruzione di tipo return.
 
-## Comments
+## I Commenti
 
 Single-line comments (`//`) and multi-line comments (`/*...*/`) are possible, while
 triple-slash comments (`///`) right in front of function declarations introduce NatSpec
 comments (which are not covered here).
 
-## Types
+## I tipi di dati
 
 The currently implemented (elementary) types are booleans (`bool`), integer and fixed-length string/byte array (bytes0 to bytes32) types.
 The integer types are signed and unsigned integers of various bit widths
@@ -113,7 +101,7 @@ uint constant x = 32;
 bytes3 constant text = "abc";
 ```
 
-## Integer Literals
+## I numeri interi letterali
 
 The type of integer literals is not determined as long as integer literals are
 combined with themselves. This is probably best explained with examples:
@@ -141,13 +129,13 @@ var x = (0xffffffffffffffffffff * 0xffffffffffffffffffff) * 0;
 ```
 Here, `x` will have the value `0` and thus the type `uint8`.
 
-## Ether and Time Units
+## Ether e le Unita' Temporali
 
 A literal number can take a suffix of `wei`, `finney`, `szabo` or `ether` to convert between the subdenominations of ether, where Ether currency numbers without a postfix are assumed to be "wei", e.g. `2 ether == 2000 finney` evaluates to `true`.
 
 Furthermore, suffixes of `seconds`, `minutes`, `hours`, `days`, `weeks` and `years` can be used to convert between units of time where seconds are the base unit and units are converted naively (i.e. a year is always exactly 365 days, etc.).
 
-## Control Structures
+## Le Strutture di Controllo
 
 Most of the control structures from C/JavaScript are available in Solidity
 except for `switch` (not planned) and `goto` (note that it's called Solidity). So
