@@ -50,52 +50,35 @@ La funzione `queryBalance` è dichiarata come `constant` e quindi non è consent
 
 ## I Commenti
 
-Single-line comments (`//`) and multi-line comments (`/*...*/`) are possible, while
-triple-slash comments (`///`) right in front of function declarations introduce NatSpec
-comments (which are not covered here).
+E' possibile fare commenti a linea singola (`//`) e a linea multipla (`/*...*/`), mentre i commenti con tre barre (`///`) prima della dichiarazione di una funzione introducono i commenti NatSpec (che non sono descritti qui).
 
 ## I tipi di dati
 
-The currently implemented (elementary) types are booleans (`bool`), integer and fixed-length string/byte array (bytes0 to bytes32) types.
-The integer types are signed and unsigned integers of various bit widths
-(`int8`/`uint8` to `int256`/`uint256` in steps of 8 bits, where `uint`/`int` are
-aliases for `uint256`/`int256`) and addresses (of 160 bits).
+I tipi (elementari) di dati implementati al momento sono booleani (`bool`), interi e array di stringhe/byte a lunghezza fissa (da bytes0 a bytes32).
+I tipi interi sono sia signed e unsigned di varie dimensioni di bits (da `int8`/`uint8` a `int256`/`uint256` in sequenze di 8 bits, laddove `uint`/`int` definiscono i tipi `uint256`/`int256`) e gli indirizzi (di 160 bits).
 
-Comparisons (`<=`, `!=`, `==`, etc.) always yield booleans which can be
-combined using `&&`, `||` and `!`. Note that the usual short-circuiting rules
-apply for `&&` and `||`, which means that for expressions of the form
-`(0 < 1 || fun())`, the function is actually never called.
+Le funzioni di comparazione (`<=`, `!=`, `==`, etc.) danno sempre come risultato dei tipi booleani che possono essere combinati utilizzando `&&`, `||` e `!`. Notate che le scorciatoie comuni si applicano per  `&&` e `||`, che significa che per le espressioni in forma `(0 < 1 || fun())`, la funzione non viene mai eseguita.
 
-If an operator is applied to different types, the compiler tries to
-implicitly convert one of the operands to the type of the other (the same is
-true for assignments). In general, an implicit conversion is possible if it
-makes sense semantically and no information is lost: `uint8` is convertible to
-`uint16` and `int120` to `int256`, but `int8` is not convertible to `uint256`.
-Furthermore, unsigned integers can be converted to bytes of the same or larger
-size, but not vice-versa. Any type that can be converted to `uint160` can also
-be converted to `address`.
+Se un operatore e' applicato a un tipo diverso, il compilatore prova a convertire implicitamente uno degli operandi agli tipo dell'altro (e' vero lo stesso per gli assignments). In generale, una conversione implicita e' possibile se ha senso semanticamente e nessuna informazione viene perduta: `uint8` e' convertibile in `uint16` e `int120` in `int256`, ma `int8` non e' convertibile in `uint256`.
+Inoltre, interi unsigned e signed possono essere convertiti a bytes di uguale o di piu' grande dimensione, ma non viceversa. Ogni tipo puo' essere convertito a `uint160` ma puo' anche essere convertito in `address`.
 
-If the compiler does not allow implicit conversion but you know what you are
-doing, an explicit type conversion is sometimes possible:
+Se il compilatore non consente una conversione implicita ma sapete cosa state facendo, talvolta e' anche possibile una conversine esplicita:
 
 ```
 int8 y = -3;
 uint x = uint(y);
 ```
 
-At the end of this code snippet, `x` will have the value `0xfffff..fd` (64 hex
-characters), which is -3 in two's complement representation of 256 bits.
+Alla fine di questo pezzo di codice, `x` avra' il valore `0xfffff..fd` (64 caratteri esadecimali), che rappresenta -3 i due complementari rappresentazioni di 256 bits.
 
-For convenience, it is not always necessary to explicitly specify the type of a
-variable, the compiler automatically infers it from the type of the first
-expression that is assigned to the variable:
+Per convenienza non e' sempre necessario specificare esplicitamente il tipo di una variabile, il compilatore infatti lo inferisce automaticamente dal tipo di prima operazione che e' stata assegnata ad una variabile:
 ```
 uint20 x = 0x123;
 var y = x;
 ```
-Here, the type of `y` will be `uint20`. Using `var` is not possible for function
-parameters or return parameters.
-State variables of integer and bytesXX types can be declared as constant.
+Qui il tipo di `y` sara' `uint20`. Utilizzando `var` non e' possibile per i parametri funzione e return.
+Le variabili di stato integer e bytesXX possono essere dichiarate come costanti.
+
 ```
 uint constant x = 32;
 bytes3 constant text = "abc";
