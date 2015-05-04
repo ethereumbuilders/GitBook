@@ -86,37 +86,30 @@ bytes3 constant text = "abc";
 
 ## I numeri interi letterali
 
-The type of integer literals is not determined as long as integer literals are
-combined with themselves. This is probably best explained with examples:
-
+Il tipo di interi letterali non e' determinato fintanto che gli interi letterali sono mescolati tra loro. Probabilmente e' piu' semplice da spiegare con degli esempi: 
 ```
 var x = 1 - 2;
 ```
-The value of `1 - 2` is `-1`, which is assigned to `x` and thus `x` receives
-the type `int8` -- the smallest type that contains `-1`. The following code
-snippet behaves differently, though:
+Il valore di `1 - 2` e' `-1`, che e' assegnato a  `x` e quindi `x` riceve il tipo `int8` -- il tipo piu' piccolo che contiene `-1`. Nononostante cio', il codice seguente si comporta in modo diverso: 
 ```
-var one = 1;
-var two = 2;
-var x = one - two;
+var uno = 1;
+var due = 2;
+var x = uno - due;
 ```
 
-Here, `one` and `two` both have type `uint8` which is also propagated to `x`. The
-subtraction inside the type `uint8` causes wrapping and thus the value of
-`x` will be `255`.
+In questo caso `uno` and `due` sono entrambi di tipo `uint8` che si propaga anche a `x`. La sottrazione dentro un tipo `uint8` causa un arrovellamento e quindi il valore della `x` sara' di `255` (ricordate che il tipo `uint` non contiene numeri negativi).
 
-It is even possible to temporarily exceed the maximum of 256 bits as long as
-only integer literals are used for the computation:
+E' persino possibile eccedere temporaneamente il massimo di 256 bits fintanto che solamente gli interi letterali sono utilizzati per il calcolo:
 ```
 var x = (0xffffffffffffffffffff * 0xffffffffffffffffffff) * 0;
 ```
-Here, `x` will have the value `0` and thus the type `uint8`.
+Qui `x` prendera' il valore `0` e quindi il tipo `uint8`.
 
 ## Ether e le Unita' Temporali
 
-A literal number can take a suffix of `wei`, `finney`, `szabo` or `ether` to convert between the subdenominations of ether, where Ether currency numbers without a postfix are assumed to be "wei", e.g. `2 ether == 2000 finney` evaluates to `true`.
+Un numero letterale puo' assumere il suffisso `wei`, `finney`, `szabo` o `ether` per essere convertito tra le denominazioni dell'ether, laddove si assume che i valori in Ether privi di suffisso siano "wei", ad esempio `2 ether == 2000 finney` e' `true`.
 
-Furthermore, suffixes of `seconds`, `minutes`, `hours`, `days`, `weeks` and `years` can be used to convert between units of time where seconds are the base unit and units are converted naively (i.e. a year is always exactly 365 days, etc.).
+Inoltre, i suffissi `seconds`, `minutes`, `hours`, `days`, `weeks` e `years` possono essere adoperati per convertire tra unita' temporali, laddove i secondi sono l'unita' di base e le unita' sono convertite in maniera semplice (i.e. un anno e' sempre esattamente 365 giorni, ecc.).
 
 ## Le Strutture di Controllo
 
