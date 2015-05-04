@@ -113,16 +113,11 @@ Inoltre, i suffissi `seconds`, `minutes`, `hours`, `days`, `weeks` e `years` pos
 
 ## Le Strutture di Controllo
 
-Most of the control structures from C/JavaScript are available in Solidity
-except for `switch` (not planned) and `goto` (note that it's called Solidity). So
-there is: `if`, `else`, `while`, `for`, `break`, `continue`, `return`. Note that there
-is no type conversion from non-boolean to boolean types as there is in C and
-JavaScript, so `if (1) { ... }` is _not_ valid Solidity.
+La maggior parte delle strutture di controllo di C/Javascript sono disponibili su Solidity tranne che per `switch` (supporto non pianificato) e `goto` (che e' invece chiamato Solidity). Dunque avete: `if`, `else`, `while`, `for`, `break`, `continue`, `return`. Notate che non e' possibile una conversione di tipo tra i non-booleani e i booleani come in C and JavaScript, quindi `if (1) { ... }` _non_ e' valido su Solidity.
 
-## Function Calls
+## Richiamare le funzioni
 
-Functions of the current contract can be called directly, also recursively, as seen in
-this nonsensical example:
+Le funzioni del contratto corrente possono essere richiamate direttamente, anche in maniera ricorsiva, come potete vedere in questo esempio senza senso:
 
 ```
 contract c {
@@ -131,9 +126,7 @@ contract c {
 }
 ```
 
-The expression `this.g(8);` is also a valid function call, but this time, the function
-will be called via a message call and not directly via jumps. When calling functions
-of other contracts, the amount of Wei sent with the call and the gas can be specified:
+Anche l'espressione `this.g(8);` e' una chiamata di funzione valida, ma questa volta la funzione verra richiamata tramite una chiamata di messaggio e non direttamente via salti. Quando richiamate funzioni di altri contratti, potete specificare l'ammontare di Wei inviato con la chiamata e il gas: 
 ```
 contract InfoFeed {
   function info() returns (uint ret) { return 42; }
