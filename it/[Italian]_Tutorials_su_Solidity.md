@@ -137,13 +137,9 @@ contract Consumer {
   function callFeed() { feed.info.value(10).gas(800)(); }
 }
 ```
-Note that the expression `InfoFeed(addr)` performs an explicit type conversion stating
-that "we know that the type of the contract at the given address is `InfoFeed`" and
-this does not execute a constructor. Be careful in that `feed.info.value(10).gas(800)`
-only (locally) set the value and amount of gas sent with the function call and only the
-parentheses at the end perform the actual call.
+Notate che l'espressione `InfoFeed(addr)` compie una conversione esplicita di tipo, dicendo che  "sappiamo che il tipo del contratto a quel determinato address e' `InfoFeed` e quindi questo non esegue il construttore. Sate attenti perche' `feed.info.value(10).gas(800)` setta solo (localmente) il valore e l'ammontare di gas inviati con la funzione chamata e solo le parentesi alla fine `()` compiono la chiamata vera e propria. 
 
-Function call arguments can also be given by name, in any order:
+Gli argomenti delle funzioni di chiamata possono anche essere dati per nome, in qualsiasi ordine:
 ```
 contract c {
 function f(uint key, uint value) { ... }
@@ -152,7 +148,7 @@ function g() {
 }
 }
 ```
-The names for function parameters and return parameters are optional.
+I name dei parametri delle funzioni e dei parametri return sono opzionali. 
 ```
 contract test {
   function func(uint k, uint) returns(uint){
@@ -161,22 +157,21 @@ contract test {
 }
 ```
 
-## Special Variables and Functions
+## Variabili e Funzioni speciali
 
-There are special variables and functions which always exist in the global
-namespace.
+Esistono variabili e funzioni speciali che esistono globalmente nel codice dei contratti. 
 
-### Block and Transaction Properties
+### Proprieta' dei Blocchi e delle Transazioni
 
- - `block.coinbase` (`address`): current block miner's address
- - `block.difficulty` (`uint`): current block difficulty
- - `block.gaslimit` (`uint`): current block gaslimit
- - `block.number` (`uint`): current block number
- - `block.blockhash` (`function(uint) returns (bytes32)`): hash of the given block
- - `block.timestamp` (`uint`): current block timestamp
- - `msg.data` (`bytes`): complete calldata
- - `msg.gas` (`uint`): remaining gas
- - `msg.sender` (`address`): sender of the message (current call)
+ - `block.coinbase` (`address`): l'indirizzo del miner del blocco attuale
+ - `block.difficulty` (`uint`): la difficolta' del blocco attuale
+ - `block.gaslimit` (`uint`): il gaslimit del blocco attuale
+ - `block.number` (`uint`): il numero del blocco attuale
+ - `block.blockhash` (`function(uint) returns (bytes32)`): l'hash del dato blocco
+ - `block.timestamp` (`uint`): il timestamp del blocco attuale
+ - `msg.data` (`bytes`): completa il calldata
+ - `msg.gas` (`uint`): gas rimanente
+ - `msg.sender` (`address`): mittente del messaggio (chiamata corrente)
  - `msg.value` (`uint`): number of wei sent with the message
  - `now` (`uint`): current block timestamp (alias for `block.timestamp`)
  - `tx.gasprice` (`uint`): gas price of the transaction
