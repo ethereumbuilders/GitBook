@@ -172,40 +172,39 @@ Esistono variabili e funzioni speciali che esistono globalmente nel codice dei c
  - `msg.data` (`bytes`): completa il calldata
  - `msg.gas` (`uint`): gas rimanente
  - `msg.sender` (`address`): mittente del messaggio (chiamata corrente)
- - `msg.value` (`uint`): number of wei sent with the message
- - `now` (`uint`): current block timestamp (alias for `block.timestamp`)
- - `tx.gasprice` (`uint`): gas price of the transaction
- - `tx.origin` (`address`): sender of the transaction (full call chain)
+ - `msg.value` (`uint`): ammontare di wei spedito con il messaggio
+ - `now` (`uint`): il timestamp del blocco attuale (alias for `block.timestamp`)
+ - `tx.gasprice` (`uint`): prezzo in gas della transazione
+ - `tx.origin` (`address`): mittente della tranzione (chiamata completa alla chain)
 
-### Cryptographic Functions
+### Funzioni Crittografiche
 
- - `sha3(...) returns (bytes32)`: compute the SHA3 hash of the (tightly packed) arguments
- - `sha256(...) returns (bytes32)`: compute the SHA256 hash of the (tightly packed) arguments
- - `ripemd160(...) returns (bytes20)`: compute RIPEMD of 256 the (tightly packed) arguments
- - `ecrecover(bytes32, byte, bytes32, bytes32) returns (address)`: recover public key from elliptic curve signature
+ - `sha3(...) returns (bytes32)`: calcola l'hash SHA3 dell'argomento (tightly packed)
+ - `sha256(...) returns (bytes32)`: calcola l'hash SHA256 dell'argomento (tightly packed)
+ - `ripemd160(...) returns (bytes20)`: calcola il RIPEMD di 256 dell'argomento (tightly packed)
+ - `ecrecover(bytes32, byte, bytes32, bytes32) returns (address)`: recupera la chiave pubblica dalla firma a curva ellittica
 
-In the above, "tightly packed" means that the arguments are concatenated without padding, i.e.
-`sha3("ab", "c") == sha3("abc") == sha3(0x616263) == sha3(6382179) = sha3(97, 98, 99)`. If padding is needed, explicit type conversions can be used.
+Nel codice sopra, "tightly packed" significa che gli argomenti sono concatenati senza imbottitura, i.e.
+`sha3("ab", "c") == sha3("abc") == sha3(0x616263) == sha3(6382179) = sha3(97, 98, 99)`. Se c'e' bisogno dell'imbottitura, e' richiesta una conversione esplicita di tipo. 
 
-### Contract Related
+### Relative ai contratti
 
- - `this` (current contract's type): the current contract, explicitly convertible to `address`
- - `suicide(address)`: suicide the current contract, sending its funds to the given address
+ - `this` (tipo dell'attuale contratto type): il contratto attuale, convertibile esplicitamente in `address`
+ - `suicide(address)`: fa "suicidare" il contratto attuale, inviando i suoi fondi al dato indirizzo
 
-Furthermore, all functions of the current contract are callable directly including the current function.
+Inoltre, tutte le funzioni del contratto corrente sono richiamabili direttamente includendo la funzione corrente. 
 
-## Functions on addresses
+## Funzioni sugli indirizzi
 
-It is possible to query the balance of an address using the property `balance`
-and to send Ether (in units of wei) to an address using the `send` function:
+E' possibile chiedere il saldo di un indirizzo usando la proprieta' `balance` ed inviare Ether (in unita' Wei) ad un indirizzo utilizzando la funzione  `send`:
 
 ```
 address x = 0x123;
 if (x.balance < 10 && address(this).balance >= 10) x.send(10);
 ```
 
-Furthermore, to interface with contracts that do not adhere to the ABI (like the classic NameReg contract),
-the function `call` is provided which takes an arbitrary number of arguments of any type. These arguments are ABI-serialized (i.e. also padded to 32 bytes). One exception is the case where the first argument is encoded to exactly four bytes. In this case, it is not padded to allow the use of function signatures here.
+Inoltre, per interfacciarsi con i contratti che non aderiscono all'ABI (come il classico contratto NameReg),
+e' fornita la funzione `call` che prende un numero casuale di argomenti di qualsiasi tipo. Questi argomenti sono serializzati in ABI (i.e. imbottiti anch'essi a  32 bytes). Una eccezione e' quel caso in cui il primo argomento e' codificato in esattamente quattro bytes. In questo caso, non e' imbottito per permettere l'uso della funzione firma.
 
 ```
 address nameReg = 0x72ba7d8e73fe8eb666ea66babc8116a41bfb10e2;
@@ -213,18 +212,13 @@ nameReg.call("register", "MyName");
 nameReg.call(bytes4(sha3("fun(uint256)")), a);
 ```
 
-Note that contracts inherit all members of address, so it is possible to query the balance of the
-current contract using `this.balance`.
+Notate che i contratti ereditano tutti i membri dell'indrizzo, quindi e' possibile chiedere il saldo del contratto corrente utilizzando `this.balance`.
 
-## Order of Evaluation of Expressions
+## Ordine di esecuzione delle espressioni
 
-The evaluation order of expressions is not specified (more formally, the order
-in which the children of one node in the expression tree are evaluated is not
-specified, but they are of course evaluated before the node itself). It is only
-guaranteed that statements are executed in order and short-circuiting for
-boolean expressions is done.
+L'ordine di esecuzione delle espressioni non e' specificato (piu' formalmente, l'ordine nel quale i bambini di un nodo nell'albero dell'espressione sono valutati non e' specificato, ma certamente sono valutit prima dello stesso nodo). Si ha solo la garanzia che le linee di codice sono eseguite in ordine e' possibile la cortocircuitazione mediante espressioni booleane.
 
-## Arrays
+## Gli Arrays
 
 Both variably and fixed size arrays are supported in storage and as parameters of external
 functions:
