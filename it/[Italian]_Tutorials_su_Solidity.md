@@ -220,8 +220,7 @@ L'ordine di esecuzione delle espressioni non e' specificato (piu' formalmente, l
 
 ## Gli Arrays
 
-Both variably and fixed size arrays are supported in storage and as parameters of external
-functions:
+Gli arrays di dimensione variable e fissa sono supportati nella memorizzazione e come parametri di funzioni estern:
 
 ```
 contract ArrayContract {
@@ -259,10 +258,9 @@ contract ArrayContract {
 }
 ```
 
-## Structs
+## Gli Structs
 
-Solidity provides a way to define new types in the form of structs, which is
-shown in the following example:
+Solidity fornisce un modo di definire un nuovo tipo nella forma di uno `struct`, che e' mostrato nell'esempio precedente: 
 
 ```
 contract CrowdFunding {
@@ -303,8 +301,8 @@ contract CrowdFunding {
 }
 ```
 
-The contract does not provide the full functionality of a crowdfunding
-contract, but it contains the basic concepts necessary to understand structs.
+Questo contratto non fornisce tutte le funzioni di un contratto tipico di crowdfunding, ma contiene i concetti di base necessari a capire gli `structs`. 
+I tipi struct possono essere usati come tipi di valore per i mappings e possono loro stessi contenere dei mappings (anche se gli stessi struct possono essere il tipo di valore per i mapping, nonostante non sia possibile includere uno struct dentro un altro struct). Notate che in tutte le funzioni, un tipo struct e' assegnato ad una variabile locale. Questo non copia lo struct
 Struct types can be used as value types for mappings and they can itself
 contain mappings (even the struct itself can be the value type of the mapping, although it is not possible to include a struct as is inside of itself). Note how in all the functions, a struct type is assigned to a local variable. This does not copy the struct but only store a reference so that assignments to members of the local variable actually write to the state.
 
