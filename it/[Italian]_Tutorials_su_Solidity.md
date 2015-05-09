@@ -573,31 +573,31 @@ contract Caller {
 }
 ```
 
-## Function Modifiers
+## Modificatori di funzione
 
-Modifiers can be used to easily change the behaviour of functions, for example to automatically check a condition prior to executing the function. They are inheritable properties of contracts and may be overridden by derived contracts.
+I modificatori possono essere utilizzati per cambiare facilmente il comportamento delle funzioni, ad esempio per il controllo automatico di una condizione che precede l'esecuzione della funzione. Sono proprieta' ereditabili dei contratti e possono essere sovrascritti da contratti derivati.
 
 ```
 contract owned {
   function owned() { owner = msg.sender; }
   address owner;
 
-  // This contract only defines a modifier but does not use it - it will
-  // be used in derived contracts.
-  // The function body is inserted where the special symbol "_" in the
-  // definition of a modifier appears.
+  // Questo contratto definisce un modificatore ma non lo usa - esso verra'
+  // sfruttato in contratti derivari.
+  // Il corpo della funzione e' inserito nel punto in cui appare il simbolo speciale "_"
+  // nella definizione di un modificatore.
   modifier onlyowner { if (msg.sender == owner) _ }
 }
 contract mortal is owned {
-  // This contract inherits the "onlyowner"-modifier from "owned" and
-  // applies it to the "kill"-function, which causes that calls to "kill"
-  // only have an effect if they are made by the stored owner.
+  // QUesto contratto eredita il modificatore "onlyowner" da "owned" e
+  // lo applica alla funzione "kill". L'effetto finale e' che i richiami all'esecuzione di "kill"
+  // hanno effetto solo se fatti dallo stored owner.
   function kill() onlyowner {
     suicide(owner);
   }
 }
 contract priced {
-  // Modifiers can receive arguments:
+  // I modificatori possono ricevere argomenti:
   modifier costs(uint price) { if (msg.value >= price) _ }
 }
 contract Register is priced, owned {
