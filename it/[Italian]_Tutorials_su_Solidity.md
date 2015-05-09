@@ -227,29 +227,29 @@ contract ArrayContract {
   uint[2**20] m_aLotOfIntegers;
   bool[2][] m_pairsOfFlags;
   function setAllFlagPairs(bool[2][] newPairs) {
-    // assignment to array replaces the complete array
+    // l'assegnamento all'array sostituisce l'array completo
     m_pairsOfFlags = newPairs;
   }
   function setFlagPair(uint index, bool flagA, bool flagB) {
-    // access to a non-existing index will stop execution
+    // accedendo ad un indice non esistente verra' bloccata l'esecuzione
     m_pairsOfFlags[index][0] = flagA;
     m_pairsOfFlags[index][1] = flagB;
   }
   function changeFlagArraySize(uint newSize) {
-    // if the new size is smaller, removed array elements will be cleared
+    // se la nuova dimensione e' inferiore, gli elementi dell'array rimossi verranno cancellati
     m_pairsOfFlags.length = newSize;
   }
   function clear() {
-    // these clear the arrays completely
+    // questi cancellano completamente l'array
     delete m_pairsOfFlags;
     delete m_aLotOfIntegers;
-    // identical effect here
+    // effetto identico qui
     m_pairsOfFlags.length = 0;
   }
   bytes m_byteData;
   function byteArrays(bytes data) external {
-    // byte arrays ("bytes") are different as they are stored without padding,
-    // but can be treated identical to "uint8[]"
+    // i byte arrays ("bytes") cambiano quando vengono messi in memoria senza il padding,
+    // ma possono essere trattati esattamente come "uint8[]"
     m_byteData = data;
     m_byteData.length += 7;
     m_byteData[3] = 8;
@@ -278,8 +278,8 @@ contract CrowdFunding {
   uint numCampaigns;
   mapping (uint => Campaign) campaigns;
   function newCampaign(address beneficiary, uint goal) returns (uint campaignID) {
-    campaignID = numCampaigns++; // campaignID is return variable
-    Campaign c = campaigns[campaignID];  // assigns reference
+    campaignID = numCampaigns++; // campaignID e' la variabile restituita
+    Campaign c = campaigns[campaignID];  // assegna una reference
     c.beneficiary = beneficiary;
     c.fundingGoal = goal;
   }
@@ -424,7 +424,7 @@ contract named is owned, mortal {
         if (msg.sender == owner) {
             address ConfigAddress = 0xd5f9d8d94886e70b06e474c3fb14fd43e2f23970;
             NameReg(Config(ConfigAddress).lookup(1)).unregister();
-// It is still possible to call a specific overridden function. 
+// E' comunque ancora possibile richiamare una specifica funzione sovrascritta. 
             mortal.kill();
         }
     }
