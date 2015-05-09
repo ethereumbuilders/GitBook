@@ -216,11 +216,11 @@ Notate che i contratti ereditano tutti i membri dell'indrizzo, quindi e' possibi
 
 ## Ordine di esecuzione delle espressioni
 
-L'ordine di esecuzione delle espressioni non e' specificato (piu' formalmente, l'ordine nel quale i bambini di un nodo nell'albero dell'espressione sono valutati non e' specificato, ma certamente sono valutit prima dello stesso nodo). Si ha solo la garanzia che le linee di codice sono eseguite in ordine e' possibile la cortocircuitazione mediante espressioni booleane.
+L'ordine di esecuzione delle espressioni non e' specificato (piu' formalmente, l'ordine nel quale i discendenti di un nodo nell'albero dell'espressione sono valutati non e' specificato, ma certamente sono valutit prima dello stesso nodo). Si ha solo la garanzia che le linee di codice sono eseguite in ordine e' possibile la cortocircuitazione mediante espressioni booleane.
 
 ## Gli Arrays
 
-Gli arrays di dimensione variable e fissa sono supportati nella memorizzazione e come parametri di funzioni estern:
+Gli arrays di dimensione variable e fissa sono supportati nella memorizzazione e come parametri di funzioni esterne:
 
 ```
 contract ArrayContract {
@@ -302,14 +302,11 @@ contract CrowdFunding {
 ```
 
 Questo contratto non fornisce tutte le funzioni di un contratto tipico di crowdfunding, ma contiene i concetti di base necessari a capire gli `structs`. 
-I tipi struct possono essere usati come tipi di valore per i mappings e possono loro stessi contenere dei mappings (anche se gli stessi struct possono essere il tipo di valore per i mapping, nonostante non sia possibile includere uno struct dentro un altro struct). Notate che in tutte le funzioni, un tipo struct e' assegnato ad una variabile locale. Questo non copia lo struct
-Struct types can be used as value types for mappings and they can itself
-contain mappings (even the struct itself can be the value type of the mapping, although it is not possible to include a struct as is inside of itself). Note how in all the functions, a struct type is assigned to a local variable. This does not copy the struct but only store a reference so that assignments to members of the local variable actually write to the state.
+I tipi struct possono essere usati come tipi di valore per i mappings e possono loro stessi contenere dei mappings (anche se gli stessi struct possono essere il tipo di valore per i mapping, nonostante non sia possibile includere uno struct dentro un altro struct). Notate che in tutte le funzioni, un tipo struct e' assegnato ad una variabile locale. Questo non copia lo struct, ma immagazzina solamente una reference, cosicche' gli assegnamenti ai membri della variabile locale scrivono effettivamente allo stato.
 
 ## Enums
 
-Enums are another way to create a user-defined type in Solidity. They are explicitly convertible
-to and from all integer types but implicit conversion is not allowed. The variable of enum type can be declared as constant.
+Gli Enums costituiscono un'altra soluzione per creare un tipo user-defined in Solidity. Sono convertibili in maniera esplicita in e da qualsiasi tipo integer, mentre la conversione implicita non è ammessa. E' invece possibile dichiarare una variabile di tipo enum come costante.
 
 ```
 contract test {
@@ -331,14 +328,14 @@ contract test {
 }
 ```
 
-## Interfacing with other Contracts
+## Interfacciamento con gli altri Contratti
 
-There are two ways to interface with other contracts: Either call a method of a contract whose address is known or create a new contract. Both uses are shown in the example below. Note that (obviously) the source code of a contract to be created needs to be known, which means that it has to come before the contract that creates it (and cyclic dependencies are not possible since the bytecode of the new contract is actually contained in the bytecode of the creating contract).
+Esistono due modi per interfacciarsi con altri contratti: richiamare un metodo di un contratto il cui indirizzo e' conosciuto, oppure creare un nuovo contratto. Entrambi gli usi sono mostrati nell'esempio che segue. Si noti che (ovviamente) il codice sorgente da creare deve essere noto; in altre parole, esso deve precedere il contratto che lo crea (e le dipendenze cicliche non sono possibili, perche' il bytecode del nuovo contratto e' contenuto nel bytecode del contratto che lo genera).
 
 ```
 contract OwnedToken {
-  // TokenCreator is a contract type that is defined below. It is fine to reference it
-  // as long as it is not used to create a new contract.
+  // TokenCreator è un tipo di contratto che viene qui sotto definito. E' possibile citarlo
+  // fintanto che ess non sara' usato per creare un nuovo contratto.
   TokenCreator creator;
   address owner;
   bytes32 name;
@@ -346,54 +343,55 @@ contract OwnedToken {
     address nameReg = 0x72ba7d8e73fe8eb666ea66babc8116a41bfb10e2;
     nameReg.call("register", _name);
     owner = msg.sender;
-    // We do an explicit type conversion from `address` to `TokenCreator` and assume that the type of
-    // the calling contract is TokenCreator, there is no real way to check.
+    // Facciamo una conversione esplicita del tipo (un cd. "cast") da `address` to `TokenCreator`
+    // e assumiamo che il tipo del contratto chiamante sia TokenCreator, sebbene non vi sia un modo 
+    // per controllare cio'.
     creator = TokenCreator(msg.sender);
     name = _name;
   }
   function changeName(bytes32 newName) {
-    // Only the creator can alter the name -- contracts are explicitly convertible to addresses.
+    // Solo il creatore ha la facolta' di alterare il nome -- i contratti sono esplicitamente 
+    // convertibili in indirizzi.
     if (msg.sender == address(creator)) name = newName;
   }
   function transfer(address newOwner) {
-    // Only the current owner can transfer the token.
+    // Solo il proprietario corrente puo' trasferire il token.
     if (msg.sender != owner) return;
-    // We also want to ask the creator if the transfer is fine.
-    // Note that this calls a function of the contract defined below.
-    // If the call fails (e.g. due to out-of-gas), the execution here stops
-    // immediately (the ability to catch this will be added later).
+    // Vogliamo poi chiedere al contratto generatore se il trasferimento è stato completato con successo.
+    // Si noti che questo chiama una funzione del contratto sotto definita.
+    // Se la chiamata fallisce (ad es. a causa della mancanza di gas), l'esecuzione si blocca immediatamente
+    // in questo punto (la possibilita' di cogliere cio' verra' aggiunta successivamente).
     if (creator.isTokenTransferOK(owner, newOwner))
       owner = newOwner;
   }
 }
 contract TokenCreator {
   function createToken(bytes32 name) returns (address tokenAddress) {
-    // Create a new Token contract and return its address.
+    // Crea un nuovo Token contract e restituisce il suo indirizzo.
     return address(new OwnedToken(name));
   }
   function changeName(address tokenAddress, bytes32 name) {
-    // We need an explicit type conversion because contract types are not part of the ABI.
+    // Abbiamo bisogno di una conversione esplicita del tipo in quanto i tipi contrattuali non fanno parte dell'ABI.
     OwnedToken token = OwnedToken(tokenAddress);
     token.changeName(name);
   }
   function isTokenTransferOK(address currentOwner, address newOwner) returns (bool ok) {
-    // Check some arbitrary condition.
+    // Controlla alcune condizioni arbitrarie.
     address tokenAddress = msg.sender;
     return (sha3(newOwner) & 0xff) == (bytes20(tokenAddress) & 0xff);
   }
 }
 ```
 
-## Constructor Arguments
+## Argomenti dei Costruttori
 
-A Solidity contract expects constructor arguments after the end of the contract data itself.
-This means that you pass the arguments to a contract by putting them after the
-compiled bytes as returned by the compiler in the usual ABI format.
+Un contratto Solidity richiede che gli argomenti del costruttore siano specificati dopo i dati del contratto stesso.
+Questo implica che il passaggio ad un contratto degli argomenti venga perfezionato inserendoli dopo i bytes compilati, nel momento in cui il compilatore li restituisce nel solito formato ABI.
 
-## Contract Inheritance
+## Ereditarieta' dei Contratti
 
-Solidity supports multiple inheritance by copying code including polymorphism.
-Details are given in the following example.
+Solidity supporta l'ereditarieta' multipla tramite copiatura del codice, polimorfismo incluso.
+Nell'esempio che segue forniamo i dettagli.
 
 ```
 contract owned {
@@ -401,27 +399,27 @@ contract owned {
     address owner;
 }
 
-// Use "is" to derive from another contract. Derived contracts can access all members
-// including private functions and storage variables.
+// Va usato "is" per derivare da un altro contratto. I contratti derivati possono accedere a tutti i membri
+// incluse le funzioni private e le variabili in memoria.
 contract mortal is owned {
     function kill() { if (msg.sender == owner) suicide(owner); }
 }
 
-// These are only provided to make the interface known to the compiler.
+// Stiamo fornendo questi contratti con il solo obiettivo di rendere nota l'interfaccia al compilatore. 
 contract Config { function lookup(uint id) returns (address adr) {} }
 contract NameReg { function register(bytes32 name) {} function unregister() {} }
 
-// Multiple inheritance is possible. Note that "owned" is also a base class of
-// "mortal", yet there is only a single instance of "owned" (as for virtual
-// inheritance in C++).
+// L'ereditarieta' multipla e' possibile. Si noti che "owned" e' anche la classe di base di
+// "mortal", sebbene vi sia soltanto una singola istanza di "owned" (concetto mutuato dall'ereditarieta'
+// virtuale in C++).
 contract named is owned, mortal {
     function named(bytes32 name) {
         address ConfigAddress = 0xd5f9d8d94886e70b06e474c3fb14fd43e2f23970;
         NameReg(Config(ConfigAddress).lookup(1)).register(name);
     }
 
-// Functions can be overridden, both local and message-based function calls take
-// these overrides into account.
+// Le funzioni possono essere sovrascritte. Sia le chiamate di funzioni locali che message-based tengono
+// conto di queste sovrascritture.
     function kill() {
         if (msg.sender == owner) {
             address ConfigAddress = 0xd5f9d8d94886e70b06e474c3fb14fd43e2f23970;
@@ -432,7 +430,7 @@ contract named is owned, mortal {
     }
 }
 
-// If a constructor takes an argument, it needs to be provided in the header.
+// Se un costruttore prende un argomento, esso (l'argomento) va fornito nell'header.
 contract PriceFeed is owned, mortal, named("GoldFeed") {
    function updateInfo(uint newInfo) {
       if (msg.sender == owner) info = newInfo;
@@ -444,8 +442,7 @@ contract PriceFeed is owned, mortal, named("GoldFeed") {
 }
 ```
 
-Note that above, we call `mortal.kill()` to "forward" the destruction request. The way this is done
-is problematic, as seen in the following example:
+Si badi che nell'esempio appena mostrato, abbiamo ordinato a `mortal.kill()` di "forwardare" la richiesta di distruzione. Il modo in cui questa richiesta viene inviata è, come si può notare nell'esempio che segue, alquanto problematica:
 ```
 contract mortal is owned {
     function kill() { if (msg.sender == owner) suicide(owner); }
@@ -460,9 +457,8 @@ contract Final is Base1, Base2 {
 }
 ```
 
-A call to `Final.kill()` will call `Base2.kill` as the most derived override, but this
-function will bypass `Base1.kill`, basically because it does not even know about `Base1`.
-The way around this is to use `super`:
+Il comando di esecuzione di `Final.kill()` richiama a sua volta `Base2.kill` poiche' l'oggetto piu' derivato sovrascrive l'antenato, ma questa funzione bypassera' `Base1.kill`, in quanto essa ignora persino `Base1`.
+Il metodo inverso consiste nell'usare `super`:
 ```
 contract mortal is owned {
     function kill() { if (msg.sender == owner) suicide(owner); }
@@ -477,51 +473,47 @@ contract Final is Base1, Base2 {
 }
 ```
 
-If `Base1` calls a function of `super`, it does not simply call this function on one of its
-base contracts, it rather calls this function on the next base contract in the final
-inheritance graph, so it will call `Base2.kill()`. Note that the actual function that
-is called when using super is not known in the context of the class where it is used,
-although its type is known. This is similar for ordinary virtual method lookup.
+Se `Base1` richiama una funzione di `super`, esso, piuttosto che comandare semplicemente l'esecuzione di tale funzione in uno dei suoi contratti di base, la fa eseguire sul contratto di base successivo all'interno del grafo di ereditarieta' finale, per cui richiamera' `Base2.kill()`. Va notato che la funzione realmente richiamata quando si usa il costrutto super non e' nota nel contesto della classe in cui esso e' usato, mentre e' noto il suo tipo. Questo vale anche per il metodo ordinario virtuale lookup.
 
-### Multiple Inheritance and Linearization
+### Ereditarieta' multipla e Linearizzazione
 
-Languages that allow multiple inheritance have to deal with several problems, one of them being the [Diamond Problem](https://en.wikipedia.org/wiki/Multiple_inheritance#The_diamond_problem). Solidity follows the path of Python and uses "[C3 Linearization](https://en.wikipedia.org/wiki/C3_linearization)" to force a specific order in the DAG of base classes. This results in the desirable property of monotonicity but disallows some inheritance graphs. Especially, the order in which the base classes are given in the `is` directive is important. In the following code, Solidity will give the error "Linearization of inheritance graph impossible".
+I linguaggi che ammettono ereditarieta' multipla debbono confrontarsi con molti problemi, tra cui il [Problema del Diamante](https://it.wikipedia.org/wiki/Ereditariet%C3%A0_multipla#Problema_del_diamante). Solidity seguendo la via scelta dagli sviluppatori di Python usa la "[C3 Linearization](https://en.wikipedia.org/wiki/C3_linearization)" per forzare un ordine specifico nella [DAG](https://github.com/ethereum/wiki/wiki/Ethash-DAG) delle classi di base. Da ciò deriva una comoda proprieta' di monotonicita' ma rende inammissibili alcuni grafi di ereditarieta'. In particolare, e' fondamentale l'ordine in cui le classi di base sono fornite nella direttivais`. In un codice come quello che segue, Solidity restituisce un errore "Linearization of inheritance graph impossible".
 ```
 contract X {}
 contract A is X {}
 contract C is A, X {}
 ```
-The reason for this is that `C` requests `X` to override `A` (by specifying `A, X` in this order), but `A` itself requests to override `X`, which is a contradiction that cannot be resolved.
+Il motivo e' che `C` richiede a `X` di sovrascrivere `A` (specificando `A, X` in quest'ordine), ma la stessa `A` richiede di sovrascrivere `X`, scatenando una contraddizione irrisolvibile.
 
-A simple rule to remember is to specify the base classes in the order from "most base-like" to "most derived".
+Una semplice regola da ricordare e' di specificare le classi di base in ordine di derivazione, dalla piu' basica alla piu' derivata.
 
-## Abstract Contracts
+## Contratti astratti
 
-Contract functions can lack an implementation as in the following example (note that the function declaration header is terminated by `;`).
+Alle funzioni Contratto possono mancare le implementazioni come nell'esempio che segue (notare che l'header della dichiarazione della funzione viene terminato da `;`).
 ```
 contract feline {
   function utterance() returns (bytes32);
 }
 ```
-Such contracts cannot be compiled (even if they contain implemented functions alongside non-implemented functions), but they can be used as base contracts:
+Questo tipo di contratti non possono essere compilati (sebbene contengano, assieme alle funzioni non implementate, anche funzioni implementate), ma possono comunque essere utilizzate come contratti di base:
 ```
 contract Cat is feline {
   function utterance() returns (bytes32) { return "miaow"; }
 }
 ```
-If a contract inherits from an abstract contract and does not implement all non-implemented functions by overriding, it will itself be abstract.
+Se un contratto eredita da un contratto astratto e non implementa tutte le funzioni non implementate sovrascrivendole, esso stesso sara' astratto.
 
-## Visibility Specifiers
+## Specificatori di visibilita'
 
-Functions and storage variables can be specified as being `public`, `internal` or `private`, where the default for functions is `public` and `internal` for storage variables. In addition, functions can also be specified as `external`.
+Le funzioni e le variabili di memoria possono essere specificate come `public`, `internal` or `private`, (l'impostazione di default e' `public` per le funzioni e `internal` per le variabili di memoria). In aggiunta, le funzioni possono anche essere specificate come `external`.
 
-External: External functions are part of the contract interface and they can be called from other contracts and via transactions. An external function `f` cannot be called internally (i.e. `f()` does not work, but `this.f()` works). Furthermore, all function parameters are immutable.
+External: le funzioni esterne sono parte dell'interfaccia di un contratto, e possono essere richiamate da altri contratti per mezzo delle transazioni. Una funzione esterna `f` non puo' essere richiamata internamente (cioè `f()` non funziona, mentre `this.f()` si'). Inoltre, tutti i parametri delle funzioni sono immutabili.
 
-Public: Public functions are part of the contract interface and can be either called internally or via messages. For public storage variables, an automatic accessor function (see below) is generated.
+Public: le funzioni pubbliche sono parte delle interfacce dei contratti e possono essere richiamate sia internamente che tramite messaggi. Per le variabili di memoria, viene generata automaticamente una funzione di accesso (vedi sotto).
 
-Inherited: Those functions and storage variables can only be accessed internally.
+Inherited: a tali funzioni e variabili di memoria si puo' accedere soltanto internamente.
 
-Private: Private functions and storage variables are only visible for the contract they are defined in and not in derived contracts.
+Private: le funzioni e le variabili di memoria private sono visibili solamente per il contratto in cui esse sono definite, e non all'interno di contratti derivati.
 
 ```
 contract c {
@@ -531,11 +523,11 @@ contract c {
 }
 ```
 
-Other contracts can call `c.data()` to retrieve the value of data in storage, but are not able to call `f`. Contracts derived from `c` can call `setData` to alter the value of `data` (but only in their own storage).
+Altri contratti possono richiamare `c.data()` per accedere ai valori dei dati in memoria, ma non sono in grado di far eseguire `f`. I contratti derivati da `c` possono richiamare `setData` per alterare i valori di `data` (ma solo all'interno del loro spazio di memoria).
 
-## Accessor Functions
+## Funzioni di accesso
 
-The compiler automatically creates accessor functions for all public state variables. The contract given below will have a function called `data` that does not take any arguments and returns a uint, the value of the state variable `data`. The initialization of state variables can be done at declaration.
+Il compilatore automaticamente crea funzioni per tutte le variabili di stato pubbliche. Il contratto che viene mostrato di seguito, avra' una funzione chiamata `data`, priva di argomenti, e che restituira' un uint, il valore della variabile di stato `data`. L'inizializzazione delle variabili di stato puo' essere effettuata in fase di dichiarazione.
 
 ```
 contract test {
@@ -543,7 +535,7 @@ contract test {
 }
 ```
 
-The next example is a bit more complex:
+L'esempio che segue e' leggermente piu' complesso:
 
 ```
 contract complex {
@@ -552,7 +544,7 @@ contract complex {
 }
 ```
 
-It will generate a function of the following form:
+Generera' una funzione di forma...
 ```
 function data(uint arg1, bool arg2, uint arg3) returns (uint a, bytes3 b)
 {
@@ -561,13 +553,11 @@ function data(uint arg1, bool arg2, uint arg3) returns (uint a, bytes3 b)
 }
 ```
 
-Note that the mapping in the struct is omitted because there is no good way to provide the key for the mapping.
+Va sottolineato che la mappatura nello struct viene omessz perche' non esiste un metodo efficace di fornire una chiave per la mappatura.
 
-## Fallback Functions
+## Funzioni di fallback (ripiego)
 
-A contract can have exactly one unnamed
-function. This function cannot have arguments and is executed on a call to the contract if
-none of the other functions matches the given function identifier (or if no data was supplied at all).
+Un contratto puo' avere esattamente una funzione anonima (senza nome). Tale funzione non puo' possedere argomenti e viene eseguita su richiesta di esecuzione del contratto se nessuna altra funzione e' compatibile con l'identificatore della funzione dato (o se non vengono affatto forniti dati).
 
 ```
 contract Test {
@@ -578,7 +568,7 @@ contract Test {
 contract Caller {
   function callTest(address testAddress) {
     Test(testAddress).send(0);
-    // results in Test(testAddress).x becoming == 1.
+    // restituisce Test(testAddress).x che diventa == 1.
   }
 }
 ```
