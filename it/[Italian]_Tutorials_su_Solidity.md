@@ -613,12 +613,11 @@ contract Register is priced, owned {
 }
 ```
 
-Multiple modifiers can be applied to a function by specifying them in a whitespace-separated list and will be evaluated in order. Explicit returns from a modifier or function body immediately leave the whole function, while control flow reaching the end of a function or modifier body continues after the "_" in the preceding modifier. Arbitrary expressions are allowed for modifier arguments and in this context, all symbols visible from the function are visible in the modifier. Symbols introduced in the modifier are not visible in the function (as they might change by overriding).
+Ad una funzione possono essere applicati modificatori multipli, che saranno valutati nell'ordine specificato in una lista separata da spazi. I risultati espliciti che derivano da un modificatore o dal corpo di una funzione si separano immediatamente dall'intera funzione, mentre il flusso di controllo che scorre fino alla fine della funzione prosegue anche dopo il "_" nel modificatore che precede. Per gli argomenti dei modificatori sono ammesse espressioni arbitrarie, ed in questo contesto, tutti i simboli visibili dalla funzione, sono visibili anche nel modificatore. I simboli introdotti nel modificatore non sono visibili nella funzione (in quanto essi possono subire modifiche da sovrascrittura).
 
-## Events
+## Eventi
 
-Events allow the convenient usage of the EVM logging facilities. Events are inheritable members of contracts. When they are called, they cause the arguments to be stored in the transaction's log. Up to three parameters can receive the attribute `indexed` which will cause the respective arguments to be treated as log topics instead of data. The hash of the signature of the event is one of the topics except you declared the event with `anonymous` specifier. All non-indexed arguments will be stored in the data part of the log. Example:
-
+Gli eventi consentono un uso conveniente delle utilità di logging EVM. GLi eventi sono membri ereditabili dei contratti. Nel momento in cui essi vengono richiamati, gli eventi fanno si' che gli argomenti vengano registrati nel log della transazione. L'attributo `indexed` può essere assegnato ad un massimo di tre parametri: a questo punto i rispettivi argomenti verranno trattati come log topics piuttosto che dati. L'hash della firma di un evento è uno dei topics, a meno che l'evento non venga dichiarato con lo specificatore `anonymous`. Tutti gli argomenti non indicizzati saranno memorizzati nella parte del log relativa ai dati. Esempio:
 ```
 contract ClientReceipt {
   event Deposit(address indexed _from, bytes32 indexed _id, uint _value);
@@ -627,31 +626,27 @@ contract ClientReceipt {
   }
 }
 ```
-Here, the call to `Deposit` will behave identical to
-`log3(msg.value, 0x50cb9fe53daa9737b786ab3646f04d0150dc50ef4e75f59509d83667ad5adb20, sha3(msg.sender), _id);`. Note that the large hex number is equal to the sha3-hash of "Deposit(address,bytes32,uint256)", the event's signature.
+Qui, il richiamo a `Deposit` avrà lo stesso comportamento di 
+`log3(msg.value, 0x50cb9fe53daa9737b786ab3646f04d0150dc50ef4e75f59509d83667ad5adb20, sha3(msg.sender), _id);`. Notare che il grande esadecimale è uguale all'hash SHA3 di "Deposit(address,bytes32,uint256)", la firma dell'evento.
 
-## Layout of Storage
+## Layout dello spazio di archiviazione
 
-Statically-sized variables (everything except mapping and dynamically-sized array types) are laid out contiguously in storage starting from position `0`. Multiple items that need less than 32 bytes are packed into a single storage slot if possible, according to the following rules:
+Le variabili a dimensione statica (ossia tutte, tranne il mapping e i tipi di array a dimensione dinamica) sono disposte contiguamente nello spazio di archiviazione a partire dalla posizione `0`. Gli oggetti multipli che necessitano di meno di 32 bytes sono compattati in un singolo slot di memoria se possibili, seguendo le regole che seguono:
 
-- The first item in a storage slot is stored lower-order aligned.
-- Elementary types use only that many bytes that are necessary to store them.
-- If an elementary type does not fit the remaining part of a storage slot, it is moved to the next storage slot.
-- Structs and array data always start a new slot and occupy whole slots (but items inside a struct or array are packed tightly according to these rules).
+- Il primo oggetto immagazzinato all'interno di uno slot di memoria è quello di ordine più basso.
+- I tipi elementari usano solamente i bytes necessari per il loro immagazzinamento.
+- Se un tipo elementare non entra nella parte rimanente di uno slot, viene spostato allo slot successivo.
+- Gli struct e gli array partono sempre da un nuovo slot, occupandolo interamente (ma gli elementi al loro interno sono compressi rispettando queste regole).
 
-The elements of structs and arrays are stored after each other, just as if they were given explicitly.
+Gli elementi di struct e array sono memorizzati uno dopo l'altro, come se fossero ordinati esplicitamente.
 
-Due to their unpredictable size, mapping and dynamically-sized array types use a `sha3`
-computation to find the starting position of the value or the array data. These starting positions are always full stack slots.
+A causa della loro dimensione imprecisata, i mapping e gli array a dimensione dinamica usano una computazione `sha3` per trovare la posizione iniziale del valore o i dati dell'array. Queste posizioni iniziali sono sempre slot interi.
 
-The mapping or the dynamic array itself
-occupies an (unfilled) slot in storage at some position `p` according to the above rule (or by
-recursively applying this rule for mappings to mappings or arrays of arrays). For a dynamic array, this slot stores the number of elements in the array. For a mapping, the slot is unused (but it is needed so that two equal mappings after each other will use a different hash distribution).
-Array data is located at `sha3(p)` and the value corresponding to a mapping key
-`k` is located at `sha3(k . p)` where `.` is concatenation. If the value is again a
-non-elementary type, the positions are found by adding an offset of `sha3(k . p)`.
 
-So for the following contract snippet:
+Il mapping o l'array dinamico stesso occupano uno slot (vuoti) nella memoria in una certa posizione `p` secondo la regola sopra descritta (o tramite la sua applicazione ricorsiva per mapping di mapping o array di array). Per un array dinamico, questo slot memorizza il numero di elementi presenti nell'array. Per un mapping, lo slot rimane inutilizzato (ma è necessario cosicche' due mapping identici e consecutivi utilizzeranno comunque una distribuzione hash diversa).
+I dati dell'array si trovano in `sha3(p)` e il valore corrispondente di una chiave `k` di mapping si trova in `sha3(k . p)` dove `.` è concatenazione. Se il valore è ancora di tipo non elementare, le posizioni sono individuate aggiungendo un offset di `sha3(k . p)`.
+
+Quindi, per il frammento di contratto che segue:
 ```
 contract c {
   struct S { uint a; uint b; }
@@ -659,11 +654,11 @@ contract c {
   mapping(uint => mapping(uint => S)) data;
 }
 ```
-The position of `data[4][9].b` is at `sha3(uint256(9) . sha3(uint256(4) . uint(256(1))) + 1`.
+La posizione di `data[4][9].b` è in `sha3(uint256(9) . sha3(uint256(4) . uint(256(1))) + 1`.
 
-## Esoteric Features
+## Caratteristiche esoteriche
 
-There are some types in Solidity's type system that have no counterpart in the syntax. One of these types are the types of functions. But still, using `var` it is possible to have local variables of these types:
+Nel sistema dei tipi all'interno di Solidity, alcuni tipi non possiedono controparti nella sintassi. Tra questi, c'e' il tipo delle funzioni. Tuttavia, usando `var` e' possibile avere variabili locali di questi tipi:
 
 ```
 contract FunctionSelector {
@@ -681,16 +676,16 @@ contract FunctionSelector {
 }
 ```
 
-Calling `select(false, x)` will compute `x * x` and `select(true, x)` will compute `2 * x`.
+Richiamando `select(false, x)` verra' computato `x * x` e con `select(true, x)` verra' computato `2 * x`.
 
 
-## Internals - the Optimizer
+## Interni - l'Ottimizzatore
 
-The Solidity optimizer operates on assembly, so it can be and also is used by other languages. It splits the sequence of instructions into basic blocks at points that are hard to move. These are basically all instructions that modify change the control flow (jumps, calls, etc), instructions that have side effects apart from `MSTORE` and `SSTORE` (like `LOGi`, `EXTCODECOPY`, but also `CALLDATALOAD` and others). Inside of such a block, the instructions are analysed and every modification to the stack, to memory or storage is recorded as an expression which consists of an instruction and a list of arguments which are essentially pointers to other expressions. The main idea is now to find expressions that are always equal (or every input) and combine them into an expression class. The optimizer first tries to find each new expression in a list of already known expressions. If this does not work, the expression is simplified according to rules like `constant` + `constant` = `sum_of_constants` or `X` * 1 = `X`. Since this is done recursively, we can also apply the latter rule if the second factor is a more complex expression where we know that it will always evaluate to one. Modifications to storage and memory locations have to erase knowledge about storage and memory locations which are not known to be different: If we first write to location x and then to location y and both are input variables, the second could overwrite the first, so we actually do not know what is stored at x after we wrote to y. On the other hand, if a simplification of the expression x - y evaluates to a non-zero constant, we know that we can keep our knowledge about what is stored at x.
+L'ottimizzatore di Solidity opera su assembly, per cui puo' essere utilizzato anche da altri linguaggi. Esso suddivide la sequenza di istruzioni in blocchi basici in punti che è difficile rimuovere [? "It splits the sequence of instructions into basic blocks at points that are hard to move"]. In pratica si tratta di istruzioni che modificano il flusso di controllo (salti, richiami, ecc.), istruzioni che hanno effetti collaterali, eccetto `MSTORE` e `SSTORE` (come `LOGi`, `EXTCODECOPY`, ma anche `CALLDATALOAD` ed altri). Dentro questi blocchi, le istruzioni vengono analizzate ed ogni modifica allo stack, alla memoria o allo spazio di archiviazione viene registrato come un'espressione che consiste in un'estruzione e una lista di argomenti che sono essenzialmente puntatori che indirizzano ad altre espressioni. A questo punto, l'idea di base e' quella di trovare espressioni che sono sempre uguali (o tutti gli input) e combinarle in una classe di espressioni. L'ottimizzatore per prima cosa prova a trovare ogni nuova espressione in una lista di espressioni gia' conosciute. Se questa ricerca non ha esito positivo, l'espressione viene semplificata secondo regole come `constant` + `constant` = `sum_of_constants` or `X` * 1 = `X`. Poiche' questa operazione viene fatta iterativamente, e' possibile applicare l'ultima regola se il secondo fattore e' un'espressione piu' complessa, laddove sia noto che essa restituira' sempre una valutazione pari a 1. Modifiche all'immagazzinamento e alle allocazioni di memoria devono cancellare la conoscenza di immagazzinamento e allocazioni di memoria di cui non e' noto se siano diverse: se scriviamo prima nell punto x e poi nel punto y, ed entrambe le immissioni sono variabili di input, la seconda potrebbe sovrascrivere la prima, per cui non e' noto cosa sia memorizzato in x dopo la scrittura in y.[Since this is done recursively, we can also apply the latter rule if the second factor is a more complex expression where we know that it will always evaluate to one. Modifications to storage and memory locations have to erase knowledge about storage and memory locations which are not known to be different: If we first write to location x and then to location y and both are input variables, the second could overwrite the first, so we actually do not know what is stored at x after we wrote to y.] D'altra parte, se una semplificazione dell'espressione x - y viene valutata come una costante non nulla, sapremo con certezza cosa e' contenuto in x.
 
-At the end of this process, we know which expressions have to be on the stack in the end and have list of modifications to memory and storage. From these expressions which are actually needed, a dependency graph is created and every operation that is not part of this graph is essentially dropped. Now new code is generated that applies the modifications to memory and storage in the order they were made in the original code (dropping modifications which were found not to be needed) and finally, generates all values that are required to be on the stack in the correct place.
+Al termine di questo processo, sapremo quali espressioni devono essere nello stack ed avremo una lista di modifiche alla memoria ed allo spazio di archiviazione. Da queste espressioni che sono effettivamente necessarie, viene generato un grafo di dipendenze, ed ogni operazione che non fa parte di esso, viene scartata. A questo punto verra' generato un nuovo codice, che applica le modifiche alla memoria ed allo spazio di archiviazione nell'ordine in cui furono fatte nel codice originale (scartando quelle riconosciute come non necessarie) ed infine, verranno generati tutti i valori essenziali nello stack, nella posizione corretta.
 
-These steps are applied to each basic block and the newly generated code is used as replacement if it is smaller. If a basic block is split at a JUMPI and during the analysis, the condition evaluates to a constant, the JUMPI is replaced depending on the value of the constant, and thus code like
+Questi passi vengono applicati ad ognuno dei blocchi di base e il codice ricalcolato verra' utilizzato al posto dell'originale, se piu' ridotto. Se un blocco di base viene separato in un [JUMPI](http://jumpi.sourceforge.net/) durante l'analisi, la condizione computera' una costante, e il JUMPI verra' rimpiazzato a seconda del valore di una costante, per cui un codice come
 ```
 var x = 7;
 data[7] = 9;
@@ -699,9 +694,9 @@ if (data[x] != x + 2)
 else
   return 1;
 ```
-is simplified to code which can also be compiled from
+viene ridotto ad un codice che puo' essere anche compilato da
 ```
 data[7] = 9;
 return 1;
 ```
-even though the instructions contained a jump in the beginning.
+sebbene le istruzioni contenessero un jump statement all'inizio.
