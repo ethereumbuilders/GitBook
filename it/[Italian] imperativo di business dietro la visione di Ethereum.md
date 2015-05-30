@@ -1,3 +1,5 @@
+Traduzione in Italiano di S. Carpentieri (@simonecarp) e M. Terzi (@terzim) di un articolo originale in inglese di William Mougayar ([blog](http://startupmanagement.com/blog)) disponibile a [questo indirizzo] (https://blog.ethereum.org/2015/05/24/the-business-imperative-behind-the-ethereum-vision/).
+
 **Un ringraziamento speciale a Vitalik Buterin, Gavin Wood e Jeffrey Wilcke per le innumerevoli revisioni, consulenze, e per il loro aiuto a decifrare le foglie del loro tè.**
 
 ## Introduzione
