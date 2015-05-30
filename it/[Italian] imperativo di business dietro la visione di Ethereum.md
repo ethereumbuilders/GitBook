@@ -1,28 +1,52 @@
-Un ringraziamento speciale a Vitalik Buterin, Gavin Wood e Jeffrey Wilcke per le innumerevoli revisioni, consulenze, e per il loro aiuto a decifrare le foglie del loro tè.
-Introduzione
+**Un ringraziamento speciale a Vitalik Buterin, Gavin Wood e Jeffrey Wilcke per le innumerevoli revisioni, consulenze, e per il loro aiuto a decifrare le foglie del loro tè.**
+
+## Introduzione
+
 Nella branca dell'informatica basata sulla crittografia, la visione della tecnologia Ethereum ha catturato l'immaginazione di un gran numero di sviluppatori di software e tecnologi che ne hanno compreso la portata. Ma quelle stesse promesse e le loro interpretazioni (e implicazioni) di business non hanno ancora raggiunto, e non sono ancora ben comprese da un pubblico non tecnico.
+
 Essendo ormai vicini al giorno in cui Ethereum uscirà dai "laboratori" per essere lanciato sul mercato, è ancora più importante che il suo messaggio sia ampiamente compreso dalla comunità imprenditoriale.
+
 Lo scopo di questo articolo è quello di rispondere alla domanda sul perché Ethereum è importante, perché anche chi non possiede conoscenze tecniche dovrebbe dedicarvi attenzione, e perché abbiamo bisogno di un'altra blockchain globale, anche se già esiste quella di Bitcoin. Queste sono alcune domande chiave, e per ognuna di esse, più ci si immerge nelle risposte, più si inizia a comprendere, e più si potrà apprezzare la posizione unica di Ethereum, imparando che il suo approccio ha meriti e longevità.
-Sommario
+
+## Sommario
+
 Ethereum è un protocollo alternativo di rendicontazione decentralizzata, e non un criptovaluta alternativa. La discendenza ideologica di Ethereum comprende parimenti a Bitcoin, BitTorrent, Java e Freenet. Dal punto di vista del prodotto, si tratta di una blockchain globale che ha general purpose, potendo governare sia applicazioni di tipo di finanziario che non.
+
 Nella sua essenza, Ethereum alimenta business logic decentralizzate, anche note come smart contracts, che possono essere immaginati come "casseforti" crittografiche contenenti un certo valore sbloccabile solo se vengono soddisfatte determinate condizioni. Questa logica di business viene eseguita sulla blockchain cloud (senza bisogno di alcun server di hosting), e rende automaticamente esecutivi i termini di un determinato accordo tra un certo numero di parti. Sono in sostanza i mattoni necessari alla creazione delle "ÐApps", la nuova forma di Applicazioni Decentralizzate in cui Ethereum eccelle. Sul lato front-end (client), Ethereum ha un potente browser dedicato che permette agli utenti di installare e interagire con qualsiasi ÐApp in maniera user-friendly.
+
 Il risultato di questo nuovo mosaico di tecnologie è l'infrastruttura Web3, che sta emergendo in questo momento, e di cui Ethereum è un perfetto facilitatore. Essa è basata su un'architettura a 3 livelli, che comprende un browser avanzato come client, una blockchain contenente la rendicontazione di ogni transazione come risorsa condivisa, e una rete virtuale di computer che eseguono i programmi di smart business logic in modo decentralizzato.
+
 Rispetto a Bitcoin, Ethereum ha costruito un nuovo framework basato sulla tecnologia crittografica che fornisce guadagni ancora maggiori in termini di facilità di sviluppo e migliori proprietà light-client, e allo stesso tempo consente alle applicazioni di condividere un ambiente economico vitale, e la solida sicurezza di una blockchain.
+
 Il genio dietro Ethereum è questa magica rete di computer che consente a un nuovo tipo di applicazioni software: quelle veramente decentralizzate, che poggiano sull'incorporare il meccanismo di fiducia all'interno di piccoli programmi, distribuendole per l'esecuzione lungo la blockchain.
+
 Tutto ciò ha varie implicazioni: per gli sviluppatori, sostanziali risparmi sui costi ed guadagni in efficienza per la scrittura di nuove applicazioni; per gli utenti non tecnici, la possibilità di ripensare i business esistenti, o creare nuove opportunità, sulla base di disaggregazione di funzioni centrali che vengono poi dedicate a costrutti decentralizzati. Ethereum aiuta tutti coloro che desiderano sviluppare applicazioni decentralizzate, codificare la business logic di contratti arbitrariamente complessi, lanciare agenti autonomi, e gestire le relazioni che saranno interamente mediate dalla blockchain.
+
 Ethereum è una forma di cloud computing specializzato, anche se permette un notevole miglioramento dell'efficienza ed efficacia dei costi in generale, laddove sono richieste garanzie di sicurezza e affidabilità molto forti. Peraltro, comprende una suite completa di strumenti per la creazione di applicazioni.
+
 Il registro di transazione di Ethereum può essere utilizzato per eseguire in modo sicuro una vasta gamma di servizi tra cui: sistemi di voto, registri dei nomi di un dominio web, transazioni finanziarie, piattaforme di crowdfunding, governance societarie, contratti e accordi che si pongono da sé in esecuzione, proprietà intellettuale, smart property, e organizzazioni autonome distribuite (DAO).
+
 Ethereum, aprendo le porte ad una nuova classe di applicazioni mai viste prima, sprona all'innovazione imprenditoriale e sociale a livello globale. A lungo termine, il risultato impatterà o travolgerà strutture economiche e di controllo.
 Migliaia di imprenditori e sviluppatori sono già al lavoro per ideare ed implementare nuove idee, progetti e start-up basate su Ethereum. Nelle organizzazioni già esistenti, i responsabili di business ed IT e gli imprenditori sono incoraggiati a esplorare le modalità con cui Ethereum permette loro di riprogettare o innovare i servizi esistenti, per conservare la competitività nel futuro.
-Capire Ethereum
+
+## Capire Ethereum
+
 Detto questo, perché è così difficile da capire Ethereum? La ragione è la stessa che rende difficile capire Bitcoin, e che ha reso nebuoloso per il grande pubblico persino Internet, per almeno tre anni dopo la sua commercializzazione. Quella ragione è: tutte queste tecnologie hanno più identità funzionali. Certo, la risposta non è particolarmente illuminante, ma è un fatto: Bitcoin, Ethereum e Internet hanno significati diversi per persone diverse. Ma la loro narrativa è forte, perché il loro impatto è poliedrico e di ampia portata. Occorre, quindi, sezionare Ethereum per renderlo più comprensibile.
-Ethereum vs. Bitcoin
+
+### Ethereum vs. Bitcoin
+
 Come punto di partenza, e soltanto come riferimento, potremmo cominciare confrontando Ethereum a Bitcoin, perché Bitcoin sembra essere stato capito, almeno da parte di coloro che hanno voluto capire.
+
 A prima vista, si può facilmente essere ingannati da somiglianze apparenti perché sia Bitcoin che Ethereum sono piattaforme open source che hanno quattro punti comuni: una criptovaluta sottostante, una blockchain intrinseca, un meccanismo di consenso decentralizzato basato sull'onere della prova, e minatori che sostengono la rete; quindi dovrebbero essere simili. Ma questa è una conclusione errata. Non appena si scava più in profondità, la realtà rivela che Bitcoin e Ethereum possiedono più difformità che similarità. Ognuno dei 4 punti ha uno scopo fondamentalmente diverso in termini di ciò che essi permettono, e per questo motivo, il progetto Ethereum è diretto in una direzione diversa rispetto a Bitcoin.
+
 Per fare un quadro, Bitcoin è stato originariamente concepito come un network per il trasferimento di valori monetari in una criptovaluta decentralizzata, e lo scopo principale della blockchain Bitcoin era di rappresentare la spina dorsale della fiducia per queste transazioni finanziarie. È stato solo di recente che la blockchain di Bitcoin iniziato ad essere impiegata in applicazioni non-finanziarie relative alla fiducia decentralizzata e come riserva di valore. Pertanto, gli aspetti programmabilità della blockchain Bitcoin sono stati quasi un ripensamento, anche se le proposte di sidechain sperano di rendere la programmabilità un po' più semplice. Al contrario, Ethereum è stato concepito sin dal primo giorno come una piattaforma di sviluppo software per applicazioni decentralizzate, e la sua blockchain è stata specificamente progettata per supportare le applicazioni in esecuzione su di essa. Quindi, il design di Ethereum ha tratto insegnamento dall'esperienza di Bitcoin, rimediando ad alcuni dei suoi difetti. Ad esempio, la blockchain di Ethereum è più veloce nello svolgimento delle verifiche, che vengono tipicamente completate in un intervallo tra 5 e 30 secondi, mentre Bitcoin impiega 10 minuti.
+
 Il paradigma Ethereum ruota attorno al fatto di essere una rete per l'alimentazione di applicazioni decentralizzate che hanno bisogno di una piattaforma di calcolo deterministico, verificabile e prevedibile, il che è ben diverso dal concetto sottostante al paradigma di Bitcoin in cui banalmente il calcolo gravita attorno alla valuta e null'altro. Pertanto, il ruolo del mining, l'utilizzo criptovaluta, e le capacità di programmabilità delle rispettive blockchain non hanno analogie immediate al fine di comprendere appieno Ethereum.
+
 In primo luogo, la criptovaluta di Ethereum (chiamata "Ether"), si discosta dalla valuta Bitcoin in quanto il suo uso principale non è dato dal pagamento di beni o servizi, né dal fatto di essere una "versione digitale" dell'oro – due funzioni che Bitcoin svolge già ora eccellentemente e che Ethereum non tenta nemmeno di fornire. Piuttosto, Ether è simile ad un incentivo alla distribuzione, attraverso un impianto idraulico, di un "cripto-carburante" necessario a pagare i costi di transazione necessari per eseguire i vari programmi di smart business logic che gli utenti inviano alla blockchain.
+
 Una analogia calzante è quella di confrontare Ether a costi computazionali basati su cloud. Quando si esegue un'applicazione nel cloud, va pagata una somma commisurata al tempo, alla memoria, al trasferimento dei dati e alla velocità di calcolo richieste. La novità del pagamento in Ether è che esso è funzionale all'esecuzione della business logic sulla blockchain. È una forma di micropricing basata su cloud che scorpora un livello dal tradizionale pila del cloud computing.
+
 Oltre ad essere un combustibile di rete, Ether sarà anche commerciabile come criptovaluta su una varietà di scambi aperti, ma si prevede che il suo apprezzamento valore sarà maggiormente influenzato dalla quantità e dalla ricchezza della domanda di transazioni superiore da speculatori (che è l'opposto di quanto è successo a Bitcoin). -------- FINE TRADUZIONE SIMONE ----------------
 In secondo luogo, il blockchain Ethereum è completamente programmabile in base alla progettazione, e più economicamente efficiente di Bitcoin. E 'probabilmente più scalabile, un requisito fondamentale appartenente alla sostenibilità economica a lungo termine di un blockchain occupato. Perché non è focalizzata sul rispetto transazioni finanziarie, lo scopo del blockchain Ethereum è diverso da quello di Bitcoin. Tecnicamente, Ethereum non ha un limite alla dimensione del blocco, e regola dinamicamente nel suo insieme, come parte della sua progettazione di base.Inoltre, Ethereum sta continuando a lavorare per migliorare gli aspetti di scalabilità, e che avrà un beneficio diretto di abbassare i costi complessivi dell'operazione.
 In generale, se si considerano le caratteristiche desiderabili per una blockchain, le seguenti caratteristiche vengono in mente, e sono quelli che Ethereum eccelle a:
