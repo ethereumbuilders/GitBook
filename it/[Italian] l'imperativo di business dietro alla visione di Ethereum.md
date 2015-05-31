@@ -51,9 +51,6 @@ Una analogia calzante è quella di confrontare Ether a costi computazionali basa
 
 Oltre ad essere un combustibile di rete, Ether sarà anche commerciabile come criptovaluta su una varietà di scambi aperti, ma si prevede che l'apprezzamento del suo valore  sarà maggiormente influenzato dalla quantità e dalla ricchezza della domanda di transazioni, piuttosto che dall'azione degli speculatori (che è l'opposto di quanto è successo a Bitcoin). 
 
-# -------- FINE TRADUZIONE SIMONE ----------------
-# -------- INIZIO TRADUZIONE MASSI ---------------
-
 In secondo luogo, la blockchain di Ethereum è stata progettata per essere completamente programmabile, ed è economicamente più  efficiente di quella di Bitcoin. E' probabilmente più scalabile, un requisito fondamentale per la convenienza di lungo termine di una blockchain molto trafficata. Dato che non è focalizzata sulla realizzazione di transazioni finanziarie, lo scopo della blockchain di Ethereum è diverso da quello della blockchain di Bitcoin. Tecnicamente, in Ethereum non ci sono limiti alla dimensione di un blocco, e il sistema si aggiustera' in maniera dinamica nel suo insieme, come parte del suo design di base. Inoltre, Ethereum continua a lavorare per migliorare gli aspetti pertinenti di scalabilità, e cio' avrà il beneficio diretto di abbassare i costi di transazione complessivi.
 
 In generale, se si considerano quali sono le caratteristiche desiderabili di una blockchain, vengono in mente le seguenti, e che sono le stesse caratteristiche nelle quali eccelle Ethereum:
@@ -135,44 +132,46 @@ Come qualsiasi piattaforma software principale, il nucleo di Ethereum è aliment
 
 3. **I Servizi Aggiuntivi:**  Per lo più incentrate su istruzione, ricerca, apprendimento e supporto tramite wiki, forum, l'Accademia Eth, siti web, incentivi di taglie, e una futura conferenza sviluppatori.
 
-Di particolare interesse è il segmento delle Applicazioni la cui dimensione è già una valanga di oltre 100 diversi progetti di terze parti, quei prodotti, estensioni della tecnologia e imprese che a pieno titolo si basano sia interamente che parzialmente su Ethereum. Essi includono applicazioni come mercati di previsione, sistemi di scambio decentralizzati, piattaforme di crowdfunding, l'Internet of Things, sistemi di voto e di governance, giochi, sistemi di reputazione, social networking, chat SMS, assicurazione, sanità, arte, Ridesharing, organizzazioni autonome distribuite, trading (di strumenti finanziari o di merci), servizi per la contabilità, comunità, eCommerce, sicurezza fisica, file di archiviazione, sistemi di validazione della proprietà, Contento, microtransazioni, Community Management, Cloud Computing, le rimesse, intelligente Contratti di Gestione, Patrimonio intelligenti, portafogli, alimentare, produzione, archiviazione dati, messaggistica, Supply Chain e altri.
+Di particolare interesse è il segmento delle Applicazioni la cui dimensione è già una valanga di oltre 100 diversi progetti di terze parti, quei prodotti, estensioni della tecnologia e imprese che a pieno titolo si basano sia interamente che parzialmente su Ethereum. Essi includono applicazioni come mercati di previsione, sistemi di scambio decentralizzati, piattaforme di crowdfunding, l'Internet of Things, sistemi di voto e di governance, giochi, sistemi di reputazione, social networking, chat SMS, assicurazione, sanità, arte, ridesharing, organizzazioni autonome distribuite, trading (di strumenti finanziari o di merci), servizi per la contabilità, comunità, eCommerce, sicurezza fisica, file di archiviazione, sistemi di validazione della proprietà, contenuto, microtransazioni, Community Management, Cloud Computing, rimesse, management di Smart Contracts, Smart Assets, portafogli, settore alimentare, di produzione, archiviazione di dati, messaggistica, Supply Chain e altri.
 
-_(Un post futuro riguardera' più dettagliatamente l'intero ecosistema di Ethereum)._
+_(Un futuro post riguardera' più dettagliatamente l'intero ecosistema di Ethereum)._
 
-Tutti questi componenti indicano in maniera inequivocabile alla progressione e la crescita del footprint Ethereum sano in differenti settori di business finanziarie e non finanziarie. Funzionalità di programmazione di Ethereum offre molto più potere di quello offerto da Bitcoin scripting causa dei poteri aggiunti di Turing-completezza, il valore-consapevolezza, blockchain-consapevolezza e le capacità logiche di transizione di stato.
+Tutti questi componenti indicano in maniera inequivocabile un sano progresso e crescita di Ethereum in differenti settori di business finanziari e non finanziari. Le funzionalità di programmazione di Ethereum offrono molto più potere di quello offerto dal linguaggio di scripting di Bitcoin dati i poteri permessi dalla Turing-completezza, la consapevolezza del valore, della blockchain e le capacità logiche di transizione di stato.
 
-###  Why Should Business People Care?
+###  Perche' dovrebbe importare agli imprenditori?
 
-La tecnologia di Ethereum è stato costruito per gli sviluppatori principalmente. Ma proprio come Information Technology, Ethereum è un enabler di opportunità di business, e quanto il suo supporto iniziale è notevolmente guidato da una comunità di tecnici, l'impatto di Ethereum otterrà moltiplicato una volta i professionisti comprendano anche le potenzialità delle applicazioni decentramento, insieme con i processi che abilitare.
+La tecnologia di Ethereum è stato costruita principalmente per gli sviluppatori. Ma proprio come l'intera informatica, Ethereum rende possibili opportunità di business, e tanto quanto il suo slancio iniziale è notevolmente guidato da una comunità di tecnici, l'impatto di Ethereum sara' moltiplicato quando gli imprenditori capiranno le potenzialità del decentramento delle applicazioni, insieme con i processi che questo rende possibili.
 
-**_Abbiamo bisogno di imparare come applicare ciò che la tecnologia ci offre blockchain. Sviluppatori Ethereum e appassionati di tecnologia riconoscono che ciò che vedono non è sufficiente al fine di rivelare l'intero spettro delle potenziali applicazioni. Gli sviluppatori hanno bisogno gli uomini d'affari in qualità di partner in grado di comprendere le capacità di Ethereum, e sono disposti ad applicare la propria esperienza verso tale comprensione._**
+**Dobbiamo imparare come applicare ciò che ci offre la tecnologia della blockchain. Gli sviluppatori di Ethereum e gli appassionati di tecnologia capiscono che ciò che vedono non è sufficiente al fine di rivelare l'intero spettro delle potenziali applicazioni. Gli sviluppatori hanno bisogno degli imprenditori in qualità di partner in grado di comprendere le capacità di Ethereum, e sono disposti ad applicare la propria esperienza al fine di arrivare a tale comprensione._**
 
-Durante gli anni '90, la tendenza reengineering aziendale preso piede. E 'stato guidato dal desiderio di abolire vecchi processi che hanno offerto poco valore, e sostituirli con quelli semplificati. Improvvisamente, ogni grande organizzazione stava rivedendo i propri processi di business, e di individuare quelli che erano lento, centralizzata, costoso, arcaico, o non soddisfano le esigenze degli utenti e clienti. **Nella visione di Ethereum, si trova una promessa reingegnerizzazione parallelo.**
+Durante gli anni '90, prese piede la tendenza alla re-ingegnerizzazione dei processi aziendali. Era guidata dal desiderio di abolire quei vecchi processi che offrivano poco valore, e di sostituirli con processi semplificati. Improvvisamente, ogni grande organizzazione rivedeva i propri processi di business, e individuava quelli che erano lenti, centralizzati, costosi, arcaici, o che non soddisfacevano le esigenze degli utenti e dei clienti. **Nella visione di Ethereum, si trova una promessa parallela di reingegnerizzazione.**
 
-Il risultato sarebbe quello di intraprendere una simile "crash e bruciare" l'esercizio di trovare vecchie applicazioni che sono lenti, costosi, arcaico o che non soddisfano i bisogni necessari, e capire se potessero essere ripensate via ÐApps o applicazioni veramente decentrate.
+Il risultato sarebbe quello di intraprendere una simile "revisione", ovvero intraprendere l'esercizio di trovare quelle vecchie applicazioni che sono lente, costose, ed arcaiche (o che non soddisfano i bisogni necessari), e capire se possono essere ripensate mediante ÐApps o applicazioni veramente decentralizzate.
 
-**_Gli uomini d'affari devono conoscere il decentramento, e chiedere se i vecchi processi possono essere sostituiti da quelli decentrati, abilitate da Ethereum. Di interesse particolare sono i tipi di applicazioni che in precedenza utilizzavano intermediari centrali o gatekeeper che tenevano autorità finale sui processi connesse alla fiducia.Ethereum consente la separazione di fiducia, e repurposes a circolare sulla rete._**
+**_Gli uomini d'affari devono capire la decentralizzazione, e chiedersi se i vecchi processi possono essere sostituiti da quelli decentralizzati, permessi da Ethereum. Di interesse particolare sono quei tipi di applicazioni che in precedenza utilizzavano intermediari centrali o gatekeeper che avevano un'autorità finale su processi legati alla fiducia. Ethereum consente la separazione di fiducia, e si ripropone di distribuirla sulla rete._**
 
-Una volta capito come di disaggregare processi centrali, e li relegano ai margini della rete, si sono tenuti solo dai limiti della vostra immaginazione. Ora è il momento di girare in un piede, come è meglio che avere qualcun altro ti spara in testa, domani.
+Una volta capito come disaggregare i processi centralizzati, e relegarsi ai margini della rete, siete solo legati dai limiti della vostra immaginazione. Ora è il momento di spararsi su un piede, dato che e' meglio che avere qualcun'altro che vi spara in testa, domani.
 
-I responsabili aziendali e IT progressivi dovrebbero individuare le risorse tecniche per le loro squadre che hanno bisogno di conoscere Ethereum e finanziare progetti e implementazioni che promuovono l'innovazione e la reingegnerizzazione sforzi per scoprire e sbloccare tutto il potenziale di applicazioni decentralizzate.
-Se si rientra in una di queste categorie, ci si trova in una posizione eccellente per iniziare a tuffarsi Ethereum:
+I responsabili aziendali e IT votati al progresso dovrebbero individuare le risorse tecniche per i loro team che hanno bisogno di conoscere Ethereum e finanziare progetti e implementazioni che promuovono l'innovazione e gli sforzi di reingegnerizzazione per scoprire e sbloccare tutto il potenziale delle applicazioni decentralizzate.
 
-1. Esistenti reparti IT
+Se rientrate in una di queste categorie, vi trovate in una posizione eccellente per iniziare a tuffarvi dentro Ethereum:
+
+1. Esistenti reparti di IT
 2. Startups con nuove idee
-3. Gli sviluppatori lungimiranti
-4. Appassionati di Bitcoin attuali
+3. Sviluppatori lungimiranti
+4. Attuali Appassionati di Bitcoin
 5. Innovatori aziendali, dirigenti, investitori e visionari
-6. ONG, attivisti, ricercatori e politici
+6. ONG, attivisti, ricercatori e policy-makers
 
-Il miglior punto di partenza per conoscere lo sviluppo sul Ethereum è il Ethereum Wiki .
+Il miglior punto di partenza per imparare lo sviluppo su Ethereum è la [Wiki di Ethereum](https://github.com/ethereum/wiki/wiki).
 
 ## Cosa si può fare con Ethereum?
-Ethereum consente innovazione attraverso applicazioni decentralizzate, industria ugualmente toccante, governo e segmenti della società.
 
-**E' importante capire dove il decentramento e blockchains hanno più senso, perché non dobbiamo spingere questi concetti su tutto.**
+Ethereum consente l'innovazione attraverso le applicazioni decentralizzate, riguardando allo stesso modo il campo degli affari, quello governativo e i segmenti della società civili.
 
-Da un punto di vista tecnologico, il decentramento è particolarmente utile per "strato di base" dei servizi, vale a dire quello che tutto il resto si affida, come l'identità, la reputazione, le comunicazioni, le reti sociali, i mercati, e farli lavorare senza fare affidamento su intermediari di fiducia specifiche nel mezzo. Dal punto di vista delle applicazioni software, blockchains sono utili per far rispettare il consenso decentrata sui database che si aggiornano se stessi in base alle funzioni di transizione di stato di ordine-dipendente (in cui la velocità di aggiornamenti maggiori di un minuto è accettabile), ed è qui che la rete per l'alimentazione Ethereum- contratti intelligenti basati può brillare. Questi possono essere utilizzati per eseguire in modo sicuro una vasta gamma di servizi tra cui: sistemi di voto, registri dei nomi di dominio, gli scambi finanziari, piattaforme crowdfunding, la governance aziendale, accordi di auto-enforcing, proprietà intellettuale, intelligente, di proprietà e le organizzazioni autonome distribuite.
+**E' importante capire dove la decentralizzazione e le blockchains hanno più senso, perché non dobbiamo spingere questi concetti a tutte le applicazioni.**
+
+Da un punto di vista tecnologico, la decentralizzazione è particolarmente utile per "strato di base" dei servizi, vale a dire quello che tutto il resto si affida, come l'identità, la reputazione, le comunicazioni, le reti sociali, i mercati, e farli lavorare senza fare affidamento su intermediari di fiducia specifiche nel mezzo. Dal punto di vista delle applicazioni software, blockchains sono utili per far rispettare il consenso decentrata sui database che si aggiornano se stessi in base alle funzioni di transizione di stato di ordine-dipendente (in cui la velocità di aggiornamenti maggiori di un minuto è accettabile), ed è qui che la rete per l'alimentazione Ethereum- contratti intelligenti basati può brillare. Questi possono essere utilizzati per eseguire in modo sicuro una vasta gamma di servizi tra cui: sistemi di voto, registri dei nomi di dominio, gli scambi finanziari, piattaforme crowdfunding, la governance aziendale, accordi di auto-enforcing, proprietà intellettuale, intelligente, di proprietà e le organizzazioni autonome distribuite.
 
 **Parte della visione Ethereum è simile a Bitcoin in termini di consenta di decentrare, ma il diavolo è nei dettagli di implementazione.** La piattaforma Ethereum è stato progettato dalla terra-up per consentire applicazioni decentralizzate, mentre la genesi di Bitcoin è una rete finanziaria che è stata sovraccarico e sovrapposte con servizi e funzionalità aggiuntive che sono le sue capacità di stretching. Protocolli "costruito sulla cima" di Bitcoin non sono luce-client cordiale, e il blockchain Bitcoin non è semplicemente progettato per essere abbastanza scalabile per supportare ogni transazione per ogni possibile caso d'uso.
 
